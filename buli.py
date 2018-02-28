@@ -8,7 +8,7 @@
 @author: eric
 """
 #path='/home/eric/Dropbox/buli/'
-path='Z:/test/buli'
+path='Z:/test/buli/'
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,14 +27,26 @@ scf_points = 17
 if crawl == 1:
     crawler(path)
 
-aaa
+
 if raw_data == 1:
     rawdata(path)
 
 if process_data == 1:
     processdata(path)
 
+
+df = pd.read_pickle(path+'all_kicker_results')
+
+
+
+
+
+
+
+
+aaa
 df = pd.read_pickle(path+'buli_final')
+
 print("Endplatzierung aller Mannschaften, die am ",spieltag,".Spieltag ",scf_points, " Punkte hatten.")
 print(df[['season','team','rank','end_rank']][(df.spieltag==spieltag)&(df.points_cum==scf_points)])
 
