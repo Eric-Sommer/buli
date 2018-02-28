@@ -7,21 +7,27 @@
 
 @author: eric
 """
-path='/home/eric/coding/python/bundesliga/'
-
+#path='/home/eric/Dropbox/buli/'
+path='Z:/test/buli'
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 from buli_rawdata_rssf import *
 from buli_process import *
+from crawler import * 
 #SWITCHES
 raw_data = 0
 process_data = 0
+crawl = 1
 
 spieltag = 24
 scf_points = 17
       
+if crawl == 1:
+    crawler(path)
+
+aaa
 if raw_data == 1:
     rawdata(path)
 
