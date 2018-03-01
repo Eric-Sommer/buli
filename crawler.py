@@ -10,6 +10,21 @@ import numpy as np
 
 seasons = np.arange(1963,2018)
 
+def correct_names(str_list):        
+    res = list(str_list)
+    tmp_lst = list(str_list)        
+    #for s,t in str_list.iteritems():                       
+    for s in range(0,len(str_list)):            
+        if tmp_lst[s] == 'Meidericher SV':
+            res[s] = 'Duisburg'
+        if tmp_lst[s] == 'Waldhof':
+            res[s] = 'Waldhof Mannheim'
+        if tmp_lst[s] == 'Haching':
+            res[s] = 'Unterhaching'
+    return res
+
+
+
 def mkURL(season,spieltag):
     seasonstring = str(season)+'-'+str(season+1)[-2:]
     url = "http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/"+seasonstring+'/'+str(spieltag)+'/0/spieltag.html'
@@ -26,13 +41,12 @@ def crawler(path):
         
     
     for s in seasons:
+        print('Downloading season ' + str(s) + '...')
         for sp in range(1,35):
             request = MyBrowser.Request((mkURL(s,sp)))
             
             rawfile = rawdir+'kicker_'+str(s)+'_'+str(sp)+".html"
-            downloaded = False
-            if not os.path.isfile(rawfile):
-                downloaded = True
+            if not os.path.isfile(rawfile):                
                 response = MyBrowser.urlopen(request)                   
                 page = response.read()                                 
                 file = open(rawfile, "wb")              
@@ -41,7 +55,7 @@ def crawler(path):
                 
     print("Finished Downloading")
 
-    buli_results = pd.DataFrame(columns=['season','spieltag','hometeam','awayteam','result'])    
+    buli_results = pd.DataFrame(columns=['season','spieltag','hometeam','awayteam','homegoals','awaygoals'])    
     for s in seasons:
         print(str(s),end=' ')
         for sp in range(1,35):
@@ -50,22 +64,26 @@ def crawler(path):
             # find hometeam, awayteam, result in string.
             hometeam = []
             awayteam = []
-            result = []
+            homegoals = []
+            awaygoals = []
             HomeRegEx = re.compile('class="ovVrn ovVrnRight">(.+?)</a>')
             AwayRegEx = re.compile('class="ovVrn">(.+?)</a>')
-            ResultRegEx = re.compile('<td class="alignleft nowrap" >(.+?)&nbsp;')
+            HomeGoalsRegEx = re.compile('<td class="alignleft nowrap" >(\d*):')
+            AwayGoalsRegEx = re.compile('<td class="alignleft nowrap" >\d*:(\d*)&nbsp;')
             
+
             for match in HomeRegEx.finditer(html):
                 hometeam.append(match.group(1))
             for match in AwayRegEx.finditer(html):
                 awayteam.append(match.group(1))
-            for match in ResultRegEx.finditer(html):
-                result.append(match.group(1))
+            for match in HomeGoalsRegEx.finditer(html):
+                homegoals.append(match.group(1))
+            for match in AwayGoalsRegEx.finditer(html):
+                awaygoals.append(match.group(1))
             
-            
-            spieltag=pd.DataFrame(data=[[s]*9,[sp]*9,hometeam,awayteam,result]).T      
-            spieltag = spieltag.rename(columns={0:'season',1:'spieltag',2:'hometeam',3:'awayteam',4:'result'})
-            buli_results = buli_results.append(spieltag,ignore_index=True)
+            spt=pd.DataFrame(data=[[s]*9,[sp]*9,hometeam,awayteam,homegoals,awaygoals]).T      
+            spt = spt.rename(columns={0:'season',1:'spieltag',2:'hometeam',3:'awayteam',4:'homegoals',5:'awaygoals'})
+            buli_results = buli_results.append(spt,ignore_index=True)
             
     # save raw data        
     buli_results.to_pickle(path+'all_kicker_results')
