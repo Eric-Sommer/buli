@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 # Analyze historical Bundesliga results
-# TO DO: 1. improve data. crawl kicker.de for historical results
 # 
 ########################################
 
@@ -24,26 +23,29 @@ if not os.path.exists(path):
     path=os.getcwd()+'/'
 
 #SWITCHES
-raw_data = 0
-process_data = 0
+
+
 crawl = 0
 
+makefigures = 0
+
+
 # SET VARIABLES FOR OUTPUT
-spieltag = 25
-scf_points = 17
+spieltag = 32
+scf_points = 33
 # Plot since season..
 min_season = 1980
       
 if crawl == 1:
     crawler(path)
 
-
+"""
 if raw_data == 1:
     rawdata(path)
 
 if process_data == 1:
     processdata(path)
-
+"""
 
 df = pd.read_pickle(path+'all_kicker_results')
 #drop 2017
@@ -121,13 +123,14 @@ pd.to_pickle(df,path+'buli_final')
 
 print("Punktzahl aller Zweitplatzierten am ",spieltag,".Spieltag")
 zweite = df[['season','team','points_cum']][(df['spieltag']==spieltag) & (df['rank']==2)]
-zweite['points_cum'].hist(bins=20)
+#zweite['points_cum'].hist(bins=20)
 zweite = zweite.sort_values(by='points_cum')
 zweite.head(10)
-for sp in range(9,35):
-    plt.clf()
-    df[df['spieltag']==sp].boxplot(column='points_cum',by=['rank'])
-    plt.savefig('box_'+str(sp)+'.png')
+if makefigures == 1:
+    for sp in range(9,35):
+        plt.clf()
+        df[df['spieltag']==sp].boxplot(column='points_cum',by=['rank'])
+        plt.savefig('box_'+str(sp)+'.png')
 
 print("Endplatzierung aller Mannschaften, die am ",spieltag,".Spieltag ",scf_points, " Punkte hatten.")
 export = df[['season','team','rank','end_rank','diff16','diff17']][(df.spieltag==spieltag)&(df.points_cum==scf_points)]
