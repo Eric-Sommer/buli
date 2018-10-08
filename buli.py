@@ -25,9 +25,9 @@ path = os.getcwd() + '/'
 # SWITCHES
 
 
-crawl = 0
+crawl = 1
 
-makefigures = 1
+makefigures = 0
 
 
 # SET VARIABLES FOR OUTPUT
@@ -36,8 +36,7 @@ scf_points = 33
 # Plot since season..
 min_season = 1980
 
-if crawl == 1:
-    crawler(path)
+
 
 """
 if raw_data == 1:
@@ -46,12 +45,17 @@ if raw_data == 1:
 if process_data == 1:
     processdata(path)
 """
-
-df = pd.read_json(path+'all_kicker_results.json')
+if crawl == 1:
+    df = crawler(path)
+else:
+    df = pd.read_json(path+'all_kicker_results.json')
 # drop 2017
 # df = df.drop(df[df.season==2017].index)
 # drop missing
 df = df.dropna(how='any')
+
+# few checks on the data
+print(df.sort_values(by=['season'])['season'].value_counts())
 
 df['hometeam'] = df['hometeam'].astype(str)
 df['awayteam'] = df['awayteam'].astype(str)
@@ -174,6 +178,10 @@ ax.invert_yaxis()
 plt.axhline(y=16.5, color='r')
 plotcases[['diff17', 'end_rank', 'label']].apply(lambda x: ax.text(*x), axis=1)
 plt.show()
+
+for x in range(1977,2018):
+    print(str(x))
+    print(df[df['season'] == x]['team'].value_counts().max())
 '''
 # sys.exit('DONE')
 ranklist = []

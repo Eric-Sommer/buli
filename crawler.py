@@ -8,7 +8,7 @@ import re
 import pandas as pd
 import numpy as np
 
-seasons = np.arange(1963, 2019)
+seasons = list(range(1963, 2019))
 
 def correct_names(str_list):
     res = list(str_list)
@@ -47,7 +47,7 @@ def crawler(path):
             request = MyBrowser.Request((mkURL(s, sp)))
 
             rawfile = rawdir + 'kicker_' + str(s) + '_' + str(sp) + ".html"
-            if not os.path.isfile(rawfile):
+            if not os.path.exists(rawfile):
                 response = MyBrowser.urlopen(request)
                 page = response.read()
                 file = open(rawfile, "wb")
@@ -101,9 +101,9 @@ def crawler(path):
                                       3: 'awayteam',
                                       4: 'homegoals',
                                       5: 'awaygoals'})
-            buli_results = buli_results.append(spt, ignore_index=True)
+            buli_results = buli_results.append(spt, ignore_index=True)            
 
     # save raw data        
     buli_results.to_json(path + 'all_kicker_results.json')
 
-    return True    
+    return buli_results    
