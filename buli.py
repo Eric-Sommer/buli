@@ -29,6 +29,7 @@ crawl = 1
 
 makefigures = 0
 
+produce_graphs = 1
 
 # SET VARIABLES FOR OUTPUT
 spieltag = 32
@@ -196,7 +197,7 @@ ewigetabelle['team'] = ewigetabelle.index
 ewigetabelle = ewigetabelle.sort_values(by=['points_cum_ever', 'goal_diff_ever'],
                                         ascending=[False, False])
 ewigetabelle['rank'] = ewigetabelle[['points_cum_ever',
-                                     'goal_diff_ever']].rank(ascending = False)
+                                     'goal_diff_ever']].rank(ascending = {False, False})
 full_names = {
         'Bayern': 'FC Bayern München',
         'Bremen': 'SV Werder Bremen',
