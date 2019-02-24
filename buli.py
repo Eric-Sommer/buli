@@ -14,19 +14,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import sys
+from functions import get_full_team_names
 
 # from buli_rawdata_rssf import *
 # from buli_process import *
-from crawler import *
-from colorama import Fore
-from colorama import Style
+from crawler import crawler, correct_names
 
 path = os.getcwd() + "/"
 
 # SWITCHES
 
-
-crawl = 0
+# Crawl and reproduce data (to make sure ID's are OK?)
+crawl = 1
 
 produce_graphs = 0
 
@@ -36,20 +35,12 @@ scf_points = 24
 # Plot since season..
 min_season = 1980
 
-
-"""
-if raw_data == 1:
-    rawdata(path)
-
-if process_data == 1:
-    processdata(path)
-"""
+seasons_to_crawl = [2017]
 if crawl == 1:
-    df = crawler(path)
+    df = crawler(path, seasons_to_crawl)
 else:
     df = pd.read_json(path + "all_kicker_results.json")
 # drop 2017
-# df = df.drop(df[df.season==2017].index)
 # drop missing
 df = df.dropna(how="any")
 df["season"] = df["season"].astype(int)
@@ -129,7 +120,7 @@ for p in range(0, 18):
     df = df.drop(["pts" + str(p + 1)], 1)
 
 # print(df[['season','spieltag','team','rank','points_cum','diff5']].head())
-pd.to_pickle(df, path + "buli_final")
+# pd.to_pickle(df, path + "buli_final")
 
 # print("Punktzahl aller Zweitplatzierten am ",spieltag,".Spieltag")
 # zweite = df[['season','team','points_cum']][(df['spieltag']==spieltag) & (df['rank']==2)]
@@ -184,6 +175,9 @@ plt.axhline(y=16.5, color="r")
 plotcases[["diff17", "end_rank", "label"]].apply(lambda x: ax.text(*x), axis=1)
 plt.show()
 
+for var in ["season", "spieltag", "pts", "goals_for", "goals_against", "rank"]:
+    df[var] = df[var].astype(int)
+
 # Ewige Tabelle
 # Now, create Rank.
 df = df.sort_values(by=["season", "team", "spieltag"])
@@ -205,60 +199,8 @@ ewigetabelle = ewigetabelle.sort_values(
     by=["points_cum_ever", "goal_diff_ever"], ascending=[False, False]
 )
 ewigetabelle["rank"] = ewigetabelle.rank(ascending=True)
-full_names = {
-    "Bayern": "FC Bayern München",
-    "Bremen": "SV Werder Bremen",
-    "HSV": "Hamburger SV",
-    "Dortmund": "Borussia Dortmund",
-    "Stuttgart": "VfB Stuttgart",
-    "Gladbach": "Borussia Mönchengladbach",
-    "Schalke": "FC Schalke 04",
-    "Köln": "1. FC Köln",
-    "Frankfurt": "Eintracht Frankfurt",
-    "Leverkusen": "Bayer 04 Leverkusen",
-    "K'lautern": "1. FC Kaiserslautern",
-    "Hertha": "Hertha BSC",
-    "Bochum": "VfL Bochum",
-    "Nürnberg": "1. FC Nürnberg",
-    "Hannover": "Hannover 96",
-    "Duisburg": "MSV Duisburg",
-    "Wolfsburg": "VfL Wolfsburg",
-    "Düsseldorf": "Fortuna Düsseldorf",
-    "Karlsruhe": "Karlsruher SC",
-    "Braunschweig": "Eintracht Braunschweig",
-    "TSV 1860": "TSV 1860 München",
-    "Freiburg": "SC Freiburg",
-    "Bielefeld": "Arminia Bielefeld",
-    "Uerdingen": "KFC Uerdingen",
-    "Mainz": "1. FSV Mainz 05",
-    "Hoffenheim": "1899 Hoffenheim",
-    "Rostock": "FC Hansa Rostock",
-    "Augsburg": "FC Augsburg",
-    "Waldhof Mannheim": "SV Waldhof Mannheim",
-    "Offenbach": "Offenbacher Kickers",
-    "RW Essen": "Rot-Weiß Essen",
-    "St. Pauli": "FC St. Pauli",
-    "Cottbus": "Energie Cottbus",
-    "Aachen": "Alemannia Aachen",
-    "Leipzig": "RB Leipzig",
-    "Oberhausen": "Rot-Weiß Oberhausen",
-    "Saarbrücken": "1. FC Saarbrücken",
-    "Darmstadt": "SV Darmstadt 98",
-    "Wattenscheid": "SV Wattenscheid 09",
-    "Dresden": "Dynamo Dresden",
-    "Homburg": "FC Homburg",
-    "Unterhaching": "SpVgg Unterhaching",
-    "Ingolstadt": "1. FC Ingolstadt",
-    "Neunkirchen": "Borussia Neunkirchen",
-    "TeBe Berlin": "Tennis Borussia Berlin",
-    "Stuttg. Kick.": "Stuttgarter Kickers",
-    "Ulm": "SSV Ulm",
-    "F. Köln": "Fortuna Köln",
-    "Paderborn": "SC Paderborn 07",
-    "Fürth": "Greuther Fürth",
-    "Blau-Weiß 90 Ber.": "Blau-Weiß 90 Berlin",
-    "Tasmania": "Tasmania Berlin",
-}
+
+full_names = get_full_team_names()
 
 ewigetabelle = ewigetabelle.replace({"team": full_names})
 
@@ -290,7 +232,12 @@ scfbilanz["goal_diff"] = scfbilanz["goals_for"] - scfbilanz["goals_against"]
 scfbilanz = scfbilanz.sort_values(by=["pts", "goal_diff"], ascending=[False, False])
 print("SC Bilanz")
 print(scfbilanz[["pts", "goal_diff", "win", "draw", "loss"]])
-
+print("SC Spiele mit mehr als 5 Toren")
+print(
+    df[["season", "spieltag", "team", "opponent", "goals_for", "goals_against"]][
+        (df["team"] == "Freiburg") & (df["goals_for"] >= 5)
+    ]
+)
 
 sys.exit("DONE")
 
