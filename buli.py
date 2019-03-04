@@ -23,13 +23,13 @@ path = os.getcwd() + "/"
 # SWITCHES
 
 # Crawl and reproduce data.
-crawl = 1
+crawl = 0
 
 produce_graphs = 0
 
 teamname = "Freiburg"
 
-seasons_to_crawl = list(range(1995,2017))
+seasons_to_crawl = list(range(1995, 2017))
 
 # SET VARIABLES FOR OUTPUT
 spieltag = 23
@@ -37,12 +37,14 @@ team_points = 16
 # Plot since season..
 min_season = 1980
 
+
 def make_boxplot_by_spieltag(df):
     for sp in range(9, 35):
         plt.clf()
         df[df["spieltag"] == sp].boxplot(column="points_cum", by=["rank"])
         plt.savefig("box_" + str(sp) + ".png")
         plt.close()
+
 
 def get_prob_abstieg(df, spieltag, team_points):
     """ A team has 'team_points' after matchday 'spieltag'
@@ -53,7 +55,9 @@ def get_prob_abstieg(df, spieltag, team_points):
     ]
 
     with open(
-        os.path.join(path, "bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"),
+        os.path.join(
+            path, "bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
+        ),
         "w",
     ) as outfile:
         export.to_string(outfile)
@@ -74,6 +78,7 @@ def get_prob_abstieg(df, spieltag, team_points):
     plotcases[["diff17", "end_rank", "label"]].apply(lambda x: ax.text(*x), axis=1)
     plt.show()
 
+
 def get_streaks(df):
     """ Looking for a goalless streak
     """
@@ -93,7 +98,9 @@ def ewigetabelle(df):
     # Now, create Rank.
     df = df.sort_values(by=["season", "team", "spieltag"])
     # various cumulative sums
-    df["goals_for_cum_ever"] = df.groupby(["team"])["goals_for"].apply(lambda x: x.cumsum())
+    df["goals_for_cum_ever"] = df.groupby(["team"])["goals_for"].apply(
+        lambda x: x.cumsum()
+    )
     df["goals_against_cum_ever"] = df.groupby(["team"])["goals_against"].apply(
         lambda x: x.cumsum()
     )
@@ -126,6 +133,7 @@ def ewigetabelle(df):
         ]
     ].to_excel("ewigetabelle.xls")
 
+
 def teambilanz(df, teamname="Freiburg"):
     """ Show historical matchup of a team against all other Teams.
     """
@@ -138,9 +146,13 @@ def teambilanz(df, teamname="Freiburg"):
         ["pts", "goals_for", "goals_against", "win", "draw", "loss"]
     ].sum()
     bilanz["goal_diff"] = bilanz["goals_for"] - bilanz["goals_against"]
-    bilanz = bilanz.sort_values(by=["pts", "goal_diff"], ascending=[False, False])
-    print("SC Bilanz")
-    print(bilanz[["pts", "goal_diff", "win", "draw", "loss"]])
+    bilanz["winshare"] = bilanz["win"] / (
+        bilanz["win"] + bilanz["draw"] + bilanz["loss"]
+    )
+    bilanz = bilanz.sort_values(by=["winshare"], ascending=[False, False])
+
+    print("Bilanz von {}".format(teamname))
+    print(bilanz[["pts", "goal_diff", "win", "draw", "loss", "winshare"]])
     print("Spiele von {} mit mehr als 5 Toren".format(teamname))
     print(
         df[["season", "spieltag", "team", "opponent", "goals_for", "goals_against"]][
@@ -193,7 +205,6 @@ def game_analysis(df):
 
     for var in ["season", "spieltag", "pts", "goals_for", "goals_against"]:
         df[var] = df[var].astype(int)
-
 
     df = df.sort_values(by=["season", "spieltag"])
     goals_mday = df.groupby(["season", "spieltag"])["goals_for"].sum()
@@ -253,31 +264,36 @@ def game_analysis(df):
     df["close"] = abs(df["diff_rank"]) <= 2
     print(df.groupby(["spieltag"])["close"].mean())
 
-
     teambilanz(df, teamname)
+
 
 def goal_analysis(df):
 
     # Torschützenliste
-    print(df['game_id'][~df['owngoal']].groupby(df['scorer']).count().sort_values(ascending=False))
+    print(
+        df["game_id"][~df["owngoal"]]
+        .groupby(df["scorer"])
+        .count()
+        .sort_values(ascending=False)
+    )
 
     # what do I want now?
-
-
-
-
+    # print(df['game_id'][~df['owngoal'] &
+    #                 (df['team'] == "Freiburg")].groupby(df['scorer']).count().sort_values(ascending=False))
 
 
 # Load Data
 if crawl == 1:
     gameresults, goals = crawler(path, seasons_to_crawl)
 else:
-    gameresults = pd.read_json("all_game_results_since{}.json".format(seasons_to_crawl[0]))
-    goals = pd.read_json('all_goals_since{}.json'.format(seasons_to_crawl[0]))
+    gameresults = pd.read_json(
+        "all_game_results_since{}.json".format(seasons_to_crawl[0])
+    )
+    goals = pd.read_json("all_goals_since{}.json".format(seasons_to_crawl[0]))
 
 game_analysis(gameresults)
 
-
+# merge team
 goal_analysis(goals)
 
 """
