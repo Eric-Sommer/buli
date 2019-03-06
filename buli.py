@@ -23,7 +23,7 @@ path = os.getcwd() + "/"
 # SWITCHES
 
 # Crawl and reproduce data.
-crawl = 0
+crawl = 1
 
 produce_graphs = 0
 
@@ -32,8 +32,8 @@ teamname = "Freiburg"
 seasons_to_crawl = list(range(1995, 2017))
 
 # SET VARIABLES FOR OUTPUT
-spieltag = 23
-team_points = 16
+spieltag = 24
+team_points = 27
 # Plot since season..
 min_season = 1980
 
@@ -149,7 +149,7 @@ def teambilanz(df, teamname="Freiburg"):
     bilanz["winshare"] = bilanz["win"] / (
         bilanz["win"] + bilanz["draw"] + bilanz["loss"]
     )
-    bilanz = bilanz.sort_values(by=["winshare"], ascending=[False, False])
+    bilanz = bilanz.sort_values(by=["winshare"], ascending=[False])
 
     print("Bilanz von {}".format(teamname))
     print(bilanz[["pts", "goal_diff", "win", "draw", "loss", "winshare"]])
@@ -272,10 +272,12 @@ def goal_analysis(df):
     # Torschützenliste
     print(
         df["game_id"][~df["owngoal"]]
-        .groupby(df["scorer"])
+        .groupby("scorer")
         .count()
         .sort_values(ascending=False)
     )
+
+
 
     # what do I want now?
     # print(df['game_id'][~df['owngoal'] &
@@ -294,6 +296,7 @@ else:
 game_analysis(gameresults)
 
 # merge team
+#goals = goals.merge(gameresults, on = 'game_id', validate='m:1')
 goal_analysis(goals)
 
 """
