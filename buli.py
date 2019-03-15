@@ -10,9 +10,10 @@
 
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import os
-from functions import get_full_team_names
+from functions import get_full_team_names, correct_signs
 
 # from buli_rawdata_rssf import *
 # from buli_process import *
@@ -23,7 +24,7 @@ path = os.getcwd() + "/"
 # SWITCHES
 
 # Crawl and reproduce data.
-crawl = 1
+crawl = 0
 
 produce_graphs = 0
 
@@ -268,20 +269,33 @@ def game_analysis(df):
 
 
 def goal_analysis(df):
+    # get last name of scorer
+    namesplit = df['scorer'].str.split('-', expand=True)
+    df['scorer_lastname'] = ''
+
+    for c in np.arange(4, -1, -1):
+        df.loc[(~namesplit[c].isna()) &
+        (df['scorer_lastname'] == ''),
+        'scorer_lastname'] = namesplit[c]
+
+    # dissolve line up list
+    for t in ['home', 'away']:
+        for tt in ['starting', 'substi']:
+            df[t+'_'+tt] = df[t+'_'+tt].str.join(",").str.lower()
+        df['lineup_'+t] = df[t+'_starting'] + df[t+'_substi']
+        # correct ö,ä,ü
+        df['lineup_'+t] = df['lineup_'+t].apply(correct_signs)
+
+        df['scorer_'+t] = [y in x for x, y in zip(df["lineup_"+t], df['scorer_lastname'])]
+
 
     # Torschützenliste
-    print(
-        df["game_id"][~df["owngoal"]]
-        .groupby("scorer")
-        .count()
-        .sort_values(ascending=False)
-    )
-
-
-
-    # what do I want now?
-    # print(df['game_id'][~df['owngoal'] &
-    #                 (df['team'] == "Freiburg")].groupby(df['scorer']).count().sort_values(ascending=False))
+    scorerlist = df['scorer'].value_counts()
+    print(scorerlist[scorerlist > 50])
+    # To Do: Top Scorers by team
+    df.loc[df['scorer_home'], 'team'] = df['hometeam']
+    df.loc[df['scorer_away'], 'team'] = df['awayteam']
+    df.groupby(['team'])['scorer'].value_counts().to_excel('scorer_by_team.xlsx')
 
 
 # Load Data
@@ -292,11 +306,15 @@ else:
         "all_game_results_since{}.json".format(seasons_to_crawl[0])
     )
     goals = pd.read_json("all_goals_since{}.json".format(seasons_to_crawl[0]))
+    lineups = pd.read_json("all_rosters_since{}.json".format(seasons_to_crawl[0]))
 
 game_analysis(gameresults)
 
-# merge team
-#goals = goals.merge(gameresults, on = 'game_id', validate='m:1')
+# merge lineups to goal data
+goals = goals.merge(lineups, on = 'game_id', validate='m:1')
+# merge teams
+goals = goals.merge(gameresults, on='game_id', validate='m:1')
+
 goal_analysis(goals)
 
 """

@@ -64,3 +64,13 @@ def get_full_team_names():
     }
 
     return full_names
+
+
+def correct_signs(s):
+    s1 = s.replace('ä', 'ae')
+    s2 = s1.replace('ö', 'oe')
+    s3 = s2.replace('ü', 'ue')
+    s4 = s3.replace('ß', 'ss')
+    s5 = s4.replace('é', 'e')
+
+    return s4

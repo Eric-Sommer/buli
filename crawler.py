@@ -128,8 +128,7 @@ def get_game_results(seasons, rawdir, path):
     for s in seasons:
         print(str(s), end=" ")
         for sp in range(1, 35):
-            html = open(
-                rawdir + "/kicker_" + str(s) + "_" + str(sp) + ".html",
+            html = open("{}/kicker_{}_{}.html".format(rawdir, s, sp),
                 "r",
                 encoding="utf-8",
             ).read()
