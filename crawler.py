@@ -128,9 +128,8 @@ def get_game_results(seasons, rawdir, path):
     for s in seasons:
         print(str(s), end=" ")
         for sp in range(1, 35):
-            html = open("{}/kicker_{}_{}.html".format(rawdir, s, sp),
-                "r",
-                encoding="utf-8",
+            html = open(
+                "{}/kicker_{}_{}.html".format(rawdir, s, sp), "r", encoding="utf-8"
             ).read()
             # find hometeam, awayteam, result in string.
             hometeam = []
@@ -216,9 +215,9 @@ def get_game_results(seasons, rawdir, path):
                 rosters = rosters.append(roster_one_g, ignore_index=True)
 
     # save raw data
-    buli_results.to_json(path + "all_game_results_since{}.json".format(seasons[0]))
-    goals.to_json(path + "all_goals_since{}.json".format(seasons[0]))
-    rosters.to_json(path + "all_rosters_since{}.json".format(seasons[0]))
+    buli_results.to_json(path + "data/all_game_results_since{}.json".format(seasons[0]))
+    goals.to_json(path + "data/all_goals_since{}.json".format(seasons[0]))
+    rosters.to_json(path + "data/all_rosters_since{}.json".format(seasons[0]))
 
     return buli_results, goals
 

@@ -5,9 +5,6 @@
 #
 ########################################
 
-# path='/home/eric/Dropbox/buli/'
-# path = 'Z:/test/buli/'
-
 
 import pandas as pd
 import numpy as np
@@ -26,7 +23,7 @@ path = os.getcwd() + "/"
 # Crawl and reproduce data.
 crawl = 0
 
-produce_graphs = 0
+produce_graphs = 1
 
 teamname = "Freiburg"
 
@@ -43,7 +40,7 @@ def make_boxplot_by_spieltag(df):
     for sp in range(9, 35):
         plt.clf()
         df[df["spieltag"] == sp].boxplot(column="points_cum", by=["rank"])
-        plt.savefig("box_" + str(sp) + ".png")
+        plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
 
 
@@ -57,7 +54,7 @@ def get_prob_abstieg(df, spieltag, team_points):
 
     with open(
         os.path.join(
-            path, "bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
+            path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
         ),
         "w",
     ) as outfile:
@@ -132,7 +129,7 @@ def ewigetabelle(df):
             "goal_diff_ever",
             "points_cum_ever",
         ]
-    ].to_excel("ewigetabelle.xls")
+    ].to_excel("out/ewigetabelle.xls")
 
 
 def teambilanz(df, teamname="Freiburg"):
@@ -243,9 +240,6 @@ def game_analysis(df):
         df["diff" + str(p + 1)] = df["points_cum"] - df["pts" + str(p + 1)]
         df = df.drop(["pts" + str(p + 1)], 1)
 
-    # print(df[['season','spieltag','team','rank','points_cum','diff5']].head())
-    # pd.to_pickle(df, path + "buli_final")
-
     # print("Punktzahl aller Zweitplatzierten am ",spieltag,".Spieltag")
     # zweite = df[['season','team','points_cum']][(df['spieltag']==spieltag) & (df['rank']==2)]
     # zweite['points_cum'].hist(bins=20)
@@ -270,50 +264,54 @@ def game_analysis(df):
 
 def goal_analysis(df):
     # get last name of scorer
-    namesplit = df['scorer'].str.split('-', expand=True)
-    df['scorer_lastname'] = ''
+    namesplit = df["scorer"].str.split("-", expand=True)
+    df["scorer_lastname"] = ""
 
     for c in np.arange(4, -1, -1):
-        df.loc[(~namesplit[c].isna()) &
-        (df['scorer_lastname'] == ''),
-        'scorer_lastname'] = namesplit[c]
+        df.loc[
+            (~namesplit[c].isna()) & (df["scorer_lastname"] == ""), "scorer_lastname"
+        ] = namesplit[c]
 
     # dissolve line up list
-    for t in ['home', 'away']:
-        for tt in ['starting', 'substi']:
-            df[t+'_'+tt] = df[t+'_'+tt].str.join(",").str.lower()
-        df['lineup_'+t] = df[t+'_starting'] + df[t+'_substi']
+    for t in ["home", "away"]:
+        for tt in ["starting", "substi"]:
+            df[t + "_" + tt] = df[t + "_" + tt].str.join(",").str.lower()
+        df["lineup_" + t] = df[t + "_starting"] + df[t + "_substi"]
         # correct ö,ä,ü
-        df['lineup_'+t] = df['lineup_'+t].apply(correct_signs)
+        df["lineup_" + t] = df["lineup_" + t].apply(correct_signs)
 
-        df['scorer_'+t] = [y in x for x, y in zip(df["lineup_"+t], df['scorer_lastname'])]
-
+        df["scorer_" + t] = [
+            y in x for x, y in zip(df["lineup_" + t], df["scorer_lastname"])
+        ]
 
     # Torschützenliste
-    scorerlist = df['scorer'].value_counts()
+    scorerlist = df["scorer"].value_counts()
     print(scorerlist[scorerlist > 50])
     # To Do: Top Scorers by team
-    df.loc[df['scorer_home'], 'team'] = df['hometeam']
-    df.loc[df['scorer_away'], 'team'] = df['awayteam']
-    df.groupby(['team'])['scorer'].value_counts().to_excel('scorer_by_team.xlsx')
+    df.loc[df["scorer_home"], "team"] = df["hometeam"]
+    df.loc[df["scorer_away"], "team"] = df["awayteam"]
 
+    teamtopscorer = df.groupby(["team"])["scorer"].value_counts()
+    #teamtopscorer["rank"] = teamtopscorer.groupby(["team"]).cumcount() + 1
+    #print(teamtopscorer['rank'].describe())
+    teamtopscorer.to_excel("out/scorer_by_team.xlsx")
 
 # Load Data
 if crawl == 1:
-    gameresults, goals = crawler(path, seasons_to_crawl)
-else:
-    gameresults = pd.read_json(
-        "all_game_results_since{}.json".format(seasons_to_crawl[0])
-    )
-    goals = pd.read_json("all_goals_since{}.json".format(seasons_to_crawl[0]))
-    lineups = pd.read_json("all_rosters_since{}.json".format(seasons_to_crawl[0]))
+    crawler(path, seasons_to_crawl)
+
+gameresults = pd.read_json(
+    "data/all_game_results_since{}.json".format(seasons_to_crawl[0])
+)
+goals = pd.read_json("data/all_goals_since{}.json".format(seasons_to_crawl[0]))
+lineups = pd.read_json("data/all_rosters_since{}.json".format(seasons_to_crawl[0]))
 
 game_analysis(gameresults)
 
 # merge lineups to goal data
-goals = goals.merge(lineups, on = 'game_id', validate='m:1')
+goals = goals.merge(lineups, on="game_id", validate="m:1")
 # merge teams
-goals = goals.merge(gameresults, on='game_id', validate='m:1')
+goals = goals.merge(gameresults, on="game_id", validate="m:1")
 
 goal_analysis(goals)
 
