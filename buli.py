@@ -21,13 +21,13 @@ path = os.getcwd() + "/"
 # SWITCHES
 
 # Crawl and reproduce data.
-crawl = 0
+crawl = 1
 
-produce_graphs = 1
+produce_graphs = 0
 
 teamname = "Freiburg"
 
-seasons_to_crawl = list(range(1995, 2017))
+seasons_to_crawl = list(range(1995, 2018))
 
 # SET VARIABLES FOR OUTPUT
 spieltag = 24
@@ -130,6 +130,22 @@ def ewigetabelle(df):
             "points_cum_ever",
         ]
     ].to_excel("out/ewigetabelle.xls")
+
+def aufbaugegner(df):
+    """ checks whethere there are certain matches against whom you want to play
+    if you are on a bad streak
+    """
+
+    df = df.sort_values(by = ['team', 'season', 'spieltag'])
+    df['pts5g'] = (df['pts'].shift(5) +
+                   df['pts'].shift(4) +
+                   df['pts'].shift(3) +
+                   df['pts'].shift(2) +
+                   df['pts'].shift(1))
+    df['relief'] = (df['pts'] == 3) & (df['pts5g'] <= 3)
+    print("Aufbaugegner: {}".format(df[df['relief']]['opponent'].value_counts()))
+
+
 
 
 def teambilanz(df, teamname="Freiburg"):
@@ -253,6 +269,8 @@ def game_analysis(df):
     get_streaks(df)
 
     ewigetabelle(df)
+
+    aufbaugegner(df)
 
     # Ab wann ist die Tabelle aussagekräftig
     df["diff_rank"] = df["end_rank"] - df["rank"]
