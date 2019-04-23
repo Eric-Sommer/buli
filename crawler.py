@@ -7,6 +7,7 @@ import os
 import re
 import pandas as pd
 import numpy as np
+import time
 from bs4 import BeautifulSoup
 
 
@@ -120,7 +121,7 @@ def crawler(path, seasons):
 def get_game_results(seasons, rawdir, path):
     """ converts html data into game results
     """
-    print("Processing Match Results")
+    print("Processing Match Results \n")
     # Initiatilize DataFrame
     buli_results = pd.DataFrame(
         columns=[
@@ -203,7 +204,7 @@ def get_game_results(seasons, rawdir, path):
     game_details = pd.DataFrame(columns=["game_id", "date", "stadium", "attendance", "schiri"])
     bookings = pd.DataFrame(columns=["game_id", "yellow", "yellowred", "red"])
 
-    # Downloadgame-specific informations.
+    # Download game-specific informations.
     for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
         # check for link being a nonempty string
         if g != "" and isinstance(g, str):
@@ -212,13 +213,24 @@ def get_game_results(seasons, rawdir, path):
             request = MyBrowser.Request("http://www.kicker.de{}".format(g))
             if not os.path.exists(gamefile):
                 html = dl_and_save(gamefile, request)
-
+    tt = []
+    print("Processing Match Details... \n")
     # After downloading, process the stuff
     for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
         html = open(
                 "data/games/game_{}.html".format(gid), "r", encoding="utf-8"
                 ).read()
-        print("Match {} / {}".format(gid, len(buli_results)))
+        tt.append(time.perf_counter())
+        if len(tt) > 5:
+            # Estimate remaining time by taking the time for the last 5 steps
+            REM_TIME = (len(buli_results) / 5) / (tt[-1] - tt[-6])
+        else:
+            REM_TIME = 0
+
+        print("Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(gid,
+                                         len(buli_results),
+                                         REM_TIME // 60,
+                                         REM_TIME - (REM_TIME // 60 * 60)))
         goals_one_g, game_details_one_g, bookings_one_g = get_game_details(
             html, gid, s
         )
