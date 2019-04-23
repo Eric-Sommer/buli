@@ -51,17 +51,30 @@ def dl_and_save(targetfile, request):
     return page
 
 
-def clean_roster(roster):
+def clean_roster(roster, gid, sub=False):
     """ args: roster (string)
 
-        returns a clean list of player names
+        returns a list of player id's and names
     """
-    red1 = roster.replace("Aufstellung: ", "")
-    red2 = red1.replace("\xa0", "")
-    red3 = re.sub("\(.+?\)", "", red2)
-    red4 = red3.replace("-", " ")
 
-    return red4.replace(",", " ").split()
+    if sub:
+        df = pd.DataFrame(roster, columns=["minute", "player_id", "player_name"])
+        df["minute"] = df["minute"].astype(int)
+        try:
+            assert len(df) <= 3
+        except AssertionError:
+            print("Warning: Too many substituions in Game {}".format(gid))
+
+    else:
+        df = pd.DataFrame(roster, columns=["player_id", "player_name"])
+        try:
+            assert len(df) == 11
+        except AssertionError:
+            print("Warning: Too many players in one team in Game {}".format(gid))
+
+    df["player_id"] = df["player_id"].astype(int)
+
+    return df
 
 
 def clean_sub(string):
@@ -95,9 +108,9 @@ def crawler(path, seasons):
 
             rawfile = "{}kicker_{}_{}.html".format(rawdir, s, sp)
             if not os.path.exists(rawfile):
-                html = dl_and_save(rawfile, request)
+                dl_and_save(rawfile, request)
 
-    print("Finished Downloading")
+    print("Finished Downloading Match Results")
 
     game_results, goals = get_game_results(seasons, rawdir, path)
 
@@ -107,7 +120,7 @@ def crawler(path, seasons):
 def get_game_results(seasons, rawdir, path):
     """ converts html data into game results
     """
-    print("Processing Game Results")
+    print("Processing Match Results")
     # Initiatilize DataFrame
     buli_results = pd.DataFrame(
         columns=[
@@ -176,95 +189,155 @@ def get_game_results(seasons, rawdir, path):
             buli_results = buli_results.append(spt, ignore_index=True)
 
     buli_results["game_id"] = buli_results.index
+    # clean
     buli_results = buli_results[buli_results["gamelink"] != ""]
+    buli_results = buli_results[~buli_results["gamelink"].isna()]
+    # export
+    buli_results.to_csv(path + "data/all_game_results_since{}.csv".format(seasons[0]), index=False)
 
-    # initiate goals data frame
+    # initiate game-specific data frames
     goals = pd.DataFrame(columns=["game_id", "goal_nr", "scorer", "minute"])
     rosters = pd.DataFrame(
-        columns=["game_id", "home_starting", "home_substi", "away_substi"]
+        columns=["game_id", "player_id", "player_name", "role", "minute"]
     )
+    game_details = pd.DataFrame(columns=["game_id", "date", "stadium", "attendance", "schiri"])
+    bookings = pd.DataFrame(columns=["game_id", "yellow", "yellowred", "red"])
 
-    # Download game details.
-
+    # Downloadgame-specific informations.
     for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
-        if g != "":
+        # check for link being a nonempty string
+        if g != "" and isinstance(g, str):
             gamefile = "{}game_{}.html".format("data/games/", gid)
 
             request = MyBrowser.Request("http://www.kicker.de{}".format(g))
             if not os.path.exists(gamefile):
                 html = dl_and_save(gamefile, request)
-            else:
-                html = open(
-                    "data/games/game_{}.html".format(gid), "r", encoding="utf-8"
-                ).read()
-            if html != "":
-                if (gid % 50) == 0:
-                    print(
-                        "Processing Matchday {} Season {}".format(
-                            buli_results["spieltag"][
-                                buli_results["game_id"] == gid
-                            ].max(),
-                            buli_results["season"][
-                                buli_results["game_id"] == gid
-                            ].max(),
-                        )
-                    )
-                goals_one_g, roster_one_g = get_game_details(html, gid)
 
-                goals = goals.append(goals_one_g, ignore_index=True)
-                rosters = rosters.append(roster_one_g, ignore_index=True)
+    # After downloading, process the stuff
+    for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
+        html = open(
+                "data/games/game_{}.html".format(gid), "r", encoding="utf-8"
+                ).read()
+        print("Match {} / {}".format(gid, len(buli_results)))
+        goals_one_g, game_details_one_g, bookings_one_g = get_game_details(
+            html, gid, s
+        )
+        goals = goals.append(goals_one_g, ignore_index=True)
+
+        home_start, away_start, home_sub, away_sub = get_lineups(html, gid)
+        lineup = pd.DataFrame(columns=['player_id', 'player_name', 'role', 'minute'])
+        try:
+            for var in ['player_id', 'player_name']:
+                lineup[var] = (list(home_start[var]) +
+                               list(away_start[var]) +
+                               list(home_sub[var]) +
+                               list(away_sub[var])
+                               )
+            lineup['role'] = (['home_start' for i in range(len(home_start))] +
+                              ['away_start' for i in range(len(away_start))] +
+                              ['home_sub' for i in range(len(home_sub))] +
+                              ['away_sub' for i in range(len(away_sub))])
+            lineup['minute'] = ([np.nan for i in range(len(home_start) +
+                                                    len(away_start))] +
+                                list(home_sub['minute']) +
+                                list(away_sub['minute'])
+                                )
+            lineup['game_id'] = gid
+        except TypeError:
+            pass
+
+        rosters = rosters.append(lineup, ignore_index=True)
+        game_details = game_details.append(
+            game_details_one_g, ignore_index=True
+        )
+        bookings = bookings.append(bookings_one_g, ignore_index=True)
 
     # save raw data
-    buli_results.to_json(path + "data/all_game_results_since{}.json".format(seasons[0]))
-    goals.to_json(path + "data/all_goals_since{}.json".format(seasons[0]))
-    rosters.to_json(path + "data/all_rosters_since{}.json".format(seasons[0]))
+
+    goals.to_csv(path + "data/all_goals_since{}.csv".format(seasons[0]), index=False)
+    rosters.to_csv(path + "data/all_rosters_since{}.csv".format(seasons[0]), index=False)
+    game_details.to_csv(path + "data/match_details_since{}.csv".format(seasons[0]), index=False)
+    bookings.to_csv(path + "data/bookings_since{}.csv".format(seasons[0]), index=False)
 
     return buli_results, goals
 
+def get_lineups(html, game_id):
 
-def get_game_details(html, game_id):
-    """ returns a dataframe with the following items from the particular game.
-
-        goals = [nr of goal, name of scorer, minute, owngoal-Dummy]
-        roster = [homestarting, awaystarting, homesubs, awaysubs]
-    """
-    gnr = 0
     game = BeautifulSoup(html, "lxml")
-    rosters = {}
-    # FETCH ROSTERS
-    html_tags_start = {"homeroster": "ausstellungHeim", "awayroster": "ausstellungAusw"}
+
+    lineups = {}
+    # FETCH LINEUPS
+    html_tags_start = {"homelineup": "ausstellungHeim", "awaylineup": "ausstellungAusw"}
     html_tags_sub = {"homesub": "einwechslungenHeim", "awaysub": "einwechslungenAusw"}
 
-    for roster, s in html_tags_start.items():
-        rosters[roster] = clean_roster(
-            game.find_all("div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s})[0]
-            .contents[1]
-            .text
-        )
-
-    for roster, s in html_tags_sub.items():
+    lineupregex = '<div class="spielerdiv"><a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
+    subregex = '<span>(\d+)\. .+?<a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
+    for lineup, s in html_tags_start.items():
         try:
-            rosters[roster] = clean_sub(
-                game.find_all("div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s})[0]
-                .contents[1]
-                .text
+            lineups[lineup] = clean_roster(
+                re.findall(
+                    lineupregex,
+                    str(
+                        game.find_all("div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s})[
+                            0
+                        ].contents[1]
+                    ),
+                ),
+                game_id,
             )
         except IndexError:
-            rosters[roster] = []
+            print("Warning: Something wrong with {} in Match {}".format(s, game_id))
+            lineups[lineup] = []
+
+    for lineup, s in html_tags_sub.items():
+        try:
+            lineups[lineup] = clean_roster(
+                re.findall(
+                    subregex,
+                    str(
+                        game.find_all(
+                            "div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s}
+                        )[0].contents[1]
+                    ),
+                ),
+                game_id,
+                sub=True,
+            )
+        # maybe there are no substitutions -> create empty data frame
+        except IndexError:
+            lineups[lineup] = pd.DataFrame(columns=['minute', 'player_id', 'player_name'])
+
+    return lineups['homelineup'], lineups['awaylineup'], lineups['homesub'], lineups['awaysub']
+
+
+def get_game_details(html, game_id, season):
+    """ returns dataframes with the following items from the particular game.
+
+        goals = [nr of goal, id of scorer, minute, owngoal-Dummy]
+        other_game_details = [date,
+                             name of stadium,
+                             attendance
+                             name of referee
+                             ]
+        bookings (yellow, yellow-red, red cards with list of player ids)
+
+    """
+
+    game = BeautifulSoup(html, "lxml")
 
     # FETCH GOALS
-    ScorerRegEx = r"spieler_(.+?).html"
+    ScorerRegEx = 'href=".+?/(\d+?)/spieler_.+?.html"'
     goal_nr = []
     scorer = []
     minute = []
     eg = []
-
+    gnr = 0
     # loop through all goals
     for bit in game.find_all("div", {"class": "spieler"}):
         gnr += 1
         goal_nr.append(gnr)
-        # the first entry is the scorer, the second one the assist (if available)
-        scorer.append(re.findall(ScorerRegEx, str(bit))[0])
+        # the first entry is the scorer id, the second one the assist (if available)
+        scorer.append(int(re.findall(ScorerRegEx, str(bit))[0]))
         minute.append(int(re.findall(r"\((\d+)\.", str(bit))[0]))
         try:
             egstring = re.findall(r"\(\d+\., (.+?),", str(bit))[0]
@@ -279,14 +352,102 @@ def get_game_details(html, game_id):
         {"goal_nr": goal_nr, "scorer": scorer, "minute": minute, "owngoal": eg}
     )
     goals["game_id"] = game_id
+    # Sometimes, you need a '3', sometimes a '4'
 
-    rosters = pd.DataFrame(
+    if game.find_all("div", {"id": "ctl00_PlaceHolderHalf_ctl03_stadion"}) == []:
+        num = 4
+    else:
+        num = 3
+
+    other_game_details = pd.DataFrame(
         {
             "game_id": game_id,
-            "home_starting": [rosters["homeroster"]],
-            "away_starting": [rosters["awayroster"]],
-            "home_substi": [rosters["homesub"]],
-            "away_substi": [rosters["awaysub"]],
-        }
+            "date": re.findall('wert">(.+?)</div',
+                               str(game.find_all("div",
+                                                 {"id": "ctl00_PlaceHolderHalf_ctl0{}_anstoss".format(num)},
+                                                 )[0]
+                ),
+                )[0],
+            "stadium": re.findall(
+                'wert">(.+?)</div',
+                str(
+                    game.find_all(
+                        "div",
+                        {"id": "ctl00_PlaceHolderHalf_ctl0{}_stadion".format(num)},
+                    )[0]
+                ),
+            )[0],
+            "attendance": int(
+                re.findall(
+                    'wert">(\d+).*</div',
+                    str(
+                        game.find_all(
+                            "div",
+                            {
+                                "id": "ctl00_PlaceHolderHalf_ctl0{}_zuschauer".format(
+                                    num
+                                )
+                            },
+                        )[0]
+                    ),
+                )[0]
+            ),
+            "schiri": re.findall(
+                ">(.+?)</a>",
+                str(
+                    game.find_all(
+                        "div",
+                        {
+                            "id": "ctl00_PlaceHolderHalf_ctl0{}_schiedsrichter".format(
+                                num
+                            )
+                        },
+                    )[0]
+                ),
+            )[0],
+        },
+        index=[game_id],
     )
-    return goals, rosters
+    # Finally, fetch bookings
+    html_tags_bookings = {
+        "yellow": "ctl00_PlaceHolderHalf_ctl01_gelb2",
+        "yellowred": "ctl00_PlaceHolderHalf_ctl01_gelbrot2",
+        "red": "ctl00_PlaceHolderHalf_ctl01_rot2",
+    }
+    regex_bookings = {"yellow": ScorerRegEx,
+                      "yellowred": ScorerRegEx,
+                      "red": '<\/div><a.*?href=\".+?\/(\d+?)\/spieler_.+?.html\"'
+                      }
+    yellow = list(
+        map(
+            int,
+            re.findall(
+                regex_bookings["yellow"],
+                str(game.find_all("tr", {"id": html_tags_bookings["yellow"]})),
+            ),
+        )
+    )
+    yellowred = list(
+        map(
+            int,
+            re.findall(
+                regex_bookings["yellowred"],
+                str(game.find_all("tr", {"id": html_tags_bookings["yellowred"]})),
+            ),
+        )
+    )
+    red = list(
+        map(
+            int,
+            re.findall(
+                regex_bookings["red"],
+                str(game.find_all("tr", {"id": html_tags_bookings["red"]}))
+            ),
+        )
+    )
+
+    bookings = pd.DataFrame(
+        {"game_id": game_id, "yellow": [yellow], "yellowred": [yellowred], "red": [red]}
+    )
+
+    return goals, other_game_details, bookings

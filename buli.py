@@ -16,24 +16,20 @@ from functions import get_full_team_names, correct_signs
 # from buli_process import *
 from crawler import crawler, correct_names
 
-path = os.getcwd() + "/"
-
 # SWITCHES
 
 # Crawl and reproduce data.
 crawl = 0
 
-produce_graphs = 1
+produce_graphs = 0
 
 teamname = "Freiburg"
 
-seasons_to_crawl = list(range(1995, 2017))
+seasons_to_crawl = list(range(1995, 2019))
 
 # SET VARIABLES FOR OUTPUT
-spieltag = 24
-team_points = 27
-# Plot since season..
-min_season = 1980
+spieltag = 29
+team_points = 32
 
 
 def make_boxplot_by_spieltag(df):
@@ -44,7 +40,7 @@ def make_boxplot_by_spieltag(df):
         plt.close()
 
 
-def get_prob_abstieg(df, spieltag, team_points):
+def get_prob_abstieg(df, spieltag, team_points, min_season=1980):
     """ A team has 'team_points' after matchday 'spieltag'
         How did other teams with these parameters fare in the past regarding relegation?
     """
@@ -54,7 +50,7 @@ def get_prob_abstieg(df, spieltag, team_points):
 
     with open(
         os.path.join(
-            path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
+                path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
         ),
         "w",
     ) as outfile:
@@ -158,8 +154,43 @@ def teambilanz(df, teamname="Freiburg"):
         ]
     )
 
+def clean_booking_data(df):
+    ''' returns a dataframe with one observation per booking.
 
-def game_analysis(df):
+    '''
+    yellow = df["yellow"].str.replace('\[|\]',
+                                      '',
+                                      regex=True).str.split(',', expand=True)
+    yellowred = df["yellowred"].str.replace('\[|\]',
+                                      '',
+                                      regex=True).str.split(',', expand=True)
+    red = df["red"].str.replace('\[|\]',
+                                      '',
+                                      regex=True).str.split(',', expand=True)
+
+    yellow_clean = yellow.unstack(level=0).dropna()
+    yellow_clean = yellow_clean[yellow_clean != ""]
+
+    red_clean = red.unstack(level=0).dropna()
+    red_clean = red_clean[red_clean != ""]
+
+    yellowred_clean = yellowred.unstack(level=0).dropna()
+    yellowred_clean = yellowred_clean[yellowred_clean != ""]
+
+
+    # Export
+    yellow_clean.sort_index(level=1).to_csv('data/yellowcards.csv',
+                        header=True,
+                        index_label=['count', 'game_id'])
+    yellowred_clean.sort_index(level=1).to_csv('data/yellowredcards.csv',
+                        header=True,
+                        index_label=['count', 'game_id'])
+    red_clean.sort_index(level=1).to_csv('data/redcards.csv',
+                        header=True,
+                        index_label=['count', 'game_id'])
+
+
+def clean_results_data(df):
     # drop missing
     df = df.dropna(how="any")
     df["season"] = df["season"].astype(int)
@@ -204,6 +235,9 @@ def game_analysis(df):
     for var in ["season", "spieltag", "pts", "goals_for", "goals_against"]:
         df[var] = df[var].astype(int)
 
+    return df
+
+def game_analysis(df):
     df = df.sort_values(by=["season", "spieltag"])
     goals_mday = df.groupby(["season", "spieltag"])["goals_for"].sum()
     goals_mday = goals_mday.sort_values(0)
@@ -261,59 +295,55 @@ def game_analysis(df):
 
     teambilanz(df, teamname)
 
+    return df
+
 
 def goal_analysis(df):
     # get last name of scorer
-    namesplit = df["scorer"].str.split("-", expand=True)
+    namesplit = df["player_name"].str.split("-", expand=True)
     df["scorer_lastname"] = ""
 
-    for c in np.arange(4, -1, -1):
+    for c in np.arange(3, -1, -1):
         df.loc[
             (~namesplit[c].isna()) & (df["scorer_lastname"] == ""), "scorer_lastname"
         ] = namesplit[c]
 
-    # dissolve line up list
-    for t in ["home", "away"]:
-        for tt in ["starting", "substi"]:
-            df[t + "_" + tt] = df[t + "_" + tt].str.join(",").str.lower()
-        df["lineup_" + t] = df[t + "_starting"] + df[t + "_substi"]
-        # correct ö,ä,ü
-        df["lineup_" + t] = df["lineup_" + t].apply(correct_signs)
-
-        df["scorer_" + t] = [
-            y in x for x, y in zip(df["lineup_" + t], df["scorer_lastname"])
-        ]
-
     # Torschützenliste
-    scorerlist = df["scorer"].value_counts()
+    scorerlist = df["player_name"].value_counts()
     print(scorerlist[scorerlist > 50])
-    # To Do: Top Scorers by team
-    df.loc[df["scorer_home"], "team"] = df["hometeam"]
-    df.loc[df["scorer_away"], "team"] = df["awayteam"]
-
-    teamtopscorer = df.groupby(["team"])["scorer"].value_counts()
-    #teamtopscorer["rank"] = teamtopscorer.groupby(["team"]).cumcount() + 1
-    #print(teamtopscorer['rank'].describe())
-    teamtopscorer.to_excel("out/scorer_by_team.xlsx")
+    # TO DO: Scorer by team. Need to look for scorer id in lineup.
+    # teamtopscorer = df.groupby(["team"])["player_name"].value_counts()
+    # teamtopscorer.to_excel("out/scorer_by_team.xlsx")
 
 # Load Data
 if crawl == 1:
     crawler(path, seasons_to_crawl)
 
-gameresults = pd.read_json(
-    "data/all_game_results_since{}.json".format(seasons_to_crawl[0])
+gameresults = pd.read_csv(
+    "data/all_game_results_since{}.csv".format(seasons_to_crawl[0])
 )
-goals = pd.read_json("data/all_goals_since{}.json".format(seasons_to_crawl[0]))
-lineups = pd.read_json("data/all_rosters_since{}.json".format(seasons_to_crawl[0]))
+goals = pd.read_csv("data/all_goals_since{}.csv".format(seasons_to_crawl[0]))
+lineups = pd.read_csv("data/all_rosters_since{}.csv".format(seasons_to_crawl[0]))
+# export id's
+player_ids = lineups.groupby('player_id').first().drop(
+                columns=['minute',
+                 'role', 'game_id'])
 
-game_analysis(gameresults)
+clean_res = clean_results_data(gameresults)
+game_analysis(clean_res)
 
 # merge lineups to goal data
-goals = goals.merge(lineups, on="game_id", validate="m:1")
+goals = goals.rename(columns={"scorer": "player_id"})
+goals = goals.merge(player_ids, on="player_id", validate="m:1")
 # merge teams
 goals = goals.merge(gameresults, on="game_id", validate="m:1")
-
 goal_analysis(goals)
+
+# create data for individual bookings
+bookings = pd.read_csv('data/bookings_since{}.csv'.format(seasons_to_crawl[0]))
+clean_bookings = clean_booking_data(bookings)
+
+
 
 """
 ranklist=[]

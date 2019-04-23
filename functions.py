@@ -73,4 +73,4 @@ def correct_signs(s):
     s4 = s3.replace("ß", "ss")
     s5 = s4.replace("é", "e")
 
-    return s4
+    return s5
