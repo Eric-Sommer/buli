@@ -25,10 +25,12 @@ def correct_names(str_list):
     return res
 
 
-def mkURL(season, spieltag):
+def mkURL(season, spieltag, liga):
+    ligastr1 = {1: "bundesliga", 2: "2bundesliga", 3: "3-liga"}
+    ligastr2 = {1: "1-bundesliga", 2: "2-bundesliga", 3: "3-liga"}
     seasonstring = str(season) + "-" + str(season + 1)[-2:]
-    url = "http://www.kicker.de/news/fussball/bundesliga/spieltag/1-bundesliga/{}/{}/spieltag.html".format(
-        seasonstring, spieltag
+    url = "http://www.kicker.de/news/fussball/{}/spieltag/{}/{}/{}/spieltag.html".format(
+        ligastr1[liga], ligastr2[liga], seasonstring, spieltag
     )
     return url
 
@@ -89,23 +91,40 @@ def clean_sub(string):
     return red4
 
 
-def crawler(path, seasons):
-    """ Crawls through the seasons
-        If file is not there, it is downloaded.
+def crawler(path, seasons, liga, resultsonly=False):
+    """ Crawls through the seasons.
+        1. Download game results if not yet existent
+            - assign game_id
+            - collect link to match information
+        2. process game results and export to HD
+        3. download match details if not yet existent
+        4. process match details
+            - lineups
+            - goals
+            - bookings
+            - other (date, place, attendance, referee)
     """
-
-    datadir = path + "data/"
+    print("LIGA {}".format(liga))
+    datadir = "{}/data/league_{}".format(path, liga)
     if not os.path.exists(datadir):
         os.mkdir(datadir)
 
-    rawdir = datadir + "raw/"
+    if not os.path.exists("{}/games".format(datadir)):
+        os.mkdir("{}/games".format(datadir))
+
+    rawdir = "{}/raw/".format(datadir, liga)
     if not os.path.exists(rawdir):
         os.mkdir(rawdir)
 
     for s in seasons:
         print("Downloading season " + str(s) + "...")
-        for sp in range(1, 35):
-            request = MyBrowser.Request(mkURL(s, sp))
+        if liga == 3:
+            n_matchdays = 38
+        else:
+            n_matchdays = 34
+
+        for sp in range(1, n_matchdays + 1):
+            request = MyBrowser.Request(mkURL(s, sp, liga))
 
             rawfile = "{}kicker_{}_{}.html".format(rawdir, s, sp)
             if not os.path.exists(rawfile):
@@ -113,16 +132,15 @@ def crawler(path, seasons):
 
     print("Finished Downloading Match Results")
 
-    game_results, goals = get_game_results(seasons, rawdir, path)
-
-    return game_results, goals
+    get_game_results(seasons, rawdir, path, liga, resultsonly)
 
 
-def get_game_results(seasons, rawdir, path):
+
+def get_game_results(seasons, rawdir, path, liga, resultsonly):
     """ converts html data into game results
     """
     print("Processing Match Results \n")
-    # Initiatilize DataFrame
+    # Initialize DataFrame
     buli_results = pd.DataFrame(
         columns=[
             "season",
@@ -138,6 +156,11 @@ def get_game_results(seasons, rawdir, path):
     AwayRegEx = re.compile('class="ovVrn">(.+?)</a>')
     HomeGoalsRegEx = re.compile(r'<td class="alignleft nowrap" >(\d*):')
     AwayGoalsRegEx = re.compile(r'<td class="alignleft nowrap" >\d*:(\d*)&nbsp;')
+    # how many matches per matchday?
+    if liga == 3:
+        n_matches = 10
+    else:
+        n_matches = 9
 
     for s in seasons:
         print(str(s), end=" ")
@@ -167,8 +190,8 @@ def get_game_results(seasons, rawdir, path):
 
             spt = pd.DataFrame(
                 data=[
-                    [s] * 9,
-                    [sp] * 9,
+                    [s] * n_matches,
+                    [sp] * n_matches,
                     hometeam,
                     awayteam,
                     homegoals,
@@ -193,85 +216,95 @@ def get_game_results(seasons, rawdir, path):
     # clean
     buli_results = buli_results[buli_results["gamelink"] != ""]
     buli_results = buli_results[~buli_results["gamelink"].isna()]
+    # Check for duplicate entries. Postponed matches sometimes appear several times
+    # kick one of them
+    occ = buli_results.groupby("gamelink")["game_id"].cumcount()
+    buli_results = buli_results[occ == 0]
     # export
-    buli_results.to_csv(path + "data/all_game_results_since{}.csv".format(seasons[0]), index=False)
-
-    # initiate game-specific data frames
-    goals = pd.DataFrame(columns=["game_id", "goal_nr", "scorer", "minute"])
-    rosters = pd.DataFrame(
-        columns=["game_id", "player_id", "player_name", "role", "minute"]
+    buli_results.to_csv(
+        path + "/data/league_{}/all_game_results_since{}.csv".format(liga, seasons[0]),
+        index=False,
     )
-    game_details = pd.DataFrame(columns=["game_id", "date", "stadium", "attendance", "schiri"])
-    bookings = pd.DataFrame(columns=["game_id", "yellow", "yellowred", "red"])
-
-    # Download game-specific informations.
-    for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
-        # check for link being a nonempty string
-        if g != "" and isinstance(g, str):
-            gamefile = "{}game_{}.html".format("data/games/", gid)
-
-            request = MyBrowser.Request("http://www.kicker.de{}".format(g))
-            if not os.path.exists(gamefile):
-                html = dl_and_save(gamefile, request)
-    tt = []
-    print("Processing Match Details... \n")
-    # After downloading, process the stuff
-    for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
-        html = open(
-                "data/games/game_{}.html".format(gid), "r", encoding="utf-8"
-                ).read()
-        tt.append(time.perf_counter())
-        if len(tt) > 5:
-            # Estimate remaining time by taking the time for the last 5 steps
-            REM_TIME = (len(buli_results) / 5) / (tt[-1] - tt[-6])
-        else:
-            REM_TIME = 0
-
-        print("Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(gid,
-                                         len(buli_results),
-                                         REM_TIME // 60,
-                                         REM_TIME - (REM_TIME // 60 * 60)))
-        goals_one_g, game_details_one_g, bookings_one_g = get_game_details(
-            html, gid, s
+    if not resultsonly:
+        # initiate game-specific data frames
+        goals = pd.DataFrame(columns=["game_id", "goal_nr", "scorer", "minute"])
+        rosters = pd.DataFrame(
+            columns=["game_id", "player_id", "player_name", "role", "minute"]
         )
-        goals = goals.append(goals_one_g, ignore_index=True)
-
-        home_start, away_start, home_sub, away_sub = get_lineups(html, gid)
-        lineup = pd.DataFrame(columns=['player_id', 'player_name', 'role', 'minute'])
-        try:
-            for var in ['player_id', 'player_name']:
-                lineup[var] = (list(home_start[var]) +
-                               list(away_start[var]) +
-                               list(home_sub[var]) +
-                               list(away_sub[var])
-                               )
-            lineup['role'] = (['home_start' for i in range(len(home_start))] +
-                              ['away_start' for i in range(len(away_start))] +
-                              ['home_sub' for i in range(len(home_sub))] +
-                              ['away_sub' for i in range(len(away_sub))])
-            lineup['minute'] = ([np.nan for i in range(len(home_start) +
-                                                    len(away_start))] +
-                                list(home_sub['minute']) +
-                                list(away_sub['minute'])
-                                )
-            lineup['game_id'] = gid
-        except TypeError:
-            pass
-
-        rosters = rosters.append(lineup, ignore_index=True)
-        game_details = game_details.append(
-            game_details_one_g, ignore_index=True
+        game_details = pd.DataFrame(
+            columns=["game_id", "date", "stadium", "attendance", "schiri"]
         )
-        bookings = bookings.append(bookings_one_g, ignore_index=True)
+        bookings = pd.DataFrame(columns=["game_id", "yellow", "yellowred", "red"])
 
-    # save raw data
+        # Download game-specific informations.
+        for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
+            # check for link being a nonempty string
+            if g != "" and isinstance(g, str):
+                gamefile = "{}game_{}.html".format(
+                    "data/league_{}/games/".format(liga), gid
+                )
 
-    goals.to_csv(path + "data/all_goals_since{}.csv".format(seasons[0]), index=False)
-    rosters.to_csv(path + "data/all_rosters_since{}.csv".format(seasons[0]), index=False)
-    game_details.to_csv(path + "data/match_details_since{}.csv".format(seasons[0]), index=False)
-    bookings.to_csv(path + "data/bookings_since{}.csv".format(seasons[0]), index=False)
+                request = MyBrowser.Request("http://www.kicker.de{}".format(g))
+                if not os.path.exists(gamefile):
+                    html = dl_and_save(gamefile, request)
+        tt = pd.Series()
+        print("Processing Match Details... \n")
+        # After downloading, process the stuff
+        for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
+            html = open(
+                "data/league_{}/games/game_{}.html".format(liga, gid), "r", encoding="utf-8"
+            ).read()
+            tt = tt.append(pd.Series(time.perf_counter()))
+            # make use of the mean of the last 10 files
+            REM_TIME = (buli_results["game_id"].max() - gid) * (tt.iloc[-10:].diff().mean())
+            if gid % 10 == 0:
+                print(
+                    "Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(
+                        gid,
+                        buli_results["game_id"].max(),
+                        REM_TIME // 60,
+                        REM_TIME - (REM_TIME // 60 * 60),
+                    )
+                )
 
-    return buli_results, goals
+            goals_one_g, game_details_one_g, bookings_one_g = get_game_details(html, gid, s)
+            goals = goals.append(goals_one_g, ignore_index=True)
+
+            home_start, away_start, home_sub, away_sub = get_lineups(html, gid)
+            lineup = pd.DataFrame(columns=["player_id", "player_name", "role", "minute"])
+            try:
+                for var in ["player_id", "player_name"]:
+                    lineup[var] = (
+                        list(home_start[var])
+                        + list(away_start[var])
+                        + list(home_sub[var])
+                        + list(away_sub[var])
+                    )
+                lineup["role"] = (
+                    ["home_start" for i in range(len(home_start))]
+                    + ["away_start" for i in range(len(away_start))]
+                    + ["home_sub" for i in range(len(home_sub))]
+                    + ["away_sub" for i in range(len(away_sub))]
+                )
+                lineup["minute"] = (
+                    [np.nan for i in range(len(home_start) + len(away_start))]
+                    + list(home_sub["minute"])
+                    + list(away_sub["minute"])
+                )
+                lineup["game_id"] = gid
+            except TypeError:
+                pass
+
+            rosters = rosters.append(lineup, ignore_index=True)
+            game_details = game_details.append(game_details_one_g, ignore_index=True)
+            bookings = bookings.append(bookings_one_g, ignore_index=True)
+
+        # save raw data
+        for df in [goals, rosters, game_details, bookings]:
+            export_to_csv(df, path, liga, seasons[0])
+
+    return buli_results
+
 
 def get_lineups(html, game_id):
 
@@ -290,9 +323,9 @@ def get_lineups(html, game_id):
                 re.findall(
                     lineupregex,
                     str(
-                        game.find_all("div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s})[
-                            0
-                        ].contents[1]
+                        game.find_all(
+                            "div", {"id": "ctl00_PlaceHolderHalf_ctl00_" + s}
+                        )[0].contents[1]
                     ),
                 ),
                 game_id,
@@ -317,9 +350,16 @@ def get_lineups(html, game_id):
             )
         # maybe there are no substitutions -> create empty data frame
         except IndexError:
-            lineups[lineup] = pd.DataFrame(columns=['minute', 'player_id', 'player_name'])
+            lineups[lineup] = pd.DataFrame(
+                columns=["minute", "player_id", "player_name"]
+            )
 
-    return lineups['homelineup'], lineups['awaylineup'], lineups['homesub'], lineups['awaysub']
+    return (
+        lineups["homelineup"],
+        lineups["awaylineup"],
+        lineups["homesub"],
+        lineups["awaysub"],
+    )
 
 
 def get_game_details(html, game_id, season):
@@ -371,65 +411,75 @@ def get_game_details(html, game_id, season):
     else:
         num = 3
 
-    other_game_details = pd.DataFrame(
-        {
-            "game_id": game_id,
-            "date": re.findall('wert">(.+?)</div',
-                               str(game.find_all("div",
-                                                 {"id": "ctl00_PlaceHolderHalf_ctl0{}_anstoss".format(num)},
-                                                 )[0]
-                ),
+    try:
+        other_game_details = pd.DataFrame(
+            {
+                "game_id": game_id,
+                "date": re.findall(
+                    'wert">(.+?)</div',
+                    str(
+                        game.find_all(
+                            "div",
+                            {"id": "ctl00_PlaceHolderHalf_ctl0{}_anstoss".format(num)},
+                        )[0]
+                    ),
                 )[0],
-            "stadium": re.findall(
-                'wert">(.+?)</div',
-                str(
-                    game.find_all(
-                        "div",
-                        {"id": "ctl00_PlaceHolderHalf_ctl0{}_stadion".format(num)},
+                "stadium": re.findall(
+                    'wert">(.+?)</div',
+                    str(
+                        game.find_all(
+                            "div",
+                            {"id": "ctl00_PlaceHolderHalf_ctl0{}_stadion".format(num)},
+                        )[0]
+                    ),
+                )[0],
+                "attendance": int(
+                    re.findall(
+                        'wert">(\d+).*</div',
+                        str(
+                            game.find_all(
+                                "div",
+                                {
+                                    "id": "ctl00_PlaceHolderHalf_ctl0{}_zuschauer".format(
+                                        num
+                                    )
+                                },
+                            )[0]
+                        ),
                     )[0]
                 ),
-            )[0],
-            "attendance": int(
-                re.findall(
-                    'wert">(\d+).*</div',
+                "schiri": re.findall(
+                    ">(.+?)</a>",
                     str(
                         game.find_all(
                             "div",
                             {
-                                "id": "ctl00_PlaceHolderHalf_ctl0{}_zuschauer".format(
+                                "id": "ctl00_PlaceHolderHalf_ctl0{}_schiedsrichter".format(
                                     num
                                 )
                             },
                         )[0]
                     ),
-                )[0]
-            ),
-            "schiri": re.findall(
-                ">(.+?)</a>",
-                str(
-                    game.find_all(
-                        "div",
-                        {
-                            "id": "ctl00_PlaceHolderHalf_ctl0{}_schiedsrichter".format(
-                                num
-                            )
-                        },
-                    )[0]
-                ),
-            )[0],
-        },
-        index=[game_id],
-    )
+                )[0],
+            },
+            index=[game_id],
+        )
+    except IndexError:
+        print("Error in fetching match details for id {}".format(game_id))
+        other_game_details = pd.DataFrame(
+            columns=["game_id", "date", "stadium", "attendance", "schiri"]
+        )
     # Finally, fetch bookings
     html_tags_bookings = {
         "yellow": "ctl00_PlaceHolderHalf_ctl01_gelb2",
         "yellowred": "ctl00_PlaceHolderHalf_ctl01_gelbrot2",
         "red": "ctl00_PlaceHolderHalf_ctl01_rot2",
     }
-    regex_bookings = {"yellow": ScorerRegEx,
-                      "yellowred": ScorerRegEx,
-                      "red": '<\/div><a.*?href=\".+?\/(\d+?)\/spieler_.+?.html\"'
-                      }
+    regex_bookings = {
+        "yellow": ScorerRegEx,
+        "yellowred": ScorerRegEx,
+        "red": '<\/div><a.*?href=".+?\/(\d+?)\/spieler_.+?.html"',
+    }
     yellow = list(
         map(
             int,
@@ -453,7 +503,7 @@ def get_game_details(html, game_id, season):
             int,
             re.findall(
                 regex_bookings["red"],
-                str(game.find_all("tr", {"id": html_tags_bookings["red"]}))
+                str(game.find_all("tr", {"id": html_tags_bookings["red"]})),
             ),
         )
     )
@@ -463,3 +513,9 @@ def get_game_details(html, game_id, season):
     )
 
     return goals, other_game_details, bookings
+
+
+def export_to_csv(df, path, liga, s0):
+    df.to_csv("{}/data/league_{}/all_goals_since{}.csv".format(path, liga, seasons[0]),
+            index=False,
+        )

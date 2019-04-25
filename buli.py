@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from functions import get_full_team_names, correct_signs
+from functions import get_full_team_names
 
 # from buli_rawdata_rssf import *
 # from buli_process import *
@@ -25,7 +25,8 @@ produce_graphs = 0
 
 teamname = "Freiburg"
 
-seasons_to_crawl = list(range(1995, 2018))
+seasons_to_crawl = list(range(1995, 2019))
+path = os.getcwd()
 
 # SET VARIABLES FOR OUTPUT
 spieltag = 29
@@ -42,7 +43,7 @@ def make_boxplot_by_spieltag(df):
 
 def get_prob_abstieg(df, spieltag, team_points, min_season=1980):
     """ A team has 'team_points' after matchday 'spieltag'
-        How did other teams with these parameters fare in the past regarding relegation?
+        How did other teams with these parameters fare in the past
     """
     export = df[["season", "team", "rank", "end_rank", "diff16", "diff17"]][
         (df.spieltag == spieltag) & (df.points_cum == team_points)
@@ -50,7 +51,7 @@ def get_prob_abstieg(df, spieltag, team_points, min_season=1980):
 
     with open(
         os.path.join(
-                path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
+            path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
         ),
         "w",
     ) as outfile:
@@ -84,6 +85,7 @@ def get_streaks(df):
         & (df["goals_for"].shift(3) == 0)
         & (df["goals_for"].shift(4) == 0)
     )
+    print(df[["team", "season", "spieltag"]][df["5gamesnogoal"]])
 
 
 def ewigetabelle(df):
@@ -127,21 +129,22 @@ def ewigetabelle(df):
         ]
     ].to_excel("out/ewigetabelle.xls")
 
+
 def aufbaugegner(df):
     """ checks whethere there are certain matches against whom you want to play
     if you are on a bad streak
     """
 
-    df = df.sort_values(by = ['team', 'season', 'spieltag'])
-    df['pts5g'] = (df['pts'].shift(5) +
-                   df['pts'].shift(4) +
-                   df['pts'].shift(3) +
-                   df['pts'].shift(2) +
-                   df['pts'].shift(1))
-    df['relief'] = (df['pts'] == 3) & (df['pts5g'] <= 3)
-    print("Aufbaugegner: {}".format(df[df['relief']]['opponent'].value_counts()))
-
-
+    df = df.sort_values(by=["team", "season", "spieltag"])
+    df["pts5g"] = (
+        df["pts"].shift(5)
+        + df["pts"].shift(4)
+        + df["pts"].shift(3)
+        + df["pts"].shift(2)
+        + df["pts"].shift(1)
+    )
+    df["relief"] = (df["pts"] == 3) & (df["pts5g"] <= 3)
+    print("Aufbaugegner: {}".format(df[df["relief"]]["opponent"].value_counts()))
 
 
 def teambilanz(df, teamname="Freiburg"):
@@ -170,19 +173,22 @@ def teambilanz(df, teamname="Freiburg"):
         ]
     )
 
-def clean_booking_data(df):
-    ''' returns a dataframe with one observation per booking.
 
-    '''
-    yellow = df["yellow"].str.replace('\[|\]',
-                                      '',
-                                      regex=True).str.split(',', expand=True)
-    yellowred = df["yellowred"].str.replace('\[|\]',
-                                      '',
-                                      regex=True).str.split(',', expand=True)
-    red = df["red"].str.replace('\[|\]',
-                                      '',
-                                      regex=True).str.split(',', expand=True)
+def clean_booking_data(df, liga):
+    """ returns a dataframe with one observation per booking.
+
+    """
+    yellow = (
+        df["yellow"].str.replace("\[|\]", "", regex=True).str.split(",", expand=True)
+    )
+    yellowred = (
+        df["yellowred"].str.replace("\[|\]", "", regex=True).str.split(",", expand=True)
+    )
+    red = df["red"].str.replace("\[|\]", "", regex=True).str.split(",", expand=True)
+    # Game_id must be maintained!!
+    yellow.index = df['game_id']
+    red.index = df['game_id']
+    yellowred.index = df['game_id']
 
     yellow_clean = yellow.unstack(level=0).dropna()
     yellow_clean = yellow_clean[yellow_clean != ""]
@@ -193,17 +199,18 @@ def clean_booking_data(df):
     yellowred_clean = yellowred.unstack(level=0).dropna()
     yellowred_clean = yellowred_clean[yellowred_clean != ""]
 
-
     # Export
-    yellow_clean.sort_index(level=1).to_csv('data/yellowcards.csv',
-                        header=True,
-                        index_label=['count', 'game_id'])
-    yellowred_clean.sort_index(level=1).to_csv('data/yellowredcards.csv',
-                        header=True,
-                        index_label=['count', 'game_id'])
-    red_clean.sort_index(level=1).to_csv('data/redcards.csv',
-                        header=True,
-                        index_label=['count', 'game_id'])
+    yellow_clean.sort_index(level=1).to_csv(
+        "data/league_{}/yellowcards.csv".format(liga), header=True, index_label=["count", "game_id"]
+    )
+    yellowred_clean.sort_index(level=1).to_csv(
+        "data/league_{}/yellowredcards.csv".format(liga),
+        header=True,
+        index_label=["count", "game_id"],
+    )
+    red_clean.sort_index(level=1).to_csv(
+        "data/league_{}/redcards.csv".format(liga), header=True, index_label=["count", "game_id"]
+    )
 
 
 def clean_results_data(df):
@@ -252,6 +259,7 @@ def clean_results_data(df):
         df[var] = df[var].astype(int)
 
     return df
+
 
 def game_analysis(df):
     df = df.sort_values(by=["season", "spieltag"])
@@ -333,33 +341,46 @@ def goal_analysis(df):
     # teamtopscorer = df.groupby(["team"])["player_name"].value_counts()
     # teamtopscorer.to_excel("out/scorer_by_team.xlsx")
 
+
 # Load Data
 if crawl == 1:
-    crawler(path, seasons_to_crawl)
+    for liga in [1, 2, 3]:
+        if liga == 3:
+            # 3. Liga existent only since 2008
+            seas = list(range(2008, 2019))
+        else:
+            seas = seasons_to_crawl
+        crawler(path, seas, liga)
 
-gameresults = pd.read_csv(
-    "data/all_game_results_since{}.csv".format(seasons_to_crawl[0])
-)
-goals = pd.read_csv("data/all_goals_since{}.csv".format(seasons_to_crawl[0]))
-lineups = pd.read_csv("data/all_rosters_since{}.csv".format(seasons_to_crawl[0]))
-# export id's
-player_ids = lineups.groupby('player_id').first().drop(
-                columns=['minute',
-                 'role', 'game_id'])
+    gameresults = pd.read_csv(
+        "data/league_{}/all_game_results_since{}.csv".format(liga, seasons_to_crawl[0])
+    )
+    goals = pd.read_csv(
+        "data/league_{}/all_goals_since{}.csv".format(liga, seasons_to_crawl[0])
+    )
+    lineups = pd.read_csv(
+        "data/league_{}/all_rosters_since{}.csv".format(liga, seasons_to_crawl[0])
+    )
+    # export id's
+    player_ids = (
+        lineups.groupby("player_id").first().drop(columns=["minute", "role", "game_id"])
+    )
 
-clean_res = clean_results_data(gameresults)
-game_analysis(clean_res)
+    clean_res = clean_results_data(gameresults)
+    game_analysis(clean_res)
 
-# merge lineups to goal data
-goals = goals.rename(columns={"scorer": "player_id"})
-goals = goals.merge(player_ids, on="player_id", validate="m:1")
-# merge teams
-goals = goals.merge(gameresults, on="game_id", validate="m:1")
-goal_analysis(goals)
+    # merge lineups to goal data
+    goals = goals.rename(columns={"scorer": "player_id"})
+    goals = goals.merge(player_ids, on="player_id", validate="m:1")
+    # merge teams
+    goals = goals.merge(gameresults, on="game_id", validate="m:1")
+    goal_analysis(goals)
 
-# create data for individual bookings
-bookings = pd.read_csv('data/bookings_since{}.csv'.format(seasons_to_crawl[0]))
-clean_bookings = clean_booking_data(bookings)
+    # create data for individual bookings
+    bookings = pd.read_csv(
+        "data/league_{}/bookings_since{}.csv".format(liga, seasons_to_crawl[0])
+    )
+    clean_bookings = clean_booking_data(bookings)
 
 
 
