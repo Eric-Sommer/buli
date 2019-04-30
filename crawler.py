@@ -2,12 +2,13 @@
 """
 CRAWLING KICKER.DE
 """
-import urllib.request as MyBrowser
 import os
 import re
+import time
+import urllib.request as MyBrowser
 import pandas as pd
 import numpy as np
-import time
+
 from bs4 import BeautifulSoup
 
 
@@ -22,6 +23,13 @@ def correct_names(str_list):
             res[s] = "Waldhof Mannheim"
         if tmp_lst[s] == "Haching":
             res[s] = "Unterhaching"
+        if tmp_lst[s] == "Blau-Weiß 90 Ber.":
+            res[s] = "Blau-Weiß 90 Berlin"
+        if tmp_lst[s] == "TSV 1860":
+            res[s] = "1860 München"
+        if tmp_lst[s] == "HSV":
+            res[s] = "Hamburger SV"
+
     return res
 
 
@@ -112,13 +120,13 @@ def crawler(path, seasons, liga, resultsonly=False):
     if not os.path.exists("{}/games".format(datadir)):
         os.mkdir("{}/games".format(datadir))
 
-    rawdir = "{}/raw/".format(datadir, liga)
+    rawdir = "{}/raw/".format(datadir)
     if not os.path.exists(rawdir):
         os.mkdir(rawdir)
 
     for s in seasons:
         print("Downloading season " + str(s) + "...")
-        if liga == 3:
+        if (liga == 3) or ((liga == 1) and (s == 1991)):
             n_matchdays = 38
         else:
             n_matchdays = 34
@@ -156,13 +164,16 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
     AwayRegEx = re.compile('class="ovVrn">(.+?)</a>')
     HomeGoalsRegEx = re.compile(r'<td class="alignleft nowrap" >(\d*):')
     AwayGoalsRegEx = re.compile(r'<td class="alignleft nowrap" >\d*:(\d*)&nbsp;')
-    # how many matches per matchday?
-    if liga == 3:
-        n_matches = 10
-    else:
-        n_matches = 9
 
     for s in seasons:
+        # how many matches per matchday?
+        if (liga == 3) or ((liga == 1) and (s == 1991)):
+            n_matches = 10
+        elif (liga == 1) & (s <= 1964):
+            n_matches = 8
+        else:
+            n_matches = 9
+
         print(str(s), end=" ")
         for sp in range(1, 35):
             html = open(
@@ -214,13 +225,15 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
 
     buli_results["game_id"] = buli_results.index
     # clean
-    buli_results = buli_results[buli_results["gamelink"] != ""]
-    buli_results = buli_results[~buli_results["gamelink"].isna()]
-    # Check for duplicate entries. Postponed matches sometimes appear several times
-    # kick one of them
-    occ = buli_results.groupby("gamelink")["game_id"].cumcount()
-    buli_results = buli_results[occ == 0]
+    if not resultsonly:
+        buli_results = buli_results[buli_results["gamelink"] != ""]
+        buli_results = buli_results[~buli_results["gamelink"].isna()]
+        # Check for duplicate entries. Postponed matches sometimes appear several times
+        # kick one of them
+        occ = buli_results.groupby("gamelink")["game_id"].cumcount()
+        buli_results = buli_results[occ == 0]
     # export
+
     buli_results.to_csv(
         path + "/data/league_{}/all_game_results_since{}.csv".format(liga, seasons[0]),
         index=False,
@@ -255,20 +268,11 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
                 "data/league_{}/games/game_{}.html".format(liga, gid), "r", encoding="utf-8"
             ).read()
             tt = tt.append(pd.Series(time.perf_counter()))
-            # make use of the mean of the last 10 files
-            REM_TIME = (buli_results["game_id"].max() - gid) * (tt.iloc[-10:].diff().mean())
-            if gid % 10 == 0:
-                print(
-                    "Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(
-                        gid,
-                        buli_results["game_id"].max(),
-                        REM_TIME // 60,
-                        REM_TIME - (REM_TIME // 60 * 60),
-                    )
-                )
+            show_remaining_time(buli_results["game_id"].max(), gid, tt)
 
             goals_one_g, game_details_one_g, bookings_one_g = get_game_details(html, gid, s)
             goals = goals.append(goals_one_g, ignore_index=True)
+
 
             home_start, away_start, home_sub, away_sub = get_lineups(html, gid)
             lineup = pd.DataFrame(columns=["player_id", "player_name", "role", "minute"])
@@ -298,6 +302,12 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
             rosters = rosters.append(lineup, ignore_index=True)
             game_details = game_details.append(game_details_one_g, ignore_index=True)
             bookings = bookings.append(bookings_one_g, ignore_index=True)
+            # name the dfs
+            goals.name='goals'
+            rosters.name='rosters'
+            game_details.name='match_details'
+            bookings.name='bookings'
+
 
         # save raw data
         for df in [goals, rosters, game_details, bookings]:
@@ -315,8 +325,9 @@ def get_lineups(html, game_id):
     html_tags_start = {"homelineup": "ausstellungHeim", "awaylineup": "ausstellungAusw"}
     html_tags_sub = {"homesub": "einwechslungenHeim", "awaysub": "einwechslungenAusw"}
 
-    lineupregex = '<div class="spielerdiv"><a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
-    subregex = '<span>(\d+)\. .+?<a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
+    lineupregex = r'''<div class="spielerdiv"><a class="link_noicon" href=".+?/(\d+)/
+    spieler_(.+?).html">.+?</div>'''
+    subregex = r'<span>(\d+)\. .+?<a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
     for lineup, s in html_tags_start.items():
         try:
             lineups[lineup] = clean_roster(
@@ -516,6 +527,22 @@ def get_game_details(html, game_id, season):
 
 
 def export_to_csv(df, path, liga, s0):
-    df.to_csv("{}/data/league_{}/all_goals_since{}.csv".format(path, liga, seasons[0]),
-            index=False,
-        )
+    filename = "{}/data/league_{}/all_{}_since{}.csv".format(path,
+                liga,
+                df.name,
+                s0)
+    print("Saving {}".format(filename))
+    df.to_csv(filename, index=False)
+
+
+def show_remaining_time(N, gid, tt):
+    REM_TIME = (N - gid) * (tt.iloc[-10:].diff().mean())
+    if gid % 10 == 0:
+        print(
+            "Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(
+            gid,
+            N,
+            REM_TIME // 60,
+            REM_TIME - (REM_TIME // 60 * 60),
+            )
+            )
