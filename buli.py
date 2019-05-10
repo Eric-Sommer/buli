@@ -28,9 +28,19 @@ TEAM_POINTS = 32
 
 
 def make_boxplot_by_spieltag(df):
+    """ Produces Boxplot showing the distribution of points by rank for a given matchday
+    """
     for sp in range(9, 35):
         plt.clf()
-        df[df["spieltag"] == sp].boxplot(column="points_cum", by=["rank"])
+        df[(df["spieltag"] == sp) &
+           (df["rank"] <= 18)].boxplot(column="points_cum",
+                                       by="rank",
+                                       fontsize=14,
+                                       figsize=(8, 5),
+                                       )
+        plt.title("Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp))
+        plt.xlabel('Platzierung')
+        plt.ylabel('Punkte')
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
 
@@ -139,7 +149,7 @@ def aufbaugegner(df):
         + df["pts"].shift(1)
     )
     df["relief"] = (df["pts"] == 3) & (df["pts5g"] <= 3)
-    print("Aufbaugegner: {}".format(df[df["relief"]]["opponent"].value_counts()))
+    print("Aufbaugegner:\n {}".format(df[df["relief"]]["opponent"].value_counts()))
 
 
 def teambilanz(df, teamname="Freiburg"):
@@ -389,9 +399,11 @@ def create_all_results(path):
     crawler(path, list(range(1963, 2019)), 1, True)
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
-    df = clean_results_data(df)
+    df = clean_results_data(df)    
     game_analysis(df, 30, 31, "Freiburg")
 
+# create_all_results(PATH)
+# aaa
 
 # START CRAWLING
 for liga in [1, 2, 3]:
