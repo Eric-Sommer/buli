@@ -7,10 +7,12 @@ Collects and analyzes
 - bookings
 - goals
 
+of German professional football matches.
+
 ## Scope ##
-Bundesliga (1st Division): Since 1995
-2. Bundesliga (2nd Division): Since 1997
-3. Liga (3rd Division): Since 2008
+- Bundesliga (1st Division): Since 1995
+- 2.Bundesliga (2nd Division): Since 1997
+- 3.Liga (3rd Division): Since 2008
 
 A special function `create_all_results()` collects Bundesliga game results (i.e. no player outcomes) since its 1963 inception.
 
