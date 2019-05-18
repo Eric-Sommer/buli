@@ -30,17 +30,23 @@ TEAM_POINTS = 32
 def make_boxplot_by_spieltag(df):
     """ Produces Boxplot showing the distribution of points by rank for a given matchday
     """
-    for sp in range(9, 35):
+    for sp in range(34,35):
         plt.clf()
-        df[(df["spieltag"] == sp) &
-           (df["rank"] <= 18)].boxplot(column="points_cum",
-                                       by="rank",
-                                       fontsize=14,
-                                       figsize=(8, 5),
-                                       )
+        fig = plt.figure(figsize=(10,5))
+        plt.boxplot([df["points_cum"][(df["spieltag"] == sp) &
+                                     (df["rank"] == r)]
+                                     for r in np.arange(1,19)]
+                   )
+        plt.scatter(x=df["rank"][(df["spieltag"] == sp) &
+                                       (df["season"] == df["season"].max())],
+                   y=df["points_cum"][(df["spieltag"] == sp) &
+                                       (df["season"] == df["season"].max())]
+                   )
+
         plt.title("Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp))
-        plt.xlabel('Platzierung')
+        #plt.xlabel('Platzierung')
         plt.ylabel('Punkte')
+        plt.text(0,-5,"Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2018/19.")
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
 
@@ -229,6 +235,7 @@ def clean_results_data(df):
     df = df.dropna(how="any")
     df["season"] = df["season"].astype(int)
     # few checks on the data
+    print("\n")
     print(df.sort_values(by=["season"])["season"].value_counts())
 
     df["hometeam"] = df["hometeam"].astype(str)
@@ -360,9 +367,7 @@ def clean_all_results(path):
     df["awayteam"] = correct_names(df["awayteam"])
     df = df[df["season"] != ""]
     df = df[~df["season"].isna()]
-    dropthese = ((df["season"] <= 1964) & (df["spieltag"] >= 31)) | (
-        (df["season"] == 2018) & (df["spieltag"] >= 30)
-    )
+    dropthese = ((df["season"] <= 1964) & (df["spieltag"] >= 31))
     df = df[~dropthese]
 
     # a number of manual corrections
@@ -391,19 +396,21 @@ def clean_all_results(path):
     return df
 
 
-def create_all_results(path):
+def create_all_results(path, crawl):
     """ run this function to crawl and prepare all match results (without lineups, goals etc.)
         for the Bundesliga since 1963
     """
+    # Run Crawler for Bundesliga
+    if crawl:
+        crawler(path, list(range(1963, 2019)), 1, True)
 
-    crawler(path, list(range(1963, 2019)), 1, True)
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
-    df = clean_results_data(df)    
+    df = clean_results_data(df)
     game_analysis(df, 30, 31, "Freiburg")
 
-# create_all_results(PATH)
-# aaa
+# create_all_results(PATH, CRAWL)
+
 
 # START CRAWLING
 for liga in [1, 2, 3]:
