@@ -18,13 +18,13 @@ from crawler import crawler, correct_names
 CRAWL = 0
 
 
-SEASONS_TO_CRAWL = list(range(1995, 2019))
+SEASONS_TO_CRAWL = list(range(1963, 2019))
 PATH = os.getcwd()
 
 # SET VARIABLES FOR OUTPUT
 TEAMNAME = "Freiburg"
-SPIELTAG = 29
-TEAM_POINTS = 32
+SPIELTAG = 2
+TEAM_POINTS = 6
 
 
 def make_boxplot_by_spieltag(df):
@@ -278,6 +278,29 @@ def clean_results_data(df):
 
     return df
 
+def schedule(df):
+    """ does it make a difference whether the schedule is tough in the first half
+    or the second half?
+    """
+
+    # reduce to first 17 games
+    df = df[df['spieltag'] <=17]
+    # get end_rank for each opponent
+    end_rank = df[["team", "season", "rank"]][df.spieltag == 34]
+    end_rank = end_rank.rename(columns={"team": "opponent",
+                                        "rank": "end_rank_opp"})
+    df = pd.merge(df, end_rank, on=["opponent", "season"])
+    sched_diff_1 = df[df['spieltag']<=9].groupby(['team',
+                                                        'season'])['end_rank_opp'].mean()
+    sched_diff_2 = df[df['spieltag']>9].groupby(['team',
+                                                        'season'],
+                                        )['end_rank_opp'].mean()
+    schedules = pd.DataFrame({'hard_1': sched_diff_1 < 8,
+                              'hard_2': sched_diff_2 < 8})
+    schedules = schedules.merge(df[['team',
+                                    'season',
+                                    'points_cum']],
+    on=['team', 'season'], left_index=True)
 
 def game_analysis(df, spieltag, team_points, teamname):
     df = df.sort_values(by=["season", "spieltag"])
@@ -324,6 +347,8 @@ def game_analysis(df, spieltag, team_points, teamname):
     make_boxplot_by_spieltag(df)
 
     get_prob_abstieg(df, SPIELTAG, TEAM_POINTS, PATH)
+
+    schedule(df)
 
     get_streaks(df)
 
@@ -417,7 +442,7 @@ for liga in [1, 2, 3]:
     if liga == 3:
     # 3. Liga existent only since 2008
         seas = list(range(2008, 2019))
-    if liga == 2:
+    elif liga == 2:
         seas = list(range(1997, 2019))
     else:
         seas = SEASONS_TO_CRAWL
