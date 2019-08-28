@@ -30,23 +30,30 @@ TEAM_POINTS = 6
 def make_boxplot_by_spieltag(df):
     """ Produces Boxplot showing the distribution of points by rank for a given matchday
     """
-    for sp in range(34,35):
+    for sp in range(34, 35):
         plt.clf()
-        fig = plt.figure(figsize=(10,5))
-        plt.boxplot([df["points_cum"][(df["spieltag"] == sp) &
-                                     (df["rank"] == r)]
-                                     for r in np.arange(1,19)]
-                   )
-        plt.scatter(x=df["rank"][(df["spieltag"] == sp) &
-                                       (df["season"] == df["season"].max())],
-                   y=df["points_cum"][(df["spieltag"] == sp) &
-                                       (df["season"] == df["season"].max())]
-                   )
+        fig = plt.figure(figsize=(10, 5))
+        plt.boxplot(
+            [
+                df["points_cum"][(df["spieltag"] == sp) & (df["rank"] == r)]
+                for r in np.arange(1, 19)
+            ]
+        )
+        plt.scatter(
+            x=df["rank"][(df["spieltag"] == sp) & (df["season"] == df["season"].max())],
+            y=df["points_cum"][
+                (df["spieltag"] == sp) & (df["season"] == df["season"].max())
+            ],
+        )
 
-        plt.title("Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp))
-        #plt.xlabel('Platzierung')
-        plt.ylabel('Punkte')
-        plt.text(0,-5,"Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2018/19.")
+        plt.title(
+            "Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp)
+        )
+        # plt.xlabel('Platzierung')
+        plt.ylabel("Punkte")
+        plt.text(
+            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2018/19."
+        )
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
 
@@ -97,9 +104,11 @@ def get_streaks(df):
         & (df["goals_for"].shift(4) == 0)
     )
     df.loc[df["season"].shift(4) != df["season"], "5gamesnogoal"] = False
-    print("Streaks of five goalless games in a row: \n".format(df[["team",
-                                                                   "season",
-                                                                   "spieltag"]][df["5gamesnogoal"]]))
+    print(
+        "Streaks of five goalless games in a row: \n".format(
+            df[["team", "season", "spieltag"]][df["5gamesnogoal"]]
+        )
+    )
 
 
 def ewigetabelle(df):
@@ -126,7 +135,9 @@ def ewigetabelle(df):
     ewigetabelle = ewigetabelle.sort_values(
         by=["points_cum_ever", "goal_diff_ever"], ascending=[False, False]
     )
-    ewigetabelle["rank"] = ewigetabelle[["points_cum_ever"]].rank(ascending=False).astype(int)
+    ewigetabelle["rank"] = (
+        ewigetabelle[["points_cum_ever"]].rank(ascending=False).astype(int)
+    )
 
     full_names = get_full_team_names()
 
@@ -180,8 +191,9 @@ def teambilanz(df, teamname="Freiburg"):
 
     print("Bilanz von {} produces".format(teamname))
     # print(bilanz[["pts", "goal_diff", "games", "win", "draw", "loss", "winshare", "avg_pts"]])
-    bilanz[["pts", "goal_diff", "games", "win", "draw", "loss", "winshare", "avg_pts"]].to_excel(
-            'out/teambilanz{}.xlsx'.format(teamname))
+    bilanz[
+        ["pts", "goal_diff", "games", "win", "draw", "loss", "winshare", "avg_pts"]
+    ].to_excel("out/teambilanz{}.xlsx".format(teamname))
     print("Spiele von {} mit mind. 5 Toren".format(teamname))
     print(
         df[["season", "spieltag", "team", "opponent", "goals_for", "goals_against"]][
@@ -198,7 +210,9 @@ def clean_booking_data(df, liga):
         df["yellow"].str.replace(r"\[|\]", "", regex=True).str.split(",", expand=True)
     )
     yellowred = (
-        df["yellowred"].str.replace(r"\[|\]", "", regex=True).str.split(",", expand=True)
+        df["yellowred"]
+        .str.replace(r"\[|\]", "", regex=True)
+        .str.split(",", expand=True)
     )
     red = df["red"].str.replace(r"\[|\]", "", regex=True).str.split(",", expand=True)
     # Game_id must be maintained!!
@@ -281,36 +295,39 @@ def clean_results_data(df):
 
     return df
 
+
 def schedule(df):
     """ does it make a difference whether the schedule is tough in the first half
     or the second half?
     """
 
-    # reduce to first 17 games
-    df = df[df['spieltag'] <=17]
     # get end_rank for each opponent
-    end_rank = df[["team", "season", "rank"]][df.spieltag == 34]
-    end_rank = end_rank.rename(columns={"team": "opponent",
-                                        "rank": "end_rank_opp"})
+    end_rank = df[["team", "season", "rank"]][df['spieltag'] == 34]
+    end_rank = end_rank.rename(columns={"team": "opponent", "rank": "end_rank_opp"})
+    end_pts = df.groupby(["team", "season"], as_index=False)['points_cum'].max()
+    end_pts = end_pts.rename(columns={'points_cum': 'points_end'})
+    # reduce to first 17 games
+    df = df[df["spieltag"] <= 17]
     df = pd.merge(df, end_rank, on=["opponent", "season"])
-    sched_diff_1 = df[df['spieltag']<=9].groupby(['team',
-                                                        'season'])['end_rank_opp'].mean()
-    sched_diff_2 = df[df['spieltag']>9].groupby(['team',
-                                                        'season'],
-                                        )['end_rank_opp'].mean()
-    schedules = pd.DataFrame({'hard_1': sched_diff_1 < 8,
-                              'hard_2': sched_diff_2 < 8})
-    schedules = schedules.merge(df[['team',
-                                    'season',
-                                    'points_cum']],
-    on=['team', 'season'], left_index=True)
+    df = pd.merge(df, end_pts, on=["team", "season"])
+    sched_diff_1 = (
+        df[df["spieltag"] <= 9].groupby(["team", "season"])["end_rank_opp"].mean()
+    )
+    sched_diff_2 = (
+        df[df["spieltag"] > 9].groupby(["team", "season"])["end_rank_opp"].mean()
+    )
+    schedules = pd.DataFrame({"hard_1": sched_diff_1 < 8, "hard_2": sched_diff_2 < 8})
+    schedules = schedules.merge(
+        df[["team", "season", "points_end"]], on=["team", "season"], left_index=True
+    )
     # Output
-    print("Season points depending on difficulty of schedule \n First 9 games: \n {} \n Last 8 games: \n {}".
-        format(
-            schedules.groupby('sched_diff_1')['points_cum'].mean(),
-            schedules.groupby('sched_diff_2')['points_cum'].mean()
-            )
+    print(
+        "Season points depending on difficulty of schedule \n First 9 games: \n {} \n Last 8 games: \n {}".format(
+            schedules.groupby("hard_1")["points_end"].hist(),
+            schedules.groupby("hard_2")["points_end"].hist(),
         )
+    )
+
 
 def game_analysis(df, spieltag, team_points, teamname):
     df = df.sort_values(by=["season", "spieltag"])
@@ -359,7 +376,7 @@ def game_analysis(df, spieltag, team_points, teamname):
     get_prob_abstieg(df, SPIELTAG, TEAM_POINTS, PATH)
 
     schedule(df)
-
+    aaa
     get_streaks(df)
 
     ewigetabelle(df)
@@ -369,7 +386,11 @@ def game_analysis(df, spieltag, team_points, teamname):
     # Ab wann ist die Tabelle aussagekräftig
     df["diff_rank"] = df["end_rank"] - df["rank"]
     df["close"] = abs(df["diff_rank"]) <= 2
-    print("Anteil der aussagekräftigen Platzierungen nach Spieltag: \n {}".format(df.groupby(["spieltag"])["close"].mean()))
+    print(
+        "Anteil der aussagekräftigen Platzierungen nach Spieltag: \n {}".format(
+            df.groupby(["spieltag"])["close"].mean()
+        )
+    )
 
     teambilanz(df, teamname)
 
@@ -402,7 +423,7 @@ def clean_all_results(path):
     df["awayteam"] = correct_names(df["awayteam"])
     df = df[df["season"] != ""]
     df = df[~df["season"].isna()]
-    dropthese = ((df["season"] <= 1964) & (df["spieltag"] >= 31))
+    dropthese = (df["season"] <= 1964) & (df["spieltag"] >= 31)
     df = df[~dropthese]
 
     # a number of manual corrections
@@ -423,10 +444,10 @@ def clean_all_results(path):
         "awaygoals",
     ] = 0
     for var in list(df):
-        assert ~df[var].isna().any()
+        #        assert ~df[var].isna().any()
         if var not in ["hometeam", "awayteam"]:
             df[var] = df[var].astype(int)
-#    df = df.rename(columns={"spieltag": "matchday"})
+    #    df = df.rename(columns={"spieltag": "matchday"})
 
     return df
 
@@ -444,13 +465,14 @@ def create_all_results(path, crawl):
     df = clean_results_data(df)
     game_analysis(df, 30, 31, "Freiburg")
 
+
 # create_all_results(PATH, CRAWL)
 
 
 # START CRAWLING
 for liga in [1, 2, 3]:
     if liga == 3:
-    # 3. Liga existent only since 2008
+        # 3. Liga existent only since 2008
         seas = list(range(2008, 2019))
     elif liga == 2:
         seas = list(range(1997, 2019))
