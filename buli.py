@@ -96,7 +96,10 @@ def get_streaks(df):
         & (df["goals_for"].shift(3) == 0)
         & (df["goals_for"].shift(4) == 0)
     )
-    print(df[["team", "season", "spieltag"]][df["5gamesnogoal"]])
+    df.loc[df["season"].shift(4) != df["season"], "5gamesnogoal"] = False
+    print("Streaks of five goalless games in a row: \n".format(df[["team",
+                                                                   "season",
+                                                                   "spieltag"]][df["5gamesnogoal"]]))
 
 
 def ewigetabelle(df):
@@ -301,6 +304,13 @@ def schedule(df):
                                     'season',
                                     'points_cum']],
     on=['team', 'season'], left_index=True)
+    # Output
+    print("Season points depending on difficulty of schedule \n First 9 games: \n {} \n Last 8 games: \n {}".
+        format(
+            schedules.groupby('sched_diff_1')['points_cum'].mean(),
+            schedules.groupby('sched_diff_2')['points_cum'].mean()
+            )
+        )
 
 def game_analysis(df, spieltag, team_points, teamname):
     df = df.sort_values(by=["season", "spieltag"])
@@ -359,7 +369,7 @@ def game_analysis(df, spieltag, team_points, teamname):
     # Ab wann ist die Tabelle aussagekräftig
     df["diff_rank"] = df["end_rank"] - df["rank"]
     df["close"] = abs(df["diff_rank"]) <= 2
-    print(df.groupby(["spieltag"])["close"].mean())
+    print("Anteil der aussagekräftigen Platzierungen nach Spieltag: \n {}".format(df.groupby(["spieltag"])["close"].mean()))
 
     teambilanz(df, teamname)
 
@@ -378,7 +388,7 @@ def goal_analysis(df):
 
     # Torschützenliste
     scorerlist = df["player_name"].value_counts()
-    print(scorerlist[scorerlist > 50])
+    print("Best Scorers: \n {}".format(scorerlist[scorerlist > 50]))
     # TO DO: Scorer by team. Need to look for scorer id in lineup.
     # teamtopscorer = df.groupby(["team"])["player_name"].value_counts()
     # teamtopscorer.to_excel("out/scorer_by_team.xlsx")
