@@ -143,7 +143,6 @@ def crawler(path, seasons, liga, resultsonly=False):
     get_game_results(seasons, rawdir, path, liga, resultsonly)
 
 
-
 def get_game_results(seasons, rawdir, path, liga, resultsonly):
     """ converts html data into game results
     """
@@ -265,17 +264,22 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
         # After downloading, process the stuff
         for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
             html = open(
-                "data/league_{}/games/game_{}.html".format(liga, gid), "r", encoding="utf-8"
+                "data/league_{}/games/game_{}.html".format(liga, gid),
+                "r",
+                encoding="utf-8",
             ).read()
             tt = tt.append(pd.Series(time.perf_counter()))
             show_remaining_time(buli_results["game_id"].max(), gid, tt)
 
-            goals_one_g, game_details_one_g, bookings_one_g = get_game_details(html, gid, s)
+            goals_one_g, game_details_one_g, bookings_one_g = get_game_details(
+                html, gid, s
+            )
             goals = goals.append(goals_one_g, ignore_index=True)
 
-
             home_start, away_start, home_sub, away_sub = get_lineups(html, gid)
-            lineup = pd.DataFrame(columns=["player_id", "player_name", "role", "minute"])
+            lineup = pd.DataFrame(
+                columns=["player_id", "player_name", "role", "minute"]
+            )
             try:
                 for var in ["player_id", "player_name"]:
                     lineup[var] = (
@@ -303,11 +307,10 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
             game_details = game_details.append(game_details_one_g, ignore_index=True)
             bookings = bookings.append(bookings_one_g, ignore_index=True)
             # name the dfs
-            goals.name='goals'
-            rosters.name='rosters'
-            game_details.name='match_details'
-            bookings.name='bookings'
-
+            goals.name = "goals"
+            rosters.name = "rosters"
+            game_details.name = "match_details"
+            bookings.name = "bookings"
 
         # save raw data
         for df in [goals, rosters, game_details, bookings]:
@@ -325,8 +328,8 @@ def get_lineups(html, game_id):
     html_tags_start = {"homelineup": "ausstellungHeim", "awaylineup": "ausstellungAusw"}
     html_tags_sub = {"homesub": "einwechslungenHeim", "awaysub": "einwechslungenAusw"}
 
-    lineupregex = r'''<div class="spielerdiv"><a class="link_noicon" href=".+?/(\d+)/
-    spieler_(.+?).html">.+?</div>'''
+    lineupregex = r"""<div class="spielerdiv"><a class="link_noicon" href=".+?/(\d+)/
+    spieler_(.+?).html">.+?</div>"""
     subregex = r'<span>(\d+)\. .+?<a class="link_noicon" href=".+?/(\d+)/spieler_(.+?).html">.+?</div>'
     for lineup, s in html_tags_start.items():
         try:
@@ -527,10 +530,7 @@ def get_game_details(html, game_id, season):
 
 
 def export_to_csv(df, path, liga, s0):
-    filename = "{}/data/league_{}/all_{}_since{}.csv".format(path,
-                liga,
-                df.name,
-                s0)
+    filename = "{}/data/league_{}/all_{}_since{}.csv".format(path, liga, df.name, s0)
     print("Saving {}".format(filename))
     df.to_csv(filename, index=False)
 
@@ -540,9 +540,6 @@ def show_remaining_time(N, gid, tt):
     if gid % 10 == 0:
         print(
             "Match {0} / {1} ({2:.0f}:{3:02.0f} remaining)".format(
-            gid,
-            N,
-            REM_TIME // 60,
-            REM_TIME - (REM_TIME // 60 * 60),
+                gid, N, REM_TIME // 60, REM_TIME - (REM_TIME // 60 * 60)
             )
-            )
+        )
