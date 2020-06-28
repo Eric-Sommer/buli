@@ -1,5 +1,5 @@
 # collect all final tables for the first 3 leagues since 1990. along with individual ranks
-# compute a score (Bundesliga: 1-18, 2. Bundesliga 19-3
+# compute a score (Bundesliga: 1-18, 2. Bundesliga 19-36, 3.Bundesliga 37-40, all other 40.
 
 from itertools import product
 import re
