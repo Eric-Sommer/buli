@@ -15,16 +15,16 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 0
+CRAWL = 1
 
 
-SEASONS_TO_CRAWL = list(range(1963, 2019))
+SEASONS_TO_CRAWL = list(range(1995, 2020))
 PATH = os.getcwd()
 
 # SET VARIABLES FOR OUTPUT
 TEAMNAME = "Freiburg"
-SPIELTAG = 2
-TEAM_POINTS = 6
+SPIELTAG = 22
+TEAM_POINTS = 32
 
 
 def make_boxplot_by_spieltag(df):
@@ -49,10 +49,11 @@ def make_boxplot_by_spieltag(df):
         plt.title(
             "Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp)
         )
+
         # plt.xlabel('Platzierung')
         plt.ylabel("Punkte")
         plt.text(
-            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2018/19."
+            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2019/20."
         )
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
@@ -302,10 +303,10 @@ def schedule(df):
     """
 
     # get end_rank for each opponent
-    end_rank = df[["team", "season", "rank"]][df['spieltag'] == 34]
+    end_rank = df[["team", "season", "rank"]][df["spieltag"] == 34]
     end_rank = end_rank.rename(columns={"team": "opponent", "rank": "end_rank_opp"})
-    end_pts = df.groupby(["team", "season"], as_index=False)['points_cum'].max()
-    end_pts = end_pts.rename(columns={'points_cum': 'points_end'})
+    end_pts = df.groupby(["team", "season"], as_index=False)["points_cum"].max()
+    end_pts = end_pts.rename(columns={"points_cum": "points_end"})
     # reduce to first 17 games
     df = df[df["spieltag"] <= 17]
     df = pd.merge(df, end_rank, on=["opponent", "season"])
@@ -376,7 +377,7 @@ def game_analysis(df, spieltag, team_points, teamname):
     get_prob_abstieg(df, SPIELTAG, TEAM_POINTS, PATH)
 
     schedule(df)
-    aaa
+
     get_streaks(df)
 
     ewigetabelle(df)
@@ -445,6 +446,7 @@ def clean_all_results(path):
     ] = 0
     for var in list(df):
         #        assert ~df[var].isna().any()
+        print(df[["season", "spieltag"]][df["hometeam"].isna()])
         if var not in ["hometeam", "awayteam"]:
             df[var] = df[var].astype(int)
     #    df = df.rename(columns={"spieltag": "matchday"})
@@ -458,37 +460,34 @@ def create_all_results(path, crawl):
     """
     # Run Crawler for Bundesliga
     if crawl:
-        crawler(path, list(range(1963, 2019)), 1, True)
+        crawler(path, list(range(1963, 2020)), 1, True)
 
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
     df = clean_results_data(df)
-    game_analysis(df, 30, 31, "Freiburg")
+    game_analysis(df, 34, 45, "Freiburg")
 
 
-# create_all_results(PATH, CRAWL)
+create_all_results(PATH, CRAWL)
 
-
+exit
 # START CRAWLING
-for liga in [1, 2, 3]:
+# for liga in [1, 2, 3]:
+for liga in [1]:
     if liga == 3:
         # 3. Liga existent only since 2008
-        seas = list(range(2008, 2019))
+        seas = list(range(2008, 2020))
     elif liga == 2:
-        seas = list(range(1997, 2019))
+        seas = list(range(1997, 2020))
     else:
         seas = SEASONS_TO_CRAWL
 
     if CRAWL == 1:
         crawler(PATH, seas, liga)
 
-    gameresults = pd.read_csv(
-        "data/league_{}/all_game_results_since{}.csv".format(liga, seas[0])
-    )
-    goals = pd.read_csv("data/league_{}/all_goals_since{}.csv".format(liga, seas[0]))
-    lineups = pd.read_csv(
-        "data/league_{}/all_rosters_since{}.csv".format(liga, seas[0])
-    )
+    gameresults = pd.read_csv(f"data/league_{liga}/all_game_results_since{seas[0]}.csv")
+    goals = pd.read_csv(f"data/league_{liga}/all_goals_since{seas[0]}.csv")
+    lineups = pd.read_csv(f"data/league_{liga}/all_rosters_since{seas[0]}.csv")
     # export id's
     player_ids = (
         lineups.groupby("player_id").first().drop(columns=["minute", "role", "game_id"])
