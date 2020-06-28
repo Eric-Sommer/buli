@@ -239,7 +239,7 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
     print(buli_results["season"].value_counts())
     buli_results.to_csv(
         os.path.join(
-            path, f"/data/league_{liga}/all_game_results_since{seasons[0]}.csv"
+            path, f"data/league_{liga}/all_game_results_since{seasons[0]}.csv"
         ),
         index=False,
     )

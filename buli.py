@@ -15,7 +15,7 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 1
+CRAWL = 0
 
 
 SEASONS_TO_CRAWL = list(range(1995, 2020))
@@ -127,12 +127,16 @@ def ewigetabelle(df):
     )
     df["goal_diff_ever"] = df["goals_for_cum_ever"] - df["goals_against_cum_ever"]
     df["points_cum_ever"] = df.groupby(["team"])["pts"].apply(lambda x: x.cumsum())
-    # Number of seasons played. don't know yet how to bring to ewige tabelle
-    n_seasons = df.groupby("team")["season"].unique().apply(len)
-    # n_seasons['team'] = n_seasons.index
-    # also add number of games, including wins, draws, losses
+    df["win"] = (df["goals_for"] > df["goals_against"]).astype(int)
+    df["draw"] = (df["goals_for"] == df["goals_against"]).astype(int)
+    df["loss"] = (df["goals_for"] < df["goals_against"]).astype(int)
 
-    ewigetabelle = df.groupby("team").last()
+    wdl = df.groupby("team")[["win", "draw", "loss"]].sum()
+    wdl["n_games"] = wdl["win"] + wdl["draw"] + wdl["loss"]
+    wdl["n_seasons"] = df.groupby("team")["season"].unique().apply(len)
+
+    ewigetabelle = df.drop(columns=["win", "draw", "loss"]).groupby("team").last().merge(wdl, on="team")
+
     ewigetabelle["team"] = ewigetabelle.index
     ewigetabelle = ewigetabelle.sort_values(
         by=["points_cum_ever", "goal_diff_ever"], ascending=[False, False]
@@ -142,17 +146,35 @@ def ewigetabelle(df):
     )
 
     ewigetabelle = ewigetabelle.replace({"team": get_full_team_names()})
-
-    ewigetabelle[
+    # Reduce colums
+    out = ewigetabelle[
         [
             "rank",
             "team",
+            "n_seasons",
+            "n_games",
+            "win",
+            "draw",
+            "loss",
             "goals_for_cum_ever",
             "goals_against_cum_ever",
             "goal_diff_ever",
             "points_cum_ever",
+
         ]
-    ].to_excel("out/ewigetabelle.xls", index=False)
+    ]
+    out = out.rename(columns={"team": "Team",
+                              "n_seasons": "Total Seasons",
+                              "n_games": "Total Games",
+                              "win": "Wins",
+                              "draw": "Draws",
+                              "loss": "Losses",
+                              "goals_for_cum_ever": "Goals scored",
+                              "goals_against_cum_ever": "Goals conceded",
+                              "goal_diff_ever": "Goal Difference",
+                              "points_cum_ever": "Points"})
+
+    out.to_excel("out/ewigetabelle.xls", index=False)
 
 
 def aufbaugegner(df):
@@ -353,7 +375,12 @@ def prepare_game_analysis_data(df):
     df["rank"] = df.groupby(["season", "spieltag"]).cumcount() + 1
 
     # obtain rank at end of season
-    end_rank = df[["team", "season", "rank"]][df.spieltag == 34]
+    df = df.sort_values(by=["season", "team", "spieltag"])
+    df["letzer_spieltag"] = 34
+    df.loc[df["season"] <= 1964, "letzer_spieltag"] = 30
+    df.loc[df["season"] == 1991, "letzer_spieltag"] = 38
+    end_rank = df[["team", "season", "rank"]][df["spieltag"] == df["letzer_spieltag"]]
+
     end_rank = end_rank.rename(columns={"rank": "end_rank"})
     df = pd.merge(df, end_rank, on=["team", "season"])
 
@@ -365,8 +392,10 @@ def prepare_game_analysis_data(df):
         df["diff" + str(p + 1)] = df["points_cum"] - df["pts" + str(p + 1)]
         df = df.drop(["pts" + str(p + 1)], 1)
 
+    return df
 
-def game_analysis(df, spieltag, team_points, teamname):
+
+def game_analysis(df, spieltag, team_points, teamname, path):
     df = prepare_game_analysis_data(df)
 
     # print("Punktzahl aller Zweitplatzierten am ",spieltag,".Spieltag")
@@ -468,10 +497,10 @@ def create_game_results_since_1963(path, crawl):
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
     df = clean_results_data(df)
-    game_analysis(df, 34, 45, "Freiburg")
+    game_analysis(df, 34, 45, "Freiburg", path)
 
 
-create_all_results(PATH, CRAWL)
+create_game_results_since_1963(PATH, CRAWL)
 
 #create_game_results_since_1963(PATH, CRAWL)
 
@@ -511,7 +540,6 @@ def main(path, spieltag, team_points, teamname, crawl, seasons_to_crawl, leagues
 
         clean_res = clean_results_data(gameresults)
         game_analysis(clean_res, spieltag, team_points, teamname)
->>>>>>> 021a4eff4705f8ea8250f7c1f080ff9a966639ff
 
         # merge lineups to goal data
         goals = goals.rename(columns={"scorer": "player_id"})
@@ -525,7 +553,7 @@ def main(path, spieltag, team_points, teamname, crawl, seasons_to_crawl, leagues
         clean_booking_data(bookings, liga)
 
 # run main analysis
-main(PATH, SPIELTAG, TEAM_POINTS, TEAMNAME, CRAWL, SEASONS_TO_CRAWL)
+# main(PATH, SPIELTAG, TEAM_POINTS, TEAMNAME, CRAWL, SEASONS_TO_CRAWL)
 
 
 """
