@@ -15,7 +15,7 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 0
+CRAWL = 1
 
 
 SEASONS_TO_CRAWL = list(range(1995, 2020))
@@ -492,7 +492,7 @@ def create_game_results_since_1963(path, crawl):
     """
     # Run Crawler for Bundesliga
     if crawl:
-        crawler(path, list(range(1963, 2020)), 1, True)
+        crawler(path, list(range(1963, 2021)), 1, True)
 
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
