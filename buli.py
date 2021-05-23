@@ -15,10 +15,9 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 1
+CRAWL = 0
 
-
-SEASONS_TO_CRAWL = list(range(1995, 2020))
+SEASONS_TO_CRAWL = list(range(1995, 2021))
 PATH = os.getcwd()
 
 # SET VARIABLES FOR OUTPUT
@@ -135,7 +134,12 @@ def ewigetabelle(df):
     wdl["n_games"] = wdl["win"] + wdl["draw"] + wdl["loss"]
     wdl["n_seasons"] = df.groupby("team")["season"].unique().apply(len)
 
-    ewigetabelle = df.drop(columns=["win", "draw", "loss"]).groupby("team").last().merge(wdl, on="team")
+    ewigetabelle = (
+        df.drop(columns=["win", "draw", "loss"])
+        .groupby("team")
+        .last()
+        .merge(wdl, on="team")
+    )
 
     ewigetabelle["team"] = ewigetabelle.index
     ewigetabelle = ewigetabelle.sort_values(
@@ -160,19 +164,22 @@ def ewigetabelle(df):
             "goals_against_cum_ever",
             "goal_diff_ever",
             "points_cum_ever",
-
         ]
     ]
-    out = out.rename(columns={"team": "Team",
-                              "n_seasons": "Total Seasons",
-                              "n_games": "Total Games",
-                              "win": "Wins",
-                              "draw": "Draws",
-                              "loss": "Losses",
-                              "goals_for_cum_ever": "Goals scored",
-                              "goals_against_cum_ever": "Goals conceded",
-                              "goal_diff_ever": "Goal Difference",
-                              "points_cum_ever": "Points"})
+    out = out.rename(
+        columns={
+            "team": "Team",
+            "n_seasons": "Total Seasons",
+            "n_games": "Total Games",
+            "win": "Wins",
+            "draw": "Draws",
+            "loss": "Losses",
+            "goals_for_cum_ever": "Goals scored",
+            "goals_against_cum_ever": "Goals conceded",
+            "goal_diff_ever": "Goal Difference",
+            "points_cum_ever": "Points",
+        }
+    )
 
     out.to_excel("out/ewigetabelle.xls", index=False)
 
@@ -350,6 +357,7 @@ def schedule(df):
         )
     )
 
+
 def prepare_game_analysis_data(df):
     df = df.sort_values(by=["season", "spieltag"])
     goals_mday = df.groupby(["season", "spieltag"])["goals_for"].sum()
@@ -420,9 +428,7 @@ def game_analysis(df, spieltag, team_points, teamname, path):
     df["diff_rank"] = df["end_rank"] - df["rank"]
     df["close"] = abs(df["diff_rank"]) <= 2
     print(
-        "Anteil der aussagekräftigen Platzierungen nach Spieltag: \n {}".format(
-            df.groupby(["spieltag"])["close"].mean()
-        )
+        f"Anteil der aussagekräftigen Platzierungen nach Spieltag: \n {df.groupby(['spieltag'])['close'].mean()}"
     )
 
     teambilanz(df, teamname)
@@ -442,7 +448,7 @@ def goal_analysis(df):
 
     # Torschützenliste
     scorerlist = df["player_name"].value_counts()
-    print("Best Scorers: \n {}".format(scorerlist[scorerlist > 50]))
+    print(f"Best Scorers: \n {scorerlist[scorerlist > 50]}")
     # TO DO: Scorer by team. Need to look for scorer id in lineup.
     # teamtopscorer = df.groupby(["team"])["player_name"].value_counts()
     # teamtopscorer.to_excel("out/scorer_by_team.xlsx")
@@ -500,11 +506,20 @@ def create_game_results_since_1963(path, crawl):
     game_analysis(df, 34, 45, "Freiburg", path)
 
 
-create_game_results_since_1963(PATH, CRAWL)
+# create_game_results_since_1963(PATH, CRAWL)
 
-#create_game_results_since_1963(PATH, CRAWL)
+# create_game_results_since_1963(PATH, CRAWL)
 
-def main(path, spieltag, team_points, teamname, crawl, seasons_to_crawl, leagues_to_crawl=[1,2,3]):
+
+def main(
+    path,
+    spieltag,
+    team_points,
+    teamname,
+    crawl,
+    seasons_to_crawl,
+    leagues_to_crawl=[1, 2, 3],
+):
     """
     Runs through all functions and returns analyses on
     - game results
@@ -523,39 +538,43 @@ def main(path, spieltag, team_points, teamname, crawl, seasons_to_crawl, leagues
             seas = list(range(1997, 2019))
         else:
             seas = seasons_to_crawl
+        if crawl == 1:
+            crawler(path, seas, liga)
 
-        crawler(path, seas, liga)
+    gameresults = pd.read_csv(f"data/league_{liga}/all_game_results_since{seas[0]}.csv")
+    goals = pd.read_csv(f"data/league_{liga}/all_goals_since{seas[0]}.csv")
+    lineups = pd.read_csv(f"data/league_{liga}/all_rosters_since{seas[0]}.csv")
+    # export id's
+    player_ids = (
+        lineups.groupby("player_id").first().drop(columns=["minute", "role", "game_id"])
+    )
 
-        gameresults = pd.read_csv(
-            "data/league_{}/all_game_results_since{}.csv".format(liga, seas[0])
-        )
-        goals = pd.read_csv("data/league_{}/all_goals_since{}.csv".format(liga, seas[0]))
-        lineups = pd.read_csv(
-            "data/league_{}/all_rosters_since{}.csv".format(liga, seas[0])
-        )
-        # export id's
-        player_ids = (
-            lineups.groupby("player_id").first().drop(columns=["minute", "role", "game_id"])
-        )
+    clean_res = clean_results_data(gameresults)
+    game_analysis(clean_res, spieltag, team_points, teamname, path)
 
-        clean_res = clean_results_data(gameresults)
-        game_analysis(clean_res, spieltag, team_points, teamname)
+    # merge lineups to goal data
+    goals = goals.rename(columns={"scorer": "player_id"})
+    goals = goals.merge(player_ids, on="player_id", validate="m:1")
+    # merge teams
+    goals = goals.merge(gameresults, on="game_id", validate="m:1")
+    goal_analysis(goals)
 
-        # merge lineups to goal data
-        goals = goals.rename(columns={"scorer": "player_id"})
-        goals = goals.merge(player_ids, on="player_id", validate="m:1")
-        # merge teams
-        goals = goals.merge(gameresults, on="game_id", validate="m:1")
-        goal_analysis(goals)
+    # create data for individual bookings
+    bookings = pd.read_csv(f"data/league_{liga}/bookings_since{seas[0]}.csv"
+    clean_booking_data(bookings, liga)
 
-        # create data for individual bookings
-        bookings = pd.read_csv("data/league_{}/bookings_since{}.csv".format(liga, seas[0]))
-        clean_booking_data(bookings, liga)
 
 # run main analysis
-# main(PATH, SPIELTAG, TEAM_POINTS, TEAMNAME, CRAWL, SEASONS_TO_CRAWL)
-
-
+main(
+    path=PATH,
+    spieltag=34,
+    team_points=45,
+    teamname="Freiburg",
+    crawl=0,
+    seasons_to_crawl=SEASONS_TO_CRAWL,
+    leagues_to_crawl=[1],
+)
+# crawler(PATH, list(range(2008,2021)), 3, True)
 """
 ranklist=[]
 

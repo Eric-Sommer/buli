@@ -113,20 +113,20 @@ def crawler(path, seasons, liga, resultsonly=False):
             - other (date, place, attendance, referee)
     """
     print(f"CRAWLING LIGA {liga} FROM {seasons[0]} to {seasons[-1]}")
-    datadir = "{}/data/league_{}".format(path, liga)
+    datadir = f"{path}/data/league_{liga}"
     if not os.path.exists(datadir):
         os.mkdir(datadir)
 
-    if not os.path.exists("{}/games".format(datadir)):
-        os.mkdir("{}/games".format(datadir))
+    if not os.path.exists(f"{datadir}/games"):
+        os.mkdir(f"{datadir}/games")
 
-    rawdir = "{}/raw/".format(datadir)
+    rawdir = f"{datadir}/raw/"
     if not os.path.exists(rawdir):
         os.mkdir(rawdir)
 
     for s in seasons:
-        print("Downloading season " + str(s) + "...")
-        if (liga == 3) or ((liga == 1) and (s == 1991)):
+        print(f"Downloading season {s}...")
+        if (liga == 3) or ((liga == 1) and (s == 1991)) or ((liga == 2) and (s <= 1993)):
             n_matchdays = 38
         else:
             n_matchdays = 34
@@ -134,7 +134,7 @@ def crawler(path, seasons, liga, resultsonly=False):
         for sp in range(1, n_matchdays + 1):
             request = MyBrowser.Request(mkURL(s, sp, liga))
 
-            rawfile = "{}kicker_{}_{}.html".format(rawdir, s, sp)
+            rawfile = f"{rawdir}kicker_{s}_{sp}.html"
             # print(f"{mkURL(s, sp, liga)} to {rawfile}.")
             if not os.path.exists(rawfile):
                 dl_and_save(rawfile, request)
@@ -172,7 +172,7 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
 
     for s in seasons:
         # how many matches per matchday?
-        if (liga == 3) or ((liga == 1) and (s == 1991)):
+        if (liga == 3) or ((liga == 1) and (s == 1991)) or ((liga == 2) and (s==1993)):
             n_matches = 10
             spieltage = 38
         elif (liga == 1) & (s <= 1964):
@@ -184,7 +184,6 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
 
         print(f"{s} ")
         for sp in range(1, spieltage + 1):
-
             html_raw = open(
                 f"{rawdir}/kicker_{s}_{sp}.html", "r", encoding="utf-8"
             ).read()
@@ -258,11 +257,9 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
         for g, gid in zip(buli_results["gamelink"], buli_results["game_id"]):
             # check for link being a nonempty string
             if g != "" and isinstance(g, str):
-                gamefile = "{}game_{}.html".format(
-                    "data/league_{}/games/".format(liga), gid
-                )
+                gamefile = f"data/league_{liga}/games/game_{gid}.html"
 
-                request = MyBrowser.Request("http://www.kicker.de{}".format(g))
+                request = MyBrowser.Request(f"http://www.kicker.de{g}")
                 if not os.path.exists(gamefile):
                     html = dl_and_save(gamefile, request)
         tt = pd.Series()
@@ -438,7 +435,7 @@ def get_game_details(html, game_id, season):
                     str(
                         game.find_all(
                             "div",
-                            {"id": "ctl00_PlaceHolderHalf_ctl0{}_anstoss".format(num)},
+                            {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_anstoss"},
                         )[0]
                     ),
                 )[0],
@@ -447,7 +444,7 @@ def get_game_details(html, game_id, season):
                     str(
                         game.find_all(
                             "div",
-                            {"id": "ctl00_PlaceHolderHalf_ctl0{}_stadion".format(num)},
+                            {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_stadion"},
                         )[0]
                     ),
                 )[0],
@@ -458,9 +455,7 @@ def get_game_details(html, game_id, season):
                             game.find_all(
                                 "div",
                                 {
-                                    "id": "ctl00_PlaceHolderHalf_ctl0{}_zuschauer".format(
-                                        num
-                                    )
+                                    "id": f"ctl00_PlaceHolderHalf_ctl0{num}_zuschauer"
                                 },
                             )[0]
                         ),
@@ -472,9 +467,7 @@ def get_game_details(html, game_id, season):
                         game.find_all(
                             "div",
                             {
-                                "id": "ctl00_PlaceHolderHalf_ctl0{}_schiedsrichter".format(
-                                    num
-                                )
+                                "id": f"ctl00_PlaceHolderHalf_ctl0{num}_schiedsrichter"
                             },
                         )[0]
                     ),
@@ -483,7 +476,7 @@ def get_game_details(html, game_id, season):
             index=[game_id],
         )
     except IndexError:
-        print("Error in fetching match details for id {}".format(game_id))
+        print(f"Error in fetching match details for id {game_id}")
         other_game_details = pd.DataFrame(
             columns=["game_id", "date", "stadium", "attendance", "schiri"]
         )
@@ -534,8 +527,8 @@ def get_game_details(html, game_id, season):
 
 
 def export_to_csv(df, path, liga, s0):
-    filename = "{}/data/league_{}/all_{}_since{}.csv".format(path, liga, df.name, s0)
-    print("Saving {}".format(filename))
+    filename = f"{path}/data/league_{liga}/all_{df.name}_since{s0}.csv"
+    print(f"Saving {filename}")
     df.to_csv(filename, index=False)
 
 
