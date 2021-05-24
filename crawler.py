@@ -126,7 +126,11 @@ def crawler(path, seasons, liga, resultsonly=False):
 
     for s in seasons:
         print(f"Downloading season {s}...")
-        if (liga == 3) or ((liga == 1) and (s == 1991)) or ((liga == 2) and (s <= 1993)):
+        if (
+            (liga == 3)
+            or ((liga == 1) and (s == 1991))
+            or ((liga == 2) and (s <= 1993))
+        ):
             n_matchdays = 38
         else:
             n_matchdays = 34
@@ -172,7 +176,11 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
 
     for s in seasons:
         # how many matches per matchday?
-        if (liga == 3) or ((liga == 1) and (s == 1991)) or ((liga == 2) and (s==1993)):
+        if (
+            (liga == 3)
+            or ((liga == 1) and (s == 1991))
+            or ((liga == 2) and (s == 1993))
+        ):
             n_matches = 10
             spieltage = 38
         elif (liga == 1) & (s <= 1964):
@@ -434,8 +442,7 @@ def get_game_details(html, game_id, season):
                     'wert">(.+?)</div',
                     str(
                         game.find_all(
-                            "div",
-                            {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_anstoss"},
+                            "div", {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_anstoss"}
                         )[0]
                     ),
                 )[0],
@@ -443,8 +450,7 @@ def get_game_details(html, game_id, season):
                     'wert">(.+?)</div',
                     str(
                         game.find_all(
-                            "div",
-                            {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_stadion"},
+                            "div", {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_stadion"}
                         )[0]
                     ),
                 )[0],
@@ -454,9 +460,7 @@ def get_game_details(html, game_id, season):
                         str(
                             game.find_all(
                                 "div",
-                                {
-                                    "id": f"ctl00_PlaceHolderHalf_ctl0{num}_zuschauer"
-                                },
+                                {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_zuschauer"},
                             )[0]
                         ),
                     )[0]
@@ -466,9 +470,7 @@ def get_game_details(html, game_id, season):
                     str(
                         game.find_all(
                             "div",
-                            {
-                                "id": f"ctl00_PlaceHolderHalf_ctl0{num}_schiedsrichter"
-                            },
+                            {"id": f"ctl00_PlaceHolderHalf_ctl0{num}_schiedsrichter"},
                         )[0]
                     ),
                 )[0],

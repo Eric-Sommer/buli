@@ -15,7 +15,7 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 0
+CRAWL = 1
 
 SEASONS_TO_CRAWL = list(range(1995, 2021))
 PATH = os.getcwd()
@@ -52,7 +52,7 @@ def make_boxplot_by_spieltag(df):
         # plt.xlabel('Platzierung')
         plt.ylabel("Punkte")
         plt.text(
-            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2019/20."
+            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2020/21."
         )
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
@@ -67,10 +67,7 @@ def get_prob_abstieg(df, spieltag, team_points, path, min_season=1980):
     ]
 
     with open(
-        os.path.join(
-            path, "out/bl_hist_sp" + str(spieltag) + "pt" + str(team_points) + ".txt"
-        ),
-        "w",
+        os.path.join(path, f"out/bl_hist_sp{spieltag}pt{team_points}.txt"), "w"
     ) as outfile:
         export.to_string(outfile)
     """
@@ -118,14 +115,12 @@ def ewigetabelle(df):
     # Now, create Rank.
     df = df.sort_values(by=["season", "team", "spieltag"])
     # various cumulative sums
-    df["goals_for_cum_ever"] = df.groupby(["team"])["goals_for"].apply(
-        lambda x: x.cumsum()
-    )
-    df["goals_against_cum_ever"] = df.groupby(["team"])["goals_against"].apply(
-        lambda x: x.cumsum()
+    df["goals_for_cum_ever"] = df.groupby(["team"])["goals_for"].transform("cumsum")
+    df["goals_against_cum_ever"] = df.groupby(["team"])["goals_against"].transform(
+        "cumsum"
     )
     df["goal_diff_ever"] = df["goals_for_cum_ever"] - df["goals_against_cum_ever"]
-    df["points_cum_ever"] = df.groupby(["team"])["pts"].apply(lambda x: x.cumsum())
+    df["points_cum_ever"] = df.groupby(["team"])["pts"].transform("cumsum")
     df["win"] = (df["goals_for"] > df["goals_against"]).astype(int)
     df["draw"] = (df["goals_for"] == df["goals_against"]).astype(int)
     df["loss"] = (df["goals_for"] < df["goals_against"]).astype(int)
@@ -197,6 +192,7 @@ def aufbaugegner(df):
         + df["pts"].shift(2)
         + df["pts"].shift(1)
     )
+    # Aufbaugegner is defined as losing against a team that made less than 3 points in the last five matches.
     df["relief"] = (df["pts"] == 3) & (df["pts5g"] <= 3)
     print("Aufbaugegner:\n {}".format(df[df["relief"]]["opponent"].value_counts()))
 
@@ -216,14 +212,14 @@ def teambilanz(df, teamname="Freiburg"):
     bilanz["games"] = bilanz["win"] + bilanz["draw"] + bilanz["loss"]
     bilanz["winshare"] = bilanz["win"] / bilanz["games"]
     bilanz["avg_pts"] = bilanz["pts"] / bilanz["games"]
-    bilanz = bilanz.sort_values(by=["winshare"], ascending=[False])
+    bilanz = bilanz.sort_values(by=["avg_pts"], ascending=[False])
 
-    print("Bilanz von {} produces".format(teamname))
+    print(f"Bilanz von {teamname} erzeugt...")
     # print(bilanz[["pts", "goal_diff", "games", "win", "draw", "loss", "winshare", "avg_pts"]])
     bilanz[
         ["pts", "goal_diff", "games", "win", "draw", "loss", "winshare", "avg_pts"]
-    ].to_excel("out/teambilanz{}.xlsx".format(teamname))
-    print("Spiele von {} mit mind. 5 Toren".format(teamname))
+    ].to_excel(f"out/teambilanz{teamname}.xlsx")
+    print(f"Spiele von {teamname} mit mind. 5 Toren")
     print(
         df[["season", "spieltag", "team", "opponent", "goals_for", "goals_against"]][
             (df["team"] == teamname) & (df["goals_for"] >= 5)
@@ -366,15 +362,16 @@ def prepare_game_analysis_data(df):
 
     # Now, create Rank.
     df = df.sort_values(by=["season", "team", "spieltag"])
+    print(df.columns)
     # various cumulative sums
-    df["goals_for_cum"] = df.groupby(["season", "team"])["goals_for"].apply(
-        lambda x: x.cumsum()
+    df["goals_for_cum"] = df.groupby(["season", "team"])["goals_for"].transform(
+        "cumsum"
     )
-    df["goals_against_cum"] = df.groupby(["season", "team"])["goals_against"].apply(
-        lambda x: x.cumsum()
+    df["goals_against_cum"] = df.groupby(["season", "team"])["goals_against"].transform(
+        "cumsum"
     )
     df["goal_diff"] = df["goals_for_cum"] - df["goals_against_cum"]
-    df["points_cum"] = df.groupby(["season", "team"])["pts"].apply(lambda x: x.cumsum())
+    df["points_cum"] = df.groupby(["season", "team"])["pts"].transform("cumsum")
 
     df = df.sort_values(
         by=["season", "spieltag", "points_cum", "goal_diff"],
@@ -463,7 +460,7 @@ def clean_all_results(path):
     df = df[df["season"] != ""]
     df = df[~df["season"].isna()]
     dropthese = (df["season"] <= 1964) & (df["spieltag"] >= 31)
-    df = df[~dropthese]
+    df = df[~dropthese].copy()
 
     # a number of manual corrections
     for var in ["hometeam", "awayteam"]:
@@ -505,10 +502,7 @@ def create_game_results_since_1963(path, crawl):
     df = clean_results_data(df)
     game_analysis(df, 34, 45, "Freiburg", path)
 
-
-# create_game_results_since_1963(PATH, CRAWL)
-
-# create_game_results_since_1963(PATH, CRAWL)
+    return None
 
 
 def main(
@@ -560,21 +554,12 @@ def main(
     goal_analysis(goals)
 
     # create data for individual bookings
-    bookings = pd.read_csv(f"data/league_{liga}/bookings_since{seas[0]}.csv"
+    bookings = pd.read_csv(f"data/league_{liga}/bookings_since{seas[0]}.csv")
     clean_booking_data(bookings, liga)
 
 
-# run main analysis
-main(
-    path=PATH,
-    spieltag=34,
-    team_points=45,
-    teamname="Freiburg",
-    crawl=0,
-    seasons_to_crawl=SEASONS_TO_CRAWL,
-    leagues_to_crawl=[1],
-)
-# crawler(PATH, list(range(2008,2021)), 3, True)
+create_game_results_since_1963(PATH, CRAWL)
+# crawler(PATH, list(range(1993,2021)), 1, False)
 """
 ranklist=[]
 

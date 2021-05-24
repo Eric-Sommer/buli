@@ -12,7 +12,7 @@ from bokeh.models import Range1d, HoverTool
 
 discount_faktor = 0.04
 
-TEAM_HIGHLIGHT = "SC Freiburg"
+TEAM_HIGHLIGHT = "Freiburg"
 
 
 def collect():
@@ -25,7 +25,7 @@ def collect():
             firstyear = 2008
         else:
             firstyear = 1993
-        for s in list(range(firstyear, 2020)):
+        for s in list(range(firstyear, 2021)):
             if (
                 (liga == 3)
                 or ((liga == 1) and (s == 1991))
@@ -41,7 +41,7 @@ def collect():
                 encoding="utf-8",
             ).read()
 
-            clubs = re.findall('class="link verinsLinkBild" style="">(.+?)</a>', html)
+            clubs = re.findall('table--show-desktop">(.+?)</span>', html)
 
             onetable = pd.DataFrame(
                 {
@@ -69,10 +69,14 @@ for pat in [
     r" \(P, A\)",
 ]:
     df["team"] = df["team"].str.replace(pat, "")
+df["team"] = df["team"].str.replace("&#246;", "ö")
+df["team"] = df["team"].str.replace("&#223;", "ß")
+df["team"] = df["team"].str.replace("&#252;", "ü")
+df["team"] = df["team"].str.replace("&#39;", "'")
 
 df["season"] = df["season"].astype(int)
 # keep only teams which played at least 2. bundesliga
-df = df.join(df.groupby("team")["liga"].min(), on="team", how="left", rsuffix="_min")
+df["liga_min"] = df.groupby("team")["liga"].transform("min")
 df = df[df["liga_min"] <= 2]
 
 # fill teams+years for missing years and assign them a score of 40.
