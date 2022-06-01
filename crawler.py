@@ -37,9 +37,7 @@ def mkURL(season, spieltag, liga):
     ligastr1 = {1: "bundesliga", 2: "2bundesliga", 3: "3-liga"}
     ligastr2 = {1: "1-bundesliga", 2: "2-bundesliga", 3: "3-liga"}
     seasonstring = str(season) + "-" + str(season + 1)[-2:]
-    url = "http://www.kicker.de/news/fussball/{}/spieltag/{}/{}/{}/spieltag.html".format(
-        ligastr1[liga], ligastr2[liga], seasonstring, spieltag
-    )
+    url = f"http://www.kicker.de/news/fussball/{ligastr1[liga]}/spieltag/{ligastr2[liga]}/{seasonstring}/{spieltag}/spieltag.html"
     return url
 
 
@@ -50,10 +48,10 @@ def dl_and_save(targetfile, request):
     try:
         response = MyBrowser.urlopen(request)
     except:
-        print("Request {} not possible".format(request))
+        print(f"Request {request} not possible")
         return ""
 
-    print("Writing {}".format(targetfile))
+    print(f"Writing {targetfile}")
     page = response.read()
     file = open(targetfile, "wb")
     file.write(page)
@@ -74,14 +72,14 @@ def clean_roster(roster, gid, sub=False):
         try:
             assert len(df) <= 3
         except AssertionError:
-            print("Warning: Too many substituions in Game {}".format(gid))
+            print(f"Warning: Too many substituions in Game {gid}")
 
     else:
         df = pd.DataFrame(roster, columns=["player_id", "player_name"])
         try:
             assert len(df) == 11
         except AssertionError:
-            print("Warning: Too many players in one team in Game {}".format(gid))
+            print(f"Warning: Too many players in one team in Game {gid}")
 
     df["player_id"] = df["player_id"].astype(int)
 
@@ -197,7 +195,7 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
             ).read()
             # Kick out postponed games
             html = html_raw.split("Verlegte Spielpaarungen")[0]
-
+            html = html.split("Weitere Spielpaarungen")[0]
             try:
                 all_teams = np.array(re.findall(TeamRegEx, html)).reshape(
                     (n_matches, 2)

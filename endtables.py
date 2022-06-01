@@ -25,7 +25,7 @@ def collect():
             firstyear = 2008
         else:
             firstyear = 1993
-        for s in list(range(firstyear, 2021)):
+        for s in list(range(firstyear, 2022)):
             if (
                 (liga == 3)
                 or ((liga == 1) and (s == 1991))

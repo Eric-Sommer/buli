@@ -17,7 +17,7 @@ from crawler import crawler, correct_names
 # Crawl and reproduce data?
 CRAWL = 1
 
-SEASONS_TO_CRAWL = list(range(1995, 2021))
+SEASONS_TO_CRAWL = list(range(1963, 2022))
 PATH = os.getcwd()
 
 # SET VARIABLES FOR OUTPUT
@@ -52,7 +52,7 @@ def make_boxplot_by_spieltag(df):
         # plt.xlabel('Platzierung')
         plt.ylabel("Punkte")
         plt.text(
-            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2020/21."
+            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2021/22."
         )
         plt.savefig("out/box_" + str(sp) + ".png")
         plt.close()
@@ -176,7 +176,7 @@ def ewigetabelle(df):
         }
     )
 
-    out.to_excel("out/ewigetabelle.xls", index=False)
+    out.to_excel("out/ewigetabelle.xlsx", index=False)
 
 
 def aufbaugegner(df):
@@ -201,7 +201,7 @@ def teambilanz(df, teamname="Freiburg"):
     """ Show historical matchup of a team against all other Teams.
     """
     # keep only team
-    teamdf = df[df["team"] == teamname]
+    teamdf = df[df["team"] == teamname].copy()
     teamdf["win"] = 1 * (teamdf["goals_for"] > teamdf["goals_against"])
     teamdf["draw"] = 1 * (teamdf["goals_for"] == teamdf["goals_against"])
     teamdf["loss"] = 1 * (teamdf["goals_for"] < teamdf["goals_against"])
@@ -298,8 +298,8 @@ def clean_results_data(df):
     dfaway["goals_for"] = dfaway["awaygoals"]
     dfaway["goals_against"] = dfaway["homegoals"]
 
-    dfhome = dfhome.drop(["hometeam", "awayteam", "homegoals", "awaygoals"], 1)
-    dfaway = dfaway.drop(["hometeam", "awayteam", "homegoals", "awaygoals"], 1)
+    dfhome = dfhome.drop(columns=["hometeam", "awayteam", "homegoals", "awaygoals"])
+    dfaway = dfaway.drop(columns=["hometeam", "awayteam", "homegoals", "awaygoals"])
     dfhome["home"] = 1
     dfaway["home"] = 0
     # Packe home und away zusammen
@@ -343,7 +343,7 @@ def schedule(df):
     )
     schedules = pd.DataFrame({"hard_1": sched_diff_1 < 8, "hard_2": sched_diff_2 < 8})
     schedules = schedules.merge(
-        df[["team", "season", "points_end"]], on=["team", "season"], left_index=True
+        df[["team", "season", "points_end"]], on=["team", "season"]
     )
     # Output
     print(
@@ -495,7 +495,7 @@ def create_game_results_since_1963(path, crawl):
     """
     # Run Crawler for Bundesliga
     if crawl:
-        crawler(path, list(range(1963, 2021)), 1, True)
+        crawler(path, list(range(1963, 2022)), 1, True)
 
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
@@ -558,8 +558,8 @@ def main(
     clean_booking_data(bookings, liga)
 
 
-create_game_results_since_1963(PATH, CRAWL)
-# crawler(PATH, list(range(1993,2021)), 1, False)
+# create_game_results_since_1963(PATH, CRAWL)
+crawler(PATH, list(range(2008, 2022)), 3, True)
 """
 ranklist=[]
 
