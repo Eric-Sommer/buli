@@ -15,7 +15,7 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 1
+CRAWL = 0
 
 SEASONS_TO_CRAWL = list(range(1963, 2022))
 PATH = os.getcwd()
@@ -23,7 +23,7 @@ PATH = os.getcwd()
 # SET VARIABLES FOR OUTPUT
 TEAMNAME = "Freiburg"
 SPIELTAG = 22
-TEAM_POINTS = 32
+TEAM_POINTS = 42
 
 
 def make_boxplot_by_spieltag(df):
@@ -54,7 +54,7 @@ def make_boxplot_by_spieltag(df):
         plt.text(
             0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2021/22."
         )
-        plt.savefig("out/box_" + str(sp) + ".png")
+        plt.savefig(f"out/box_{p}.png")
         plt.close()
 
 
@@ -394,8 +394,8 @@ def prepare_game_analysis_data(df):
         temp = df[["season", "spieltag", "points_cum"]][df["rank"] == p + 1]
         temp = temp.rename(columns={"points_cum": "pts" + str(p + 1)})
         df = pd.merge(df, temp, on=["season", "spieltag"])
-        df["diff" + str(p + 1)] = df["points_cum"] - df["pts" + str(p + 1)]
-        df = df.drop(["pts" + str(p + 1)], 1)
+        df[f"diff{p+1}"] = df["points_cum"] - df[f"pts{p+1}"]
+        df = df.drop(columns=[f"pts{p+1}"])
 
     return df
 
@@ -559,7 +559,7 @@ def main(
 
 
 # create_game_results_since_1963(PATH, CRAWL)
-crawler(PATH, list(range(2008, 2022)), 3, True)
+crawler(PATH, list(rangec(2008, 2022)), 1, True)
 """
 ranklist=[]
 
