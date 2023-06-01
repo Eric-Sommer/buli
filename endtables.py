@@ -10,7 +10,7 @@ from bokeh.plotting import figure
 from bokeh.io import output_file, show
 from bokeh.models import Range1d, HoverTool
 
-discount_faktor = 0.04
+discount_faktor = 0.1
 
 TEAM_HIGHLIGHT = "Freiburg"
 
@@ -25,7 +25,7 @@ def collect():
             firstyear = 2008
         else:
             firstyear = 1993
-        for s in list(range(firstyear, 2022)):
+        for s in list(range(firstyear, 2023)):
             if (
                 (liga == 3)
                 or ((liga == 1) and (s == 1991))
@@ -52,7 +52,7 @@ def collect():
                 }
             )
 
-            tables = tables.append(onetable)
+            tables = pd.concat([tables, onetable])
 
     return tables
 
@@ -131,12 +131,12 @@ plt.title(titlestring)
 plt.savefig("{}.png".format(filename))
 
 # Now Try the same thing with bokeh
-for graph in [filename, "{}_top20".format(filename)]:
-    output_file("{}.html".format(graph))
-    if graph == "{}_top20".format(filename):
+for graph in [filename, f"{filename}_top20"]:
+    output_file(f"{graph}.html")
+    if graph == f"{filename}_top20":
         out = out[:20]
 
-    p = figure(x_range=out["team"], plot_height=500, plot_width=1000, title=titlestring)
+    p = figure(x_range=out["team"], height=500, width=1000, title=titlestring)
     colorlist = np.select(
         [out["team"] != TEAM_HIGHLIGHT, out["team"] == TEAM_HIGHLIGHT],
         ["blue", "orange"],

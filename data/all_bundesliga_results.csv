@@ -791,7 +791,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,1,Hamburger SV,Hannover,2,1
 1966,1,Stuttgart,Nürnberg,1,0
 1966,1,K'lautern,Karlsruhe,3,1
-1966,1,Duisburg,RW Essen,2,0
+1966,1,Duisburg,Essen,2,0
 1966,1,Schalke,Gladbach,0,0
 1966,1,Bayern,Frankfurt,1,2
 1966,2,1860 München,Braunschweig,2,1
@@ -800,7 +800,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,2,Karlsruhe,Hamburger SV,1,1
 1966,2,Nürnberg,Duisburg,3,1
 1966,2,Gladbach,K'lautern,1,1
-1966,2,RW Essen,Schalke,4,1
+1966,2,Essen,Schalke,4,1
 1966,2,Frankfurt,Köln,4,0
 1966,2,Hannover,Dortmund,2,0
 1966,3,Stuttgart,1860 München,2,0
@@ -808,7 +808,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,3,Duisburg,Bremen,1,0
 1966,3,Hamburger SV,Gladbach,2,0
 1966,3,Schalke,Nürnberg,1,0
-1966,3,K'lautern,RW Essen,5,2
+1966,3,K'lautern,Essen,5,2
 1966,3,Dortmund,Karlsruhe,2,1
 1966,3,Braunschweig,Köln,1,0
 1966,3,Düsseldorf,Frankfurt,2,4
@@ -816,7 +816,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,4,1860 München,Duisburg,3,3
 1966,4,Karlsruhe,Bayern,1,6
 1966,4,Bremen,Schalke,2,1
-1966,4,RW Essen,Hamburger SV,1,1
+1966,4,Essen,Hamburger SV,1,1
 1966,4,Nürnberg,K'lautern,1,2
 1966,4,Gladbach,Dortmund,4,0
 1966,4,Köln,Stuttgart,3,1
@@ -825,13 +825,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,5,Bayern,Gladbach,4,3
 1966,5,K'lautern,Bremen,2,0
 1966,5,Hamburger SV,Nürnberg,0,1
-1966,5,Dortmund,RW Essen,0,0
+1966,5,Dortmund,Essen,0,0
 1966,5,Duisburg,Köln,1,0
 1966,5,Düsseldorf,Karlsruhe,1,0
 1966,5,Stuttgart,Braunschweig,1,2
 1966,5,Hannover,Frankfurt,2,1
 1966,6,1860 München,K'lautern,3,0
-1966,6,RW Essen,Bayern,3,1
+1966,6,Essen,Bayern,3,1
 1966,6,Bremen,Hamburger SV,5,1
 1966,6,Nürnberg,Dortmund,2,0
 1966,6,Köln,Schalke,2,1
@@ -843,7 +843,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,7,Bayern,Nürnberg,0,1
 1966,7,Dortmund,Bremen,2,0
 1966,7,K'lautern,Köln,0,0
-1966,7,Düsseldorf,RW Essen,2,0
+1966,7,Düsseldorf,Essen,2,0
 1966,7,Schalke,Braunschweig,0,0
 1966,7,Hannover,Gladbach,1,1
 1966,7,Duisburg,Stuttgart,0,0
@@ -853,7 +853,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,8,Köln,Hamburger SV,0,0
 1966,8,Nürnberg,Düsseldorf,4,2
 1966,8,Braunschweig,K'lautern,2,0
-1966,8,RW Essen,Hannover,3,0
+1966,8,Essen,Hannover,3,0
 1966,8,Stuttgart,Schalke,1,1
 1966,8,Gladbach,Karlsruhe,3,1
 1966,8,Frankfurt,Duisburg,1,0
@@ -862,7 +862,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,9,Hamburger SV,Braunschweig,1,0
 1966,9,Hannover,Nürnberg,2,0
 1966,9,K'lautern,Stuttgart,3,3
-1966,9,Karlsruhe,RW Essen,0,1
+1966,9,Karlsruhe,Essen,0,1
 1966,9,Schalke,Duisburg,2,1
 1966,9,Gladbach,Frankfurt,0,0
 1966,9,Dortmund,Köln,6,1
@@ -872,7 +872,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,10,Stuttgart,Hamburger SV,1,3
 1966,10,Nürnberg,Karlsruhe,2,2
 1966,10,Duisburg,K'lautern,1,1
-1966,10,RW Essen,Gladbach,2,1
+1966,10,Essen,Gladbach,2,1
 1966,10,Frankfurt,Schalke,4,2
 1966,10,Braunschweig,Dortmund,3,1
 1966,11,Hannover,1860 München,2,2
@@ -881,28 +881,28 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,11,Hamburger SV,Duisburg,0,0
 1966,11,Gladbach,Nürnberg,2,0
 1966,11,K'lautern,Schalke,1,0
-1966,11,RW Essen,Frankfurt,1,1
+1966,11,Essen,Frankfurt,1,1
 1966,11,Dortmund,Stuttgart,1,1
 1966,11,Düsseldorf,Köln,1,3
 1966,12,1860 München,Karlsruhe,3,0
 1966,12,Stuttgart,Bayern,2,4
 1966,12,Bremen,Gladbach,2,2
 1966,12,Schalke,Hamburger SV,2,0
-1966,12,Nürnberg,RW Essen,1,1
+1966,12,Nürnberg,Essen,1,1
 1966,12,Frankfurt,K'lautern,1,1
 1966,12,Duisburg,Dortmund,1,5
 1966,12,Köln,Hannover,1,1
 1966,12,Braunschweig,Düsseldorf,4,0
 1966,13,Gladbach,1860 München,2,3
 1966,13,Bayern,Duisburg,2,1
-1966,13,RW Essen,Bremen,0,1
+1966,13,Essen,Bremen,0,1
 1966,13,Hamburger SV,K'lautern,1,0
 1966,13,Nürnberg,Frankfurt,0,1
 1966,13,Dortmund,Schalke,6,2
 1966,13,Karlsruhe,Köln,1,1
 1966,13,Düsseldorf,Stuttgart,3,3
 1966,13,Hannover,Braunschweig,4,2
-1966,14,1860 München,RW Essen,1,0
+1966,14,1860 München,Essen,1,0
 1966,14,Schalke,Bayern,2,1
 1966,14,Bremen,Nürnberg,4,4
 1966,14,Frankfurt,Hamburger SV,1,3
@@ -915,14 +915,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,15,Bayern,K'lautern,5,0
 1966,15,Frankfurt,Bremen,4,1
 1966,15,Hamburger SV,Dortmund,1,1
-1966,15,RW Essen,Köln,1,3
+1966,15,Essen,Köln,1,3
 1966,15,Düsseldorf,Schalke,3,1
 1966,15,Gladbach,Braunschweig,0,0
 1966,15,Hannover,Duisburg,3,0
 1966,15,Karlsruhe,Stuttgart,4,1
 1966,16,1860 München,Bremen,2,1
 1966,16,Hamburger SV,Bayern,3,1
-1966,16,Braunschweig,RW Essen,0,0
+1966,16,Braunschweig,Essen,0,0
 1966,16,Schalke,Hannover,2,1
 1966,16,Stuttgart,Gladbach,0,2
 1966,16,K'lautern,Düsseldorf,2,1
@@ -935,7 +935,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,17,Düsseldorf,Hamburger SV,2,2
 1966,17,Nürnberg,Braunschweig,0,4
 1966,17,Hannover,K'lautern,2,1
-1966,17,RW Essen,Stuttgart,1,3
+1966,17,Essen,Stuttgart,1,3
 1966,17,Karlsruhe,Schalke,1,0
 1966,17,Gladbach,Duisburg,3,3
 1966,18,1860 München,Köln,2,1
@@ -944,7 +944,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,18,Hannover,Hamburger SV,1,0
 1966,18,Nürnberg,Stuttgart,3,3
 1966,18,Karlsruhe,K'lautern,2,2
-1966,18,RW Essen,Duisburg,0,1
+1966,18,Essen,Duisburg,0,1
 1966,18,Gladbach,Schalke,11,0
 1966,18,Frankfurt,Bayern,2,1
 1966,19,Braunschweig,1860 München,1,0
@@ -953,7 +953,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,19,Hamburger SV,Karlsruhe,1,0
 1966,19,Duisburg,Nürnberg,2,0
 1966,19,K'lautern,Gladbach,1,0
-1966,19,Schalke,RW Essen,1,1
+1966,19,Schalke,Essen,1,1
 1966,19,Köln,Frankfurt,1,4
 1966,19,Dortmund,Hannover,3,0
 1966,20,1860 München,Stuttgart,1,1
@@ -961,14 +961,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,20,Bremen,Duisburg,1,1
 1966,20,Gladbach,Hamburger SV,4,2
 1966,20,Nürnberg,Schalke,0,4
-1966,20,RW Essen,K'lautern,1,1
+1966,20,Essen,K'lautern,1,1
 1966,20,Karlsruhe,Dortmund,2,0
 1966,20,Köln,Braunschweig,1,0
 1966,20,Frankfurt,Düsseldorf,3,0
 1966,21,Duisburg,1860 München,1,2
 1966,21,Bayern,Karlsruhe,2,2
 1966,21,Schalke,Bremen,0,1
-1966,21,Hamburger SV,RW Essen,1,1
+1966,21,Hamburger SV,Essen,1,1
 1966,21,K'lautern,Nürnberg,1,1
 1966,21,Dortmund,Gladbach,3,2
 1966,21,Stuttgart,Köln,2,2
@@ -978,14 +978,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,22,Gladbach,Bayern,1,2
 1966,22,Bremen,K'lautern,1,1
 1966,22,Nürnberg,Hamburger SV,1,0
-1966,22,RW Essen,Dortmund,1,1
+1966,22,Essen,Dortmund,1,1
 1966,22,Köln,Duisburg,1,1
 1966,22,Karlsruhe,Düsseldorf,3,2
 1966,22,Braunschweig,Stuttgart,1,1
 1966,22,Frankfurt,Hannover,3,3
 1966,23,Duisburg,Braunschweig,0,0
 1966,23,K'lautern,1860 München,0,3
-1966,23,Bayern,RW Essen,4,1
+1966,23,Bayern,Essen,4,1
 1966,23,Hamburger SV,Bremen,1,1
 1966,23,Dortmund,Nürnberg,0,1
 1966,23,Schalke,Köln,1,0
@@ -996,7 +996,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,24,Nürnberg,Bayern,0,1
 1966,24,Bremen,Dortmund,2,1
 1966,24,Köln,K'lautern,2,1
-1966,24,RW Essen,Düsseldorf,0,4
+1966,24,Essen,Düsseldorf,0,4
 1966,24,Braunschweig,Schalke,1,0
 1966,24,Gladbach,Hannover,2,0
 1966,24,Stuttgart,Duisburg,1,3
@@ -1006,7 +1006,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,25,Hamburger SV,Köln,1,3
 1966,25,Düsseldorf,Nürnberg,2,2
 1966,25,K'lautern,Braunschweig,2,0
-1966,25,Hannover,RW Essen,1,0
+1966,25,Hannover,Essen,1,0
 1966,25,Schalke,Stuttgart,2,0
 1966,25,Karlsruhe,Gladbach,3,3
 1966,25,Duisburg,Frankfurt,0,0
@@ -1015,7 +1015,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,26,Braunschweig,Hamburger SV,2,0
 1966,26,Nürnberg,Hannover,1,1
 1966,26,Stuttgart,K'lautern,0,1
-1966,26,RW Essen,Karlsruhe,3,1
+1966,26,Essen,Karlsruhe,3,1
 1966,26,Duisburg,Schalke,3,0
 1966,26,Frankfurt,Gladbach,1,0
 1966,26,Köln,Dortmund,1,1
@@ -1025,7 +1025,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,27,Hamburger SV,Stuttgart,1,1
 1966,27,Karlsruhe,Nürnberg,0,1
 1966,27,K'lautern,Duisburg,0,0
-1966,27,Gladbach,RW Essen,4,3
+1966,27,Gladbach,Essen,4,3
 1966,27,Schalke,Frankfurt,1,1
 1966,27,Dortmund,Braunschweig,0,0
 1966,28,1860 München,Hannover,3,0
@@ -1034,21 +1034,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,28,Duisburg,Hamburger SV,2,1
 1966,28,Nürnberg,Gladbach,1,0
 1966,28,Schalke,K'lautern,0,3
-1966,28,Frankfurt,RW Essen,5,0
+1966,28,Frankfurt,Essen,5,0
 1966,28,Stuttgart,Dortmund,1,0
 1966,28,Köln,Düsseldorf,2,0
 1966,29,Karlsruhe,1860 München,3,1
 1966,29,Bayern,Stuttgart,1,1
 1966,29,Gladbach,Bremen,1,1
 1966,29,Hamburger SV,Schalke,1,1
-1966,29,RW Essen,Nürnberg,1,1
+1966,29,Essen,Nürnberg,1,1
 1966,29,K'lautern,Frankfurt,1,1
 1966,29,Dortmund,Duisburg,4,1
 1966,29,Hannover,Köln,0,1
 1966,29,Düsseldorf,Braunschweig,1,1
 1966,30,1860 München,Gladbach,4,3
 1966,30,Duisburg,Bayern,0,0
-1966,30,Bremen,RW Essen,0,0
+1966,30,Bremen,Essen,0,0
 1966,30,K'lautern,Hamburger SV,2,1
 1966,30,Frankfurt,Nürnberg,1,4
 1966,30,Schalke,Dortmund,1,4
@@ -1056,7 +1056,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,30,Stuttgart,Düsseldorf,3,1
 1966,30,Braunschweig,Hannover,0,1
 1966,31,Gladbach,Köln,3,0
-1966,31,RW Essen,1860 München,2,2
+1966,31,Essen,1860 München,2,2
 1966,31,Bayern,Schalke,5,0
 1966,31,Nürnberg,Bremen,2,1
 1966,31,Hamburger SV,Frankfurt,0,2
@@ -1068,7 +1068,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,32,K'lautern,Bayern,1,0
 1966,32,Bremen,Frankfurt,3,0
 1966,32,Dortmund,Hamburger SV,7,0
-1966,32,Köln,RW Essen,2,1
+1966,32,Köln,Essen,2,1
 1966,32,Schalke,Düsseldorf,2,1
 1966,32,Braunschweig,Gladbach,2,1
 1966,32,Duisburg,Hannover,3,0
@@ -1077,7 +1077,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,33,Bayern,Hamburger SV,3,1
 1966,33,Nürnberg,Köln,1,1
 1966,33,Düsseldorf,K'lautern,3,1
-1966,33,RW Essen,Braunschweig,0,0
+1966,33,Essen,Braunschweig,0,0
 1966,33,Hannover,Schalke,1,2
 1966,33,Gladbach,Stuttgart,1,2
 1966,33,Karlsruhe,Duisburg,3,0
@@ -1088,7 +1088,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1966,34,Hamburger SV,Düsseldorf,2,1
 1966,34,Braunschweig,Nürnberg,4,1
 1966,34,K'lautern,Hannover,1,0
-1966,34,Stuttgart,RW Essen,1,0
+1966,34,Stuttgart,Essen,1,0
 1966,34,Schalke,Karlsruhe,1,3
 1966,34,Duisburg,Gladbach,1,3
 1967,1,Duisburg,Dortmund,2,2
@@ -1711,7 +1711,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,1,Hamburger SV,K'lautern,2,1
 1969,1,Köln,Braunschweig,3,2
 1969,1,Hannover,Dortmund,4,2
-1969,1,Bayern,RW Essen,4,0
+1969,1,Bayern,Essen,4,0
 1969,2,Frankfurt,Schalke,2,1
 1969,2,1860 München,Hertha,2,0
 1969,2,Gladbach,Bayern,2,1
@@ -1720,7 +1720,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,2,Bremen,Köln,2,1
 1969,2,Dortmund,Hamburger SV,2,1
 1969,2,Braunschweig,Hannover,1,1
-1969,2,RW Essen,Aachen,2,0
+1969,2,Essen,Aachen,2,0
 1969,3,Bayern,Frankfurt,2,1
 1969,3,Köln,Duisburg,6,2
 1969,3,Stuttgart,1860 München,3,1
@@ -1729,7 +1729,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,3,Hamburger SV,Braunschweig,3,3
 1969,3,Schalke,K'lautern,4,2
 1969,3,Hertha,Aachen,2,1
-1969,3,Gladbach,RW Essen,2,1
+1969,3,Gladbach,Essen,2,1
 1969,4,Duisburg,Hannover,1,0
 1969,4,Frankfurt,Gladbach,1,2
 1969,4,1860 München,Köln,1,0
@@ -1737,11 +1737,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,4,Bremen,Hamburger SV,1,1
 1969,4,Dortmund,Schalke,1,1
 1969,4,Aachen,Stuttgart,4,2
-1969,4,RW Essen,Hertha,5,2
+1969,4,Essen,Hertha,5,2
 1969,4,K'lautern,Bayern,0,0
 1969,5,Bayern,Dortmund,3,0
 1969,5,Gladbach,K'lautern,1,1
-1969,5,Frankfurt,RW Essen,2,1
+1969,5,Frankfurt,Essen,2,1
 1969,5,Hannover,1860 München,3,1
 1969,5,Hamburger SV,Duisburg,4,1
 1969,5,Oberhausen,Bremen,3,1
@@ -1756,7 +1756,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,6,Aachen,Hannover,1,1
 1969,6,Dortmund,Gladbach,2,1
 1969,6,K'lautern,Frankfurt,2,0
-1969,6,RW Essen,Stuttgart,3,3
+1969,6,Essen,Stuttgart,3,3
 1969,7,Frankfurt,Dortmund,2,0
 1969,7,Oberhausen,1860 München,3,0
 1969,7,Bayern,Bremen,4,1
@@ -1765,7 +1765,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,7,Gladbach,Braunschweig,1,0
 1969,7,Hannover,Hertha,2,1
 1969,7,Köln,Stuttgart,3,1
-1969,7,K'lautern,RW Essen,0,0
+1969,7,K'lautern,Essen,0,0
 1969,8,1860 München,Schalke,0,2
 1969,8,Duisburg,Bayern,4,2
 1969,8,Aachen,Oberhausen,2,0
@@ -1774,14 +1774,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,8,Braunschweig,Frankfurt,3,1
 1969,8,Stuttgart,Hannover,2,1
 1969,8,Dortmund,K'lautern,5,1
-1969,8,RW Essen,Köln,0,0
+1969,8,Essen,Köln,0,0
 1969,9,Bayern,1860 München,2,0
 1969,9,Gladbach,Duisburg,4,1
 1969,9,Frankfurt,Bremen,2,1
 1969,9,Hamburger SV,Stuttgart,1,3
 1969,9,K'lautern,Braunschweig,2,0
 1969,9,Hannover,Köln,3,4
-1969,9,Dortmund,RW Essen,4,1
+1969,9,Dortmund,Essen,4,1
 1969,9,Schalke,Aachen,3,0
 1969,9,Oberhausen,Hertha,3,1
 1969,10,Duisburg,Frankfurt,1,1
@@ -1791,7 +1791,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,10,Bremen,K'lautern,3,2
 1969,10,Köln,Hamburger SV,3,0
 1969,10,Braunschweig,Dortmund,1,1
-1969,10,RW Essen,Hannover,1,0
+1969,10,Essen,Hannover,1,0
 1969,10,Hertha,Schalke,3,0
 1969,11,Bayern,Hertha,1,2
 1969,11,Dortmund,Bremen,2,1
@@ -1799,7 +1799,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,11,Gladbach,Aachen,5,1
 1969,11,K'lautern,Duisburg,0,2
 1969,11,Hamburger SV,Hannover,2,0
-1969,11,Braunschweig,RW Essen,0,0
+1969,11,Braunschweig,Essen,0,0
 1969,11,Frankfurt,1860 München,4,3
 1969,11,Oberhausen,Köln,0,2
 1969,12,1860 München,K'lautern,0,1
@@ -1807,7 +1807,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,12,Stuttgart,Bayern,2,3
 1969,12,Hannover,Oberhausen,2,1
 1969,12,Bremen,Braunschweig,0,1
-1969,12,RW Essen,Hamburger SV,2,2
+1969,12,Essen,Hamburger SV,2,2
 1969,12,Köln,Schalke,8,0
 1969,12,Aachen,Frankfurt,2,1
 1969,12,Hertha,Gladbach,1,1
@@ -1815,7 +1815,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,13,Dortmund,1860 München,3,1
 1969,13,Bayern,Köln,1,2
 1969,13,Braunschweig,Duisburg,2,1
-1969,13,Bremen,RW Essen,2,1
+1969,13,Bremen,Essen,2,1
 1969,13,Schalke,Hannover,2,0
 1969,13,K'lautern,Aachen,3,1
 1969,13,Gladbach,Stuttgart,3,0
@@ -1823,7 +1823,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,14,1860 München,Braunschweig,1,0
 1969,14,Duisburg,Bremen,1,1
 1969,14,Aachen,Dortmund,3,1
-1969,14,RW Essen,Oberhausen,1,0
+1969,14,Essen,Oberhausen,1,0
 1969,14,Köln,Gladbach,0,1
 1969,14,Hertha,K'lautern,3,0
 1969,14,Stuttgart,Frankfurt,4,0
@@ -1835,7 +1835,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,15,Oberhausen,Schalke,0,3
 1969,15,Bremen,1860 München,1,1
 1969,15,Bayern,Hamburger SV,2,1
-1969,15,RW Essen,Duisburg,0,0
+1969,15,Essen,Duisburg,0,0
 1969,15,Frankfurt,Köln,0,0
 1969,15,K'lautern,Stuttgart,3,2
 1969,16,Aachen,Bremen,0,0
@@ -1846,11 +1846,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,16,Hannover,Frankfurt,1,1
 1969,16,Stuttgart,Dortmund,2,1
 1969,16,Köln,K'lautern,6,1
-1969,16,Schalke,RW Essen,5,3
+1969,16,Schalke,Essen,5,3
 1969,17,Gladbach,Oberhausen,6,1
 1969,17,K'lautern,Hannover,5,2
 1969,17,Dortmund,Köln,1,0
-1969,17,RW Essen,1860 München,3,0
+1969,17,Essen,1860 München,3,0
 1969,17,Bremen,Hertha,1,0
 1969,17,Frankfurt,Hamburger SV,2,2
 1969,17,Braunschweig,Stuttgart,1,0
@@ -1860,13 +1860,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,18,1860 München,Aachen,0,0
 1969,18,Bremen,Stuttgart,1,1
 1969,18,Braunschweig,Köln,1,2
-1969,18,RW Essen,Bayern,1,1
+1969,18,Essen,Bayern,1,1
 1969,18,Gladbach,Schalke,2,0
 1969,18,Duisburg,Hertha,1,3
 1969,18,Frankfurt,Oberhausen,5,1
 1969,18,K'lautern,Hamburger SV,1,1
 1969,19,Oberhausen,K'lautern,0,0
-1969,19,Aachen,RW Essen,0,0
+1969,19,Aachen,Essen,0,0
 1969,19,Schalke,Frankfurt,0,0
 1969,19,Hannover,Braunschweig,0,2
 1969,19,Hamburger SV,Dortmund,4,3
@@ -1880,7 +1880,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,20,Frankfurt,Bayern,2,1
 1969,20,Bremen,Hannover,1,0
 1969,20,Duisburg,Köln,1,1
-1969,20,RW Essen,Gladbach,1,0
+1969,20,Essen,Gladbach,1,0
 1969,20,Braunschweig,Hamburger SV,3,0
 1969,20,K'lautern,Schalke,1,1
 1969,21,Oberhausen,Braunschweig,2,1
@@ -1890,7 +1890,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,21,Schalke,Dortmund,1,1
 1969,21,Stuttgart,Aachen,5,0
 1969,21,Gladbach,Frankfurt,1,2
-1969,21,Hertha,RW Essen,4,0
+1969,21,Hertha,Essen,4,0
 1969,21,Hamburger SV,Bremen,2,2
 1969,22,1860 München,Hannover,3,0
 1969,22,Dortmund,Bayern,1,3
@@ -1898,7 +1898,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,22,Bremen,Oberhausen,1,1
 1969,22,Aachen,Köln,1,3
 1969,22,K'lautern,Gladbach,1,4
-1969,22,RW Essen,Frankfurt,1,1
+1969,22,Essen,Frankfurt,1,1
 1969,22,Braunschweig,Schalke,3,0
 1969,22,Hertha,Stuttgart,3,1
 1969,23,Hamburger SV,1860 München,0,1
@@ -1906,7 +1906,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,23,Gladbach,Dortmund,4,2
 1969,23,Köln,Hertha,5,1
 1969,23,Frankfurt,K'lautern,2,1
-1969,23,Stuttgart,RW Essen,4,1
+1969,23,Stuttgart,Essen,4,1
 1969,23,Schalke,Bremen,0,0
 1969,23,Oberhausen,Duisburg,2,0
 1969,23,Hannover,Aachen,5,0
@@ -1918,7 +1918,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,24,Hertha,Hannover,1,1
 1969,24,Dortmund,Frankfurt,2,1
 1969,24,Bremen,Bayern,1,0
-1969,24,RW Essen,K'lautern,1,1
+1969,24,Essen,K'lautern,1,1
 1969,25,Oberhausen,Aachen,1,0
 1969,25,Schalke,1860 München,3,1
 1969,25,Bayern,Duisburg,2,0
@@ -1926,7 +1926,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,25,Frankfurt,Braunschweig,0,0
 1969,25,Hannover,Stuttgart,2,0
 1969,25,K'lautern,Dortmund,2,2
-1969,25,Köln,RW Essen,5,2
+1969,25,Köln,Essen,5,2
 1969,25,Hamburger SV,Hertha,1,0
 1969,26,1860 München,Bayern,2,1
 1969,26,Duisburg,Gladbach,0,1
@@ -1934,7 +1934,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,26,Stuttgart,Hamburger SV,1,1
 1969,26,Braunschweig,K'lautern,1,0
 1969,26,Köln,Hannover,5,0
-1969,26,RW Essen,Dortmund,3,3
+1969,26,Essen,Dortmund,3,3
 1969,26,Aachen,Schalke,1,2
 1969,26,Hertha,Oberhausen,1,0
 1969,27,Oberhausen,Stuttgart,3,0
@@ -1944,7 +1944,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,27,K'lautern,Bremen,1,0
 1969,27,Hamburger SV,Köln,2,5
 1969,27,Dortmund,Braunschweig,2,2
-1969,27,Hannover,RW Essen,3,0
+1969,27,Hannover,Essen,3,0
 1969,27,Schalke,Hertha,1,3
 1969,28,Hertha,Bayern,0,4
 1969,28,Duisburg,K'lautern,0,0
@@ -1953,14 +1953,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,28,Hannover,Hamburger SV,1,1
 1969,28,Stuttgart,Schalke,2,0
 1969,28,Aachen,Gladbach,0,3
-1969,28,RW Essen,Braunschweig,1,1
+1969,28,Essen,Braunschweig,1,1
 1969,28,1860 München,Frankfurt,1,1
 1969,29,K'lautern,1860 München,3,2
 1969,29,Bayern,Stuttgart,1,2
 1969,29,Dortmund,Duisburg,3,1
 1969,29,Oberhausen,Hannover,0,0
 1969,29,Braunschweig,Bremen,1,2
-1969,29,Hamburger SV,RW Essen,1,0
+1969,29,Hamburger SV,Essen,1,0
 1969,29,Schalke,Köln,1,0
 1969,29,Gladbach,Hertha,1,1
 1969,29,Frankfurt,Aachen,6,2
@@ -1972,11 +1972,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,30,Hertha,Frankfurt,2,0
 1969,30,1860 München,Dortmund,3,0
 1969,30,Aachen,K'lautern,1,1
-1969,30,RW Essen,Bremen,3,2
+1969,30,Essen,Bremen,3,2
 1969,31,Braunschweig,1860 München,2,2
 1969,31,Bayern,Hannover,7,2
 1969,31,Bremen,Duisburg,0,0
-1969,31,Oberhausen,RW Essen,1,1
+1969,31,Oberhausen,Essen,1,1
 1969,31,Schalke,Hamburger SV,1,1
 1969,31,Dortmund,Aachen,3,1
 1969,31,Gladbach,Köln,2,0
@@ -1984,14 +1984,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,31,Frankfurt,Stuttgart,4,0
 1969,32,1860 München,Bremen,0,1
 1969,32,Hamburger SV,Bayern,1,3
-1969,32,Duisburg,RW Essen,0,1
+1969,32,Duisburg,Essen,0,1
 1969,32,Schalke,Oberhausen,2,2
 1969,32,Aachen,Braunschweig,1,1
 1969,32,Hannover,Gladbach,1,0
 1969,32,Hertha,Dortmund,9,1
 1969,32,Köln,Frankfurt,1,2
 1969,32,Stuttgart,K'lautern,2,1
-1969,33,RW Essen,Schalke,1,1
+1969,33,Essen,Schalke,1,1
 1969,33,K'lautern,Köln,3,2
 1969,33,Duisburg,1860 München,2,1
 1969,33,Bayern,Oberhausen,6,2
@@ -2002,7 +2002,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1969,33,Dortmund,Stuttgart,0,0
 1969,34,Hertha,Bremen,4,1
 1969,34,Hamburger SV,Frankfurt,5,1
-1969,34,1860 München,RW Essen,0,0
+1969,34,1860 München,Essen,0,0
 1969,34,Schalke,Bayern,2,2
 1969,34,Aachen,Duisburg,3,2
 1969,34,Oberhausen,Gladbach,3,4
@@ -2012,7 +2012,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,1,Bremen,Köln,1,1
 1970,1,Frankfurt,Hamburger SV,0,0
 1970,1,Braunschweig,Schalke,3,3
-1970,1,RW Essen,Hannover,2,0
+1970,1,Essen,Hannover,2,0
 1970,1,Dortmund,Bielefeld,3,0
 1970,1,Stuttgart,Bayern,1,1
 1970,1,Hertha,K'lautern,5,3
@@ -2021,7 +2021,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,2,Köln,Braunschweig,3,1
 1970,2,Hamburger SV,Gladbach,2,2
 1970,2,Schalke,Duisburg,1,0
-1970,2,Bielefeld,RW Essen,0,0
+1970,2,Bielefeld,Essen,0,0
 1970,2,Oberhausen,Stuttgart,1,2
 1970,2,K'lautern,Dortmund,1,0
 1970,2,Bayern,Hertha,1,0
@@ -2033,7 +2033,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,3,Hertha,Oberhausen,3,1
 1970,3,Frankfurt,Bielefeld,1,1
 1970,3,Braunschweig,Bremen,1,0
-1970,3,RW Essen,K'lautern,4,0
+1970,3,Essen,K'lautern,4,0
 1970,3,Duisburg,Köln,0,0
 1970,3,Hamburger SV,Offenbach,3,2
 1970,4,K'lautern,Frankfurt,2,0
@@ -2041,7 +2041,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,4,Köln,Stuttgart,2,1
 1970,4,Bielefeld,Gladbach,0,2
 1970,4,Schalke,Hertha,0,1
-1970,4,Bayern,RW Essen,2,2
+1970,4,Bayern,Essen,2,2
 1970,4,Bremen,Duisburg,0,2
 1970,4,Hannover,Hamburger SV,0,3
 1970,4,Oberhausen,Dortmund,0,1
@@ -2050,13 +2050,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,5,Hertha,Köln,3,2
 1970,5,Gladbach,K'lautern,5,0
 1970,5,Dortmund,Schalke,1,2
-1970,5,RW Essen,Oberhausen,3,3
+1970,5,Essen,Oberhausen,3,3
 1970,5,Frankfurt,Bayern,0,1
 1970,5,Hamburger SV,Bielefeld,3,2
 1970,5,Hannover,Offenbach,1,1
 1970,6,Köln,Dortmund,2,2
 1970,6,Bayern,Gladbach,2,2
-1970,6,Schalke,RW Essen,4,1
+1970,6,Schalke,Essen,4,1
 1970,6,Oberhausen,Frankfurt,0,0
 1970,6,Bremen,Hertha,0,0
 1970,6,K'lautern,Hamburger SV,2,0
@@ -2064,7 +2064,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,6,Bielefeld,Hannover,3,1
 1970,6,Offenbach,Duisburg,2,0
 1970,7,Bielefeld,Offenbach,2,0
-1970,7,RW Essen,Köln,2,0
+1970,7,Essen,Köln,2,0
 1970,7,Frankfurt,Schalke,1,0
 1970,7,Hertha,Braunschweig,1,0
 1970,7,Hannover,K'lautern,2,1
@@ -2074,7 +2074,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,7,Dortmund,Bremen,0,1
 1970,8,Köln,Frankfurt,0,0
 1970,8,Schalke,Gladbach,0,0
-1970,8,Bremen,RW Essen,1,1
+1970,8,Bremen,Essen,1,1
 1970,8,Oberhausen,Hamburger SV,8,1
 1970,8,Braunschweig,Dortmund,3,0
 1970,8,Bayern,Hannover,4,1
@@ -2083,7 +2083,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,8,Offenbach,Stuttgart,3,3
 1970,9,Gladbach,Köln,1,1
 1970,9,Hamburger SV,Schalke,1,2
-1970,9,RW Essen,Braunschweig,0,1
+1970,9,Essen,Braunschweig,0,1
 1970,9,Hannover,Oberhausen,1,2
 1970,9,Dortmund,Duisburg,5,1
 1970,9,Bielefeld,Bayern,1,0
@@ -2096,14 +2096,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,10,Bayern,K'lautern,3,1
 1970,10,Köln,Hamburger SV,3,0
 1970,10,Schalke,Hannover,3,0
-1970,10,Duisburg,RW Essen,1,0
+1970,10,Duisburg,Essen,1,0
 1970,10,Offenbach,Hertha,1,0
 1970,10,Braunschweig,Frankfurt,2,0
 1970,11,Dortmund,Hertha,3,1
 1970,11,Hannover,Köln,2,0
 1970,11,Gladbach,Braunschweig,3,1
 1970,11,Bielefeld,Schalke,0,3
-1970,11,RW Essen,Stuttgart,1,1
+1970,11,Essen,Stuttgart,1,1
 1970,11,K'lautern,Oberhausen,4,1
 1970,11,Bayern,Offenbach,0,0
 1970,11,Frankfurt,Duisburg,0,0
@@ -2112,7 +2112,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,12,Köln,Bielefeld,2,0
 1970,12,Duisburg,Gladbach,1,1
 1970,12,Schalke,K'lautern,2,0
-1970,12,Hertha,RW Essen,1,1
+1970,12,Hertha,Essen,1,1
 1970,12,Offenbach,Dortmund,3,0
 1970,12,Stuttgart,Frankfurt,2,1
 1970,12,Bremen,Hannover,0,0
@@ -2120,7 +2120,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,13,Bayern,Schalke,3,0
 1970,13,K'lautern,Köln,0,0
 1970,13,Gladbach,Stuttgart,4,1
-1970,13,RW Essen,Dortmund,0,1
+1970,13,Essen,Dortmund,0,1
 1970,13,Oberhausen,Offenbach,2,2
 1970,13,Frankfurt,Hertha,1,3
 1970,13,Bielefeld,Bremen,3,0
@@ -2130,7 +2130,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,14,Köln,Bayern,0,3
 1970,14,Hertha,Gladbach,4,2
 1970,14,Schalke,Oberhausen,2,0
-1970,14,Offenbach,RW Essen,1,2
+1970,14,Offenbach,Essen,1,2
 1970,14,Dortmund,Frankfurt,3,0
 1970,14,Bremen,K'lautern,1,1
 1970,14,Stuttgart,Hamburger SV,3,3
@@ -2138,7 +2138,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,15,Gladbach,Dortmund,3,2
 1970,15,Oberhausen,Köln,2,2
 1970,15,Offenbach,Schalke,0,1
-1970,15,RW Essen,Frankfurt,2,0
+1970,15,Essen,Frankfurt,2,0
 1970,15,Bayern,Bremen,2,1
 1970,15,Hamburger SV,Hertha,0,0
 1970,15,K'lautern,Braunschweig,0,1
@@ -2146,7 +2146,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,15,Bielefeld,Duisburg,0,0
 1970,16,Dortmund,Hamburger SV,1,1
 1970,16,Köln,Schalke,2,0
-1970,16,RW Essen,Gladbach,1,2
+1970,16,Essen,Gladbach,1,2
 1970,16,Bremen,Oberhausen,2,0
 1970,16,Braunschweig,Bayern,1,1
 1970,16,Hertha,Hannover,0,0
@@ -2159,14 +2159,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,17,Bayern,Duisburg,2,1
 1970,17,Offenbach,Köln,4,1
 1970,17,Schalke,Bremen,0,0
-1970,17,Hamburger SV,RW Essen,2,1
+1970,17,Hamburger SV,Essen,2,1
 1970,17,K'lautern,Stuttgart,0,5
 1970,17,Oberhausen,Braunschweig,1,0
 1970,18,Oberhausen,Duisburg,0,2
 1970,18,Köln,Bremen,1,1
 1970,18,Hamburger SV,Frankfurt,3,0
 1970,18,Schalke,Braunschweig,1,0
-1970,18,Hannover,RW Essen,3,1
+1970,18,Hannover,Essen,3,1
 1970,18,Bielefeld,Dortmund,2,3
 1970,18,Bayern,Stuttgart,1,0
 1970,18,K'lautern,Hertha,2,0
@@ -2174,7 +2174,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,19,Braunschweig,Köln,3,1
 1970,19,Gladbach,Hamburger SV,3,0
 1970,19,Duisburg,Schalke,1,0
-1970,19,RW Essen,Bielefeld,2,1
+1970,19,Essen,Bielefeld,2,1
 1970,19,Stuttgart,Oberhausen,2,1
 1970,19,Dortmund,K'lautern,0,2
 1970,19,Hertha,Bayern,3,3
@@ -2183,7 +2183,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,20,Köln,Duisburg,2,1
 1970,20,Hannover,Gladbach,1,1
 1970,20,Schalke,Stuttgart,2,1
-1970,20,K'lautern,RW Essen,5,2
+1970,20,K'lautern,Essen,5,2
 1970,20,Bielefeld,Frankfurt,1,0
 1970,20,Bremen,Braunschweig,2,0
 1970,20,Offenbach,Hamburger SV,3,3
@@ -2192,7 +2192,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,21,Stuttgart,Köln,1,2
 1970,21,Gladbach,Bielefeld,0,2
 1970,21,Hertha,Schalke,2,1
-1970,21,RW Essen,Bayern,3,1
+1970,21,Essen,Bayern,3,1
 1970,21,Dortmund,Oberhausen,2,0
 1970,21,Frankfurt,K'lautern,3,2
 1970,21,Duisburg,Bremen,3,1
@@ -2201,14 +2201,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,22,Köln,Hertha,3,2
 1970,22,K'lautern,Gladbach,0,1
 1970,22,Schalke,Dortmund,0,0
-1970,22,Oberhausen,RW Essen,0,0
+1970,22,Oberhausen,Essen,0,0
 1970,22,Bremen,Stuttgart,3,1
 1970,22,Bielefeld,Hamburger SV,1,1
 1970,22,Braunschweig,Duisburg,5,0
 1970,22,Offenbach,Hannover,1,5
 1970,22,Bayern,Frankfurt,2,1
 1970,23,Dortmund,Köln,0,0
-1970,23,RW Essen,Schalke,1,3
+1970,23,Essen,Schalke,1,3
 1970,23,Hamburger SV,K'lautern,5,2
 1970,23,Frankfurt,Oberhausen,5,0
 1970,23,Hertha,Bremen,3,1
@@ -2224,8 +2224,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,24,K'lautern,Hannover,2,1
 1970,24,Duisburg,Stuttgart,1,0
 1970,24,Oberhausen,Gladbach,0,2
-1970,24,Köln,RW Essen,3,2
-1970,25,RW Essen,Bremen,2,2
+1970,24,Köln,Essen,3,2
+1970,25,Essen,Bremen,2,2
 1970,25,Frankfurt,Köln,1,1
 1970,25,Gladbach,Schalke,2,0
 1970,25,Hamburger SV,Oberhausen,0,0
@@ -2237,7 +2237,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,26,Oberhausen,Hannover,4,3
 1970,26,Köln,Gladbach,3,2
 1970,26,Schalke,Hamburger SV,3,1
-1970,26,Braunschweig,RW Essen,1,0
+1970,26,Braunschweig,Essen,1,0
 1970,26,Duisburg,Dortmund,4,3
 1970,26,Bayern,Bielefeld,2,0
 1970,26,Stuttgart,Hertha,1,1
@@ -2247,7 +2247,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,27,Bielefeld,Oberhausen,2,1
 1970,27,Gladbach,Bremen,0,2
 1970,27,Hannover,Schalke,3,0
-1970,27,RW Essen,Duisburg,1,1
+1970,27,Essen,Duisburg,1,1
 1970,27,Dortmund,Stuttgart,3,1
 1970,27,K'lautern,Bayern,2,1
 1970,27,Hertha,Offenbach,3,1
@@ -2255,7 +2255,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,28,Köln,Hannover,0,1
 1970,28,Braunschweig,Gladbach,1,1
 1970,28,Schalke,Bielefeld,0,1
-1970,28,Stuttgart,RW Essen,5,1
+1970,28,Stuttgart,Essen,5,1
 1970,28,Oberhausen,K'lautern,4,2
 1970,28,Hertha,Dortmund,5,2
 1970,28,Offenbach,Bayern,1,1
@@ -2265,7 +2265,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,29,Hannover,Bremen,0,3
 1970,29,Bielefeld,Köln,1,0
 1970,29,Gladbach,Duisburg,1,0
-1970,29,RW Essen,Hertha,0,3
+1970,29,Essen,Hertha,0,3
 1970,29,Bayern,Oberhausen,4,2
 1970,29,Dortmund,Offenbach,1,1
 1970,29,Frankfurt,Stuttgart,1,0
@@ -2274,7 +2274,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,30,Köln,K'lautern,1,2
 1970,30,Stuttgart,Gladbach,1,1
 1970,30,Schalke,Bayern,1,3
-1970,30,Dortmund,RW Essen,7,2
+1970,30,Dortmund,Essen,7,2
 1970,30,Offenbach,Oberhausen,3,2
 1970,30,Hertha,Frankfurt,6,2
 1970,30,Bremen,Bielefeld,4,1
@@ -2284,21 +2284,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,31,Hannover,Duisburg,3,3
 1970,31,Bayern,Köln,7,0
 1970,31,Oberhausen,Schalke,4,1
-1970,31,RW Essen,Offenbach,2,3
+1970,31,Essen,Offenbach,2,3
 1970,31,Frankfurt,Dortmund,2,0
 1970,31,Hamburger SV,Stuttgart,1,0
 1970,31,Bielefeld,Braunschweig,0,1
 1970,32,Köln,Oberhausen,2,4
 1970,32,Dortmund,Gladbach,3,4
 1970,32,Schalke,Offenbach,1,2
-1970,32,Frankfurt,RW Essen,3,2
+1970,32,Frankfurt,Essen,3,2
 1970,32,Bremen,Bayern,0,1
 1970,32,Hertha,Hamburger SV,2,0
 1970,32,Braunschweig,K'lautern,2,0
 1970,32,Stuttgart,Hannover,1,2
 1970,32,Duisburg,Bielefeld,4,1
 1970,33,Schalke,Köln,2,2
-1970,33,Gladbach,RW Essen,4,3
+1970,33,Gladbach,Essen,4,3
 1970,33,Oberhausen,Bremen,3,0
 1970,33,Hamburger SV,Dortmund,2,1
 1970,33,Bayern,Braunschweig,4,1
@@ -2309,7 +2309,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1970,34,Köln,Offenbach,4,2
 1970,34,Frankfurt,Gladbach,1,4
 1970,34,Bremen,Schalke,0,1
-1970,34,RW Essen,Hamburger SV,1,3
+1970,34,Essen,Hamburger SV,1,3
 1970,34,Braunschweig,Oberhausen,1,1
 1970,34,Dortmund,Hannover,2,2
 1970,34,Duisburg,Bayern,2,0
@@ -2930,7 +2930,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,1,Köln,Frankfurt,1,1
 1973,1,Gladbach,F. Köln,3,1
 1973,1,Duisburg,Hannover,1,1
-1973,1,Offenbach,RW Essen,1,1
+1973,1,Offenbach,Essen,1,1
 1973,1,K'lautern,Bremen,2,2
 1973,1,Hamburger SV,Hertha,0,2
 1973,1,Stuttgart,Schalke,3,0
@@ -2944,10 +2944,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,2,Hertha,Offenbach,2,2
 1973,2,Wuppertaler SV,Hamburger SV,3,0
 1973,2,Düsseldorf,Köln,3,0
-1973,2,RW Essen,Gladbach,2,6
+1973,2,Essen,Gladbach,2,6
 1973,3,K'lautern,Frankfurt,1,4
 1973,3,Duisburg,Köln,5,1
-1973,3,Bayern,RW Essen,2,0
+1973,3,Bayern,Essen,2,0
 1973,3,Stuttgart,Hannover,5,1
 1973,3,Offenbach,Wuppertaler SV,0,1
 1973,3,Bochum,Bremen,0,0
@@ -2961,7 +2961,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,4,Bremen,Hamburger SV,1,1
 1973,4,Wuppertaler SV,Gladbach,2,4
 1973,4,Köln,K'lautern,3,1
-1973,4,RW Essen,F. Köln,0,2
+1973,4,Essen,F. Köln,0,2
 1973,4,Düsseldorf,Duisburg,2,1
 1973,5,Bochum,Frankfurt,1,1
 1973,5,Offenbach,Bremen,4,0
@@ -2971,7 +2971,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,5,Gladbach,Schalke,6,0
 1973,5,Stuttgart,Köln,2,1
 1973,5,F. Köln,Hertha,3,3
-1973,5,RW Essen,Düsseldorf,1,4
+1973,5,Essen,Düsseldorf,1,4
 1973,6,Hannover,Offenbach,2,3
 1973,6,Duisburg,Stuttgart,1,0
 1973,6,Frankfurt,Hamburger SV,1,0
@@ -2979,14 +2979,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,6,Bremen,Gladbach,2,3
 1973,6,Köln,Bochum,2,2
 1973,6,Wuppertaler SV,F. Köln,0,0
-1973,6,Hertha,RW Essen,1,1
+1973,6,Hertha,Essen,1,1
 1973,6,Düsseldorf,K'lautern,2,5
 1973,7,Gladbach,Hannover,4,3
 1973,7,F. Köln,Schalke,1,1
 1973,7,Bayern,Bremen,2,2
 1973,7,Hamburger SV,Köln,3,1
 1973,7,Bochum,Duisburg,3,0
-1973,7,RW Essen,Wuppertaler SV,2,1
+1973,7,Essen,Wuppertaler SV,2,1
 1973,7,Stuttgart,K'lautern,3,4
 1973,7,Hertha,Düsseldorf,2,0
 1973,7,Offenbach,Frankfurt,5,2
@@ -2996,10 +2996,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,8,Hannover,Bayern,3,1
 1973,8,Köln,Offenbach,2,0
 1973,8,Bremen,F. Köln,2,0
-1973,8,Schalke,RW Essen,3,1
+1973,8,Schalke,Essen,3,1
 1973,8,Wuppertaler SV,Hertha,2,1
 1973,8,Düsseldorf,Stuttgart,2,0
-1973,9,RW Essen,Bremen,3,1
+1973,9,Essen,Bremen,3,1
 1973,9,Wuppertaler SV,Düsseldorf,2,2
 1973,9,Bayern,Frankfurt,2,2
 1973,9,F. Köln,Hannover,2,2
@@ -3011,13 +3011,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,10,Bremen,Hertha,4,1
 1973,10,Frankfurt,F. Köln,4,2
 1973,10,Köln,Bayern,4,3
-1973,10,Hannover,RW Essen,1,2
+1973,10,Hannover,Essen,1,2
 1973,10,K'lautern,Offenbach,3,0
 1973,10,Stuttgart,Hamburger SV,3,0
 1973,10,Schalke,Wuppertaler SV,4,2
 1973,10,Düsseldorf,Bochum,1,1
 1973,10,Duisburg,Gladbach,1,2
-1973,11,RW Essen,Frankfurt,6,3
+1973,11,Essen,Frankfurt,6,3
 1973,11,Bayern,Duisburg,4,2
 1973,11,Hertha,Hannover,4,2
 1973,11,Offenbach,Stuttgart,2,1
@@ -3032,7 +3032,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,12,Hannover,Wuppertaler SV,1,1
 1973,12,Bremen,Schalke,2,1
 1973,12,Stuttgart,Gladbach,6,1
-1973,12,Köln,RW Essen,3,2
+1973,12,Köln,Essen,3,2
 1973,12,Bochum,Offenbach,4,1
 1973,12,Düsseldorf,Hamburger SV,2,0
 1973,13,Wuppertaler SV,Frankfurt,1,1
@@ -3043,7 +3043,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,13,Gladbach,Bochum,2,0
 1973,13,Hertha,Köln,2,2
 1973,13,F. Köln,K'lautern,3,3
-1973,13,RW Essen,Duisburg,4,2
+1973,13,Essen,Duisburg,4,2
 1973,14,Köln,Wuppertaler SV,0,0
 1973,14,Duisburg,Hertha,1,1
 1973,14,Frankfurt,Schalke,2,1
@@ -3052,7 +3052,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,14,Düsseldorf,Offenbach,3,3
 1973,14,Hamburger SV,Gladbach,1,0
 1973,14,Stuttgart,F. Köln,2,1
-1973,14,K'lautern,RW Essen,0,0
+1973,14,K'lautern,Essen,0,0
 1973,15,Bremen,Frankfurt,1,2
 1973,15,Bayern,Hamburger SV,4,1
 1973,15,Düsseldorf,Hannover,2,0
@@ -3060,14 +3060,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,15,Schalke,Köln,2,2
 1973,15,F. Köln,Bochum,2,2
 1973,15,Wuppertaler SV,Duisburg,2,0
-1973,15,RW Essen,Stuttgart,3,3
+1973,15,Essen,Stuttgart,3,3
 1973,15,Hertha,K'lautern,3,1
 1973,16,Frankfurt,Hannover,1,1
 1973,16,Duisburg,Schalke,2,0
 1973,16,Offenbach,Bayern,2,2
 1973,16,Köln,Bremen,2,0
 1973,16,Hamburger SV,F. Köln,4,0
-1973,16,Bochum,RW Essen,1,2
+1973,16,Bochum,Essen,1,2
 1973,16,K'lautern,Wuppertaler SV,4,0
 1973,16,Stuttgart,Hertha,2,0
 1973,16,Gladbach,Düsseldorf,1,2
@@ -3075,7 +3075,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,17,Bayern,Gladbach,4,3
 1973,17,Hannover,Köln,1,0
 1973,17,F. Köln,Offenbach,2,1
-1973,17,RW Essen,Hamburger SV,1,1
+1973,17,Essen,Hamburger SV,1,1
 1973,17,Schalke,K'lautern,3,3
 1973,17,Wuppertaler SV,Stuttgart,3,4
 1973,17,Hertha,Bochum,4,2
@@ -3083,7 +3083,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,18,Frankfurt,Köln,2,1
 1973,18,F. Köln,Gladbach,3,5
 1973,18,Hannover,Duisburg,2,2
-1973,18,RW Essen,Offenbach,1,2
+1973,18,Essen,Offenbach,1,2
 1973,18,Bremen,K'lautern,3,1
 1973,18,Hertha,Hamburger SV,2,1
 1973,18,Schalke,Stuttgart,2,3
@@ -3097,9 +3097,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,19,Hamburger SV,Wuppertaler SV,2,1
 1973,19,Bochum,Schalke,2,5
 1973,19,Köln,Düsseldorf,4,2
-1973,19,Gladbach,RW Essen,2,2
+1973,19,Gladbach,Essen,2,2
 1973,20,Frankfurt,K'lautern,3,1
-1973,20,RW Essen,Bayern,0,1
+1973,20,Essen,Bayern,0,1
 1973,20,Hannover,Stuttgart,3,0
 1973,20,Bremen,Bochum,1,0
 1973,20,Schalke,Hamburger SV,3,1
@@ -3114,7 +3114,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,21,Hamburger SV,Bremen,3,0
 1973,21,Gladbach,Wuppertaler SV,7,1
 1973,21,K'lautern,Köln,1,2
-1973,21,F. Köln,RW Essen,1,3
+1973,21,F. Köln,Essen,1,3
 1973,21,Duisburg,Düsseldorf,0,1
 1973,22,Frankfurt,Bochum,3,1
 1973,22,Wuppertaler SV,Bayern,1,4
@@ -3124,7 +3124,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,22,Köln,Stuttgart,5,2
 1973,22,Hertha,F. Köln,1,1
 1973,22,Duisburg,K'lautern,2,1
-1973,22,Düsseldorf,RW Essen,3,0
+1973,22,Düsseldorf,Essen,3,0
 1973,23,Hamburger SV,Frankfurt,4,2
 1973,23,Bayern,Schalke,5,1
 1973,23,Offenbach,Hannover,2,1
@@ -3133,8 +3133,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,23,Stuttgart,Duisburg,0,1
 1973,23,K'lautern,Düsseldorf,3,2
 1973,23,Gladbach,Bremen,3,1
-1973,23,RW Essen,Hertha,3,2
-1973,24,Wuppertaler SV,RW Essen,2,0
+1973,23,Essen,Hertha,3,2
+1973,24,Wuppertaler SV,Essen,2,0
 1973,24,Frankfurt,Offenbach,2,2
 1973,24,Bremen,Bayern,1,1
 1973,24,Hannover,Gladbach,0,2
@@ -3148,7 +3148,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,25,Offenbach,Köln,1,2
 1973,25,F. Köln,Bremen,1,3
 1973,25,Hamburger SV,Duisburg,2,0
-1973,25,RW Essen,Schalke,2,5
+1973,25,Essen,Schalke,2,5
 1973,25,Bochum,K'lautern,2,2
 1973,25,Hertha,Wuppertaler SV,3,0
 1973,25,Stuttgart,Düsseldorf,0,0
@@ -3156,21 +3156,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,26,Frankfurt,Bayern,1,1
 1973,26,Hannover,F. Köln,1,1
 1973,26,Duisburg,Offenbach,4,0
-1973,26,Bremen,RW Essen,1,1
+1973,26,Bremen,Essen,1,1
 1973,26,K'lautern,Hamburger SV,1,4
 1973,26,Schalke,Hertha,3,0
 1973,26,Stuttgart,Bochum,2,0
 1973,26,Köln,Gladbach,0,1
 1973,27,F. Köln,Frankfurt,3,2
 1973,27,Bayern,Köln,4,1
-1973,27,RW Essen,Hannover,1,1
+1973,27,Essen,Hannover,1,1
 1973,27,Offenbach,K'lautern,2,3
 1973,27,Hertha,Bremen,0,0
 1973,27,Hamburger SV,Stuttgart,1,0
 1973,27,Wuppertaler SV,Schalke,1,1
 1973,27,Bochum,Düsseldorf,3,3
 1973,27,Gladbach,Duisburg,3,2
-1973,28,Frankfurt,RW Essen,6,0
+1973,28,Frankfurt,Essen,6,0
 1973,28,Duisburg,Bayern,0,4
 1973,28,Hannover,Hertha,3,1
 1973,28,Stuttgart,Offenbach,4,0
@@ -3186,9 +3186,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,29,Schalke,Bremen,4,2
 1973,29,Hamburger SV,Düsseldorf,1,3
 1973,29,Gladbach,Stuttgart,3,1
-1973,29,RW Essen,Köln,1,1
+1973,29,Essen,Köln,1,1
 1973,29,F. Köln,Duisburg,3,0
-1973,30,Duisburg,RW Essen,1,0
+1973,30,Duisburg,Essen,1,0
 1973,30,Frankfurt,Wuppertaler SV,1,0
 1973,30,Stuttgart,Bayern,1,1
 1973,30,Hannover,Schalke,0,1
@@ -3205,7 +3205,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,31,Gladbach,Hamburger SV,6,1
 1973,31,Wuppertaler SV,Köln,1,3
 1973,31,F. Köln,Stuttgart,1,0
-1973,31,RW Essen,K'lautern,3,3
+1973,31,Essen,K'lautern,3,3
 1973,32,Frankfurt,Bremen,1,1
 1973,32,Hamburger SV,Bayern,0,5
 1973,32,Hannover,Düsseldorf,1,2
@@ -3213,14 +3213,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,32,Köln,Schalke,3,1
 1973,32,Bochum,F. Köln,2,0
 1973,32,Duisburg,Wuppertaler SV,0,0
-1973,32,Stuttgart,RW Essen,0,3
+1973,32,Stuttgart,Essen,0,3
 1973,32,K'lautern,Hertha,3,1
 1973,33,Hannover,Frankfurt,0,0
 1973,33,Bayern,Offenbach,1,0
 1973,33,Bremen,Köln,4,2
 1973,33,F. Köln,Hamburger SV,3,0
 1973,33,Schalke,Duisburg,0,1
-1973,33,RW Essen,Bochum,2,2
+1973,33,Essen,Bochum,2,2
 1973,33,Wuppertaler SV,K'lautern,2,4
 1973,33,Hertha,Stuttgart,1,0
 1973,33,Düsseldorf,Gladbach,1,0
@@ -3229,7 +3229,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1973,34,Köln,Hannover,2,1
 1973,34,Offenbach,F. Köln,4,0
 1973,34,Duisburg,Bremen,3,1
-1973,34,Hamburger SV,RW Essen,2,3
+1973,34,Hamburger SV,Essen,2,3
 1973,34,K'lautern,Schalke,4,0
 1973,34,Bochum,Hertha,2,1
 1973,34,Stuttgart,Wuppertaler SV,2,2
@@ -3239,7 +3239,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,1,Braunschweig,TeBe Berlin,5,0
 1974,1,Stuttgart,Bochum,1,0
 1974,1,Schalke,K'lautern,2,1
-1974,1,Köln,RW Essen,0,1
+1974,1,Köln,Essen,0,1
 1974,1,Wuppertaler SV,Duisburg,1,4
 1974,1,Gladbach,Hamburger SV,1,3
 1974,2,Düsseldorf,Stuttgart,4,0
@@ -3249,21 +3249,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,2,Frankfurt,Gladbach,1,1
 1974,2,Bochum,Köln,3,2
 1974,2,Duisburg,Schalke,2,0
-1974,2,RW Essen,Wuppertaler SV,2,0
+1974,2,Essen,Wuppertaler SV,2,0
 1974,2,TeBe Berlin,Bremen,4,0
 1974,3,Gladbach,TeBe Berlin,3,1
 1974,3,Stuttgart,Bayern,1,2
 1974,3,Köln,Düsseldorf,2,2
 1974,3,Braunschweig,Duisburg,4,1
 1974,3,Wuppertaler SV,Bochum,1,1
-1974,3,Schalke,RW Essen,3,0
+1974,3,Schalke,Essen,3,0
 1974,3,Bremen,K'lautern,3,1
 1974,3,Hertha,Offenbach,4,1
 1974,3,Frankfurt,Hamburger SV,1,3
 1974,4,Bayern,Köln,6,3
 1974,4,K'lautern,Gladbach,1,3
 1974,4,Düsseldorf,Wuppertaler SV,2,0
-1974,4,RW Essen,Braunschweig,1,2
+1974,4,Essen,Braunschweig,1,2
 1974,4,Bochum,Schalke,2,1
 1974,4,Duisburg,Bremen,4,0
 1974,4,Offenbach,Stuttgart,3,1
@@ -3273,7 +3273,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,5,Gladbach,Duisburg,4,1
 1974,5,Schalke,Düsseldorf,3,0
 1974,5,Braunschweig,Bochum,2,0
-1974,5,Bremen,RW Essen,0,0
+1974,5,Bremen,Essen,0,0
 1974,5,Köln,Offenbach,0,1
 1974,5,Frankfurt,K'lautern,5,1
 1974,5,Stuttgart,Hertha,1,2
@@ -3281,7 +3281,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,6,Offenbach,Wuppertaler SV,3,1
 1974,6,K'lautern,TeBe Berlin,4,0
 1974,6,Bayern,Schalke,0,2
-1974,6,RW Essen,Gladbach,1,3
+1974,6,Essen,Gladbach,1,3
 1974,6,Düsseldorf,Braunschweig,2,2
 1974,6,Bochum,Bremen,3,1
 1974,6,Duisburg,Frankfurt,1,3
@@ -3291,7 +3291,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,7,Braunschweig,Bayern,3,1
 1974,7,Gladbach,Bochum,3,0
 1974,7,Schalke,Offenbach,2,0
-1974,7,Frankfurt,RW Essen,9,1
+1974,7,Frankfurt,Essen,9,1
 1974,7,Wuppertaler SV,Hertha,0,0
 1974,7,TeBe Berlin,Duisburg,2,3
 1974,7,Köln,Stuttgart,4,2
@@ -3301,7 +3301,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,8,Offenbach,Braunschweig,2,1
 1974,8,Bochum,Frankfurt,3,1
 1974,8,Hertha,Schalke,1,0
-1974,8,RW Essen,TeBe Berlin,3,2
+1974,8,Essen,TeBe Berlin,3,2
 1974,8,Stuttgart,Wuppertaler SV,5,1
 1974,8,Duisburg,K'lautern,3,2
 1974,8,Hamburger SV,Köln,3,1
@@ -3310,7 +3310,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,9,Braunschweig,Hertha,2,1
 1974,9,TeBe Berlin,Bochum,2,0
 1974,9,Schalke,Stuttgart,2,0
-1974,9,K'lautern,RW Essen,2,0
+1974,9,K'lautern,Essen,2,0
 1974,9,Wuppertaler SV,Köln,1,4
 1974,9,Duisburg,Hamburger SV,2,0
 1974,9,Bremen,Offenbach,3,6
@@ -3320,7 +3320,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,10,Stuttgart,Braunschweig,0,0
 1974,10,Bochum,K'lautern,4,0
 1974,10,Köln,Schalke,4,2
-1974,10,RW Essen,Duisburg,3,0
+1974,10,Essen,Duisburg,3,0
 1974,10,Hamburger SV,Wuppertaler SV,4,1
 1974,10,Hertha,Bremen,2,0
 1974,11,K'lautern,Düsseldorf,1,0
@@ -3329,7 +3329,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,11,Gladbach,Hertha,1,1
 1974,11,Braunschweig,Köln,1,4
 1974,11,Schalke,Wuppertaler SV,1,0
-1974,11,RW Essen,Hamburger SV,0,0
+1974,11,Essen,Hamburger SV,0,0
 1974,11,Frankfurt,Offenbach,0,0
 1974,11,Bremen,Stuttgart,5,2
 1974,12,Offenbach,TeBe Berlin,3,2
@@ -3337,13 +3337,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,12,Stuttgart,Gladbach,1,2
 1974,12,Düsseldorf,Duisburg,1,1
 1974,12,Wuppertaler SV,Braunschweig,0,1
-1974,12,Bochum,RW Essen,2,2
+1974,12,Bochum,Essen,2,2
 1974,12,Hamburger SV,Schalke,1,1
 1974,12,Köln,Bremen,3,1
 1974,12,Hertha,Frankfurt,2,1
 1974,13,Duisburg,Bayern,2,1
 1974,13,Gladbach,Köln,1,1
-1974,13,RW Essen,Düsseldorf,1,2
+1974,13,Essen,Düsseldorf,1,2
 1974,13,Braunschweig,Schalke,1,0
 1974,13,Bochum,Hamburger SV,4,2
 1974,13,Bremen,Wuppertaler SV,2,1
@@ -3351,7 +3351,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,13,TeBe Berlin,Hertha,0,3
 1974,13,K'lautern,Offenbach,1,2
 1974,14,Hamburger SV,Braunschweig,0,0
-1974,14,Bayern,RW Essen,2,2
+1974,14,Bayern,Essen,2,2
 1974,14,Wuppertaler SV,Gladbach,1,5
 1974,14,Düsseldorf,Bochum,0,1
 1974,14,Schalke,Bremen,2,0
@@ -3363,7 +3363,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,15,Duisburg,Hertha,1,3
 1974,15,Hamburger SV,Düsseldorf,2,1
 1974,15,Braunschweig,Bremen,0,0
-1974,15,RW Essen,Offenbach,5,1
+1974,15,Essen,Offenbach,5,1
 1974,15,Frankfurt,Wuppertaler SV,5,0
 1974,15,TeBe Berlin,Köln,2,3
 1974,15,K'lautern,Stuttgart,6,0
@@ -3372,7 +3372,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,16,Bayern,Düsseldorf,4,0
 1974,16,Stuttgart,Duisburg,2,1
 1974,16,Schalke,Frankfurt,1,1
-1974,16,Hertha,RW Essen,4,2
+1974,16,Hertha,Essen,4,2
 1974,16,Wuppertaler SV,TeBe Berlin,2,0
 1974,16,Bremen,Hamburger SV,1,0
 1974,16,Köln,K'lautern,2,0
@@ -3382,7 +3382,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,17,Frankfurt,Braunschweig,2,0
 1974,17,Bochum,Hertha,4,0
 1974,17,TeBe Berlin,Schalke,0,2
-1974,17,RW Essen,Stuttgart,3,1
+1974,17,Essen,Stuttgart,3,1
 1974,17,K'lautern,Wuppertaler SV,2,0
 1974,17,Düsseldorf,Offenbach,3,2
 1974,17,Duisburg,Köln,1,3
@@ -3392,7 +3392,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,18,TeBe Berlin,Braunschweig,2,2
 1974,18,Bochum,Stuttgart,1,0
 1974,18,K'lautern,Schalke,1,1
-1974,18,RW Essen,Köln,1,1
+1974,18,Essen,Köln,1,1
 1974,18,Duisburg,Wuppertaler SV,2,2
 1974,18,Hamburger SV,Gladbach,1,1
 1974,19,Hertha,Bayern,4,1
@@ -3401,7 +3401,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,19,Braunschweig,K'lautern,3,2
 1974,19,Köln,Bochum,4,1
 1974,19,Schalke,Duisburg,5,0
-1974,19,Wuppertaler SV,RW Essen,0,2
+1974,19,Wuppertaler SV,Essen,0,2
 1974,19,Offenbach,Hamburger SV,4,1
 1974,19,Bremen,TeBe Berlin,1,1
 1974,20,Bayern,Stuttgart,1,1
@@ -3409,14 +3409,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,20,Düsseldorf,Köln,3,0
 1974,20,Duisburg,Braunschweig,3,2
 1974,20,Bochum,Wuppertaler SV,4,2
-1974,20,RW Essen,Schalke,4,4
+1974,20,Essen,Schalke,4,4
 1974,20,K'lautern,Bremen,4,1
 1974,20,Offenbach,Hertha,3,1
 1974,20,Hamburger SV,Frankfurt,3,1
 1974,21,Köln,Bayern,1,0
 1974,21,Gladbach,K'lautern,3,0
 1974,21,Wuppertaler SV,Düsseldorf,2,3
-1974,21,Braunschweig,RW Essen,4,2
+1974,21,Braunschweig,Essen,4,2
 1974,21,Schalke,Bochum,1,0
 1974,21,Bremen,Duisburg,3,1
 1974,21,Stuttgart,Offenbach,3,1
@@ -3427,13 +3427,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,22,Duisburg,Gladbach,1,1
 1974,22,Düsseldorf,Schalke,2,1
 1974,22,Bochum,Braunschweig,1,0
-1974,22,RW Essen,Bremen,1,1
+1974,22,Essen,Bremen,1,1
 1974,22,Offenbach,Köln,1,4
 1974,22,K'lautern,Frankfurt,2,2
 1974,22,Hertha,Stuttgart,4,0
 1974,23,Wuppertaler SV,Offenbach,0,0
 1974,23,Frankfurt,Duisburg,4,1
-1974,23,Gladbach,RW Essen,1,1
+1974,23,Gladbach,Essen,1,1
 1974,23,Braunschweig,Düsseldorf,3,0
 1974,23,Bremen,Bochum,3,0
 1974,23,Köln,Hertha,2,1
@@ -3445,13 +3445,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,24,Bochum,Gladbach,0,0
 1974,24,Düsseldorf,Bremen,4,1
 1974,24,Offenbach,Schalke,3,0
-1974,24,RW Essen,Frankfurt,0,5
+1974,24,Essen,Frankfurt,0,5
 1974,24,Hertha,Wuppertaler SV,2,0
 1974,24,Stuttgart,Köln,2,0
 1974,24,Hamburger SV,K'lautern,2,0
 1974,25,Gladbach,Düsseldorf,3,1
 1974,25,Köln,Hamburger SV,4,0
-1974,25,TeBe Berlin,RW Essen,1,0
+1974,25,TeBe Berlin,Essen,1,0
 1974,25,Bremen,Bayern,0,2
 1974,25,Schalke,Hertha,1,0
 1974,25,K'lautern,Duisburg,2,0
@@ -3462,7 +3462,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,26,Hertha,Braunschweig,3,1
 1974,26,Bochum,TeBe Berlin,0,0
 1974,26,Stuttgart,Schalke,3,1
-1974,26,RW Essen,K'lautern,3,1
+1974,26,Essen,K'lautern,3,1
 1974,26,Köln,Wuppertaler SV,4,0
 1974,26,Hamburger SV,Duisburg,2,3
 1974,26,Offenbach,Bremen,5,1
@@ -3472,7 +3472,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,27,TeBe Berlin,Düsseldorf,1,4
 1974,27,Braunschweig,Stuttgart,6,0
 1974,27,K'lautern,Bochum,1,0
-1974,27,Duisburg,RW Essen,3,3
+1974,27,Duisburg,Essen,3,3
 1974,27,Wuppertaler SV,Hamburger SV,0,4
 1974,27,Bremen,Hertha,4,0
 1974,27,Schalke,Köln,1,1
@@ -3482,14 +3482,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,28,Köln,Braunschweig,3,0
 1974,28,Bochum,Duisburg,1,2
 1974,28,Wuppertaler SV,Schalke,0,1
-1974,28,Hamburger SV,RW Essen,2,2
+1974,28,Hamburger SV,Essen,2,2
 1974,28,Stuttgart,Bremen,2,2
 1974,28,Offenbach,Frankfurt,2,1
 1974,29,K'lautern,Bayern,0,1
 1974,29,Gladbach,Stuttgart,5,1
 1974,29,Duisburg,Düsseldorf,0,3
 1974,29,Braunschweig,Wuppertaler SV,1,1
-1974,29,RW Essen,Bochum,1,1
+1974,29,Essen,Bochum,1,1
 1974,29,Schalke,Hamburger SV,3,1
 1974,29,Bremen,Köln,4,1
 1974,29,TeBe Berlin,Offenbach,0,2
@@ -3497,7 +3497,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,30,Offenbach,K'lautern,2,2
 1974,30,Bayern,Duisburg,2,1
 1974,30,Köln,Gladbach,1,2
-1974,30,Düsseldorf,RW Essen,4,0
+1974,30,Düsseldorf,Essen,4,0
 1974,30,Schalke,Braunschweig,1,1
 1974,30,Hamburger SV,Bochum,3,2
 1974,30,Wuppertaler SV,Bremen,2,4
@@ -3506,13 +3506,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,31,Duisburg,Offenbach,2,1
 1974,31,Frankfurt,Köln,3,2
 1974,31,K'lautern,Hertha,3,0
-1974,31,RW Essen,Bayern,2,2
+1974,31,Essen,Bayern,2,2
 1974,31,Gladbach,Wuppertaler SV,6,2
 1974,31,Bochum,Düsseldorf,4,2
 1974,31,Braunschweig,Hamburger SV,1,2
 1974,31,Bremen,Schalke,0,1
 1974,31,TeBe Berlin,Stuttgart,1,1
-1974,32,Offenbach,RW Essen,1,3
+1974,32,Offenbach,Essen,1,3
 1974,32,Hertha,Duisburg,3,0
 1974,32,Bayern,Bochum,2,1
 1974,32,Schalke,Gladbach,1,3
@@ -3525,7 +3525,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,33,Gladbach,Braunschweig,2,0
 1974,33,Bochum,Offenbach,3,1
 1974,33,Frankfurt,Schalke,2,1
-1974,33,RW Essen,Hertha,2,1
+1974,33,Essen,Hertha,2,1
 1974,33,TeBe Berlin,Wuppertaler SV,0,0
 1974,33,Duisburg,Stuttgart,3,3
 1974,33,K'lautern,Köln,1,1
@@ -3536,7 +3536,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1974,34,Braunschweig,Frankfurt,2,0
 1974,34,Hertha,Bochum,4,2
 1974,34,Schalke,TeBe Berlin,3,0
-1974,34,Stuttgart,RW Essen,3,2
+1974,34,Stuttgart,Essen,3,2
 1974,34,Wuppertaler SV,K'lautern,3,3
 1974,34,Köln,Duisburg,4,2
 1975,1,Hannover,Gladbach,3,3
@@ -3546,7 +3546,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,1,Hamburger SV,Schalke,4,1
 1975,1,Bochum,Bremen,0,3
 1975,1,Duisburg,Düsseldorf,2,2
-1975,1,RW Essen,Uerdingen,2,1
+1975,1,Essen,Uerdingen,2,1
 1975,1,Hertha,Köln,2,1
 1975,2,Offenbach,Hamburger SV,3,2
 1975,2,Bremen,Frankfurt,1,2
@@ -3554,7 +3554,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,2,Braunschweig,Hertha,5,2
 1975,2,Schalke,Duisburg,5,1
 1975,2,Uerdingen,Bochum,0,0
-1975,2,Düsseldorf,RW Essen,5,2
+1975,2,Düsseldorf,Essen,5,2
 1975,2,Köln,Hannover,2,1
 1975,2,Karlsruhe,Bayern,1,2
 1975,3,Bayern,Bremen,4,0
@@ -3563,19 +3563,19 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,3,Hertha,Karlsruhe,1,1
 1975,3,Duisburg,Offenbach,6,2
 1975,3,Frankfurt,Uerdingen,3,1
-1975,3,RW Essen,Schalke,0,0
+1975,3,Essen,Schalke,0,0
 1975,3,Bochum,Düsseldorf,0,1
 1975,3,Braunschweig,Köln,0,0
 1975,4,Gladbach,Duisburg,3,0
-1975,4,Bremen,Hertha,3,2
-1975,4,Offenbach,RW Essen,0,4
 1975,4,Düsseldorf,Frankfurt,1,1
-1975,4,Schalke,Bochum,1,1
 1975,4,Uerdingen,Bayern,2,1
+1975,4,Bremen,Hertha,3,2
+1975,4,Offenbach,Essen,0,4
+1975,4,Schalke,Bochum,1,1
 1975,4,Hannover,Hamburger SV,1,0
 1975,4,Karlsruhe,Braunschweig,0,2
 1975,4,Köln,K'lautern,1,1
-1975,5,RW Essen,Gladbach,1,3
+1975,5,Essen,Gladbach,1,3
 1975,5,Hertha,Uerdingen,5,0
 1975,5,Bochum,Offenbach,5,1
 1975,5,Frankfurt,Schalke,2,1
@@ -3588,7 +3588,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,6,Düsseldorf,Hertha,2,1
 1975,6,Offenbach,Frankfurt,2,1
 1975,6,Schalke,Bayern,2,2
-1975,6,Hannover,RW Essen,0,0
+1975,6,Hannover,Essen,0,0
 1975,6,Uerdingen,Braunschweig,0,0
 1975,6,K'lautern,Duisburg,3,0
 1975,6,Bremen,Karlsruhe,1,0
@@ -3599,7 +3599,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,7,Bayern,Offenbach,3,1
 1975,7,Bochum,Hannover,2,0
 1975,7,Braunschweig,Düsseldorf,3,1
-1975,7,RW Essen,K'lautern,5,1
+1975,7,Essen,K'lautern,5,1
 1975,7,Karlsruhe,Uerdingen,1,0
 1975,7,Bremen,Köln,3,2
 1975,8,K'lautern,Bochum,2,1
@@ -3608,7 +3608,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,8,Hannover,Frankfurt,3,2
 1975,8,Schalke,Braunschweig,5,1
 1975,8,Düsseldorf,Karlsruhe,0,2
-1975,8,Hamburger SV,RW Essen,4,1
+1975,8,Hamburger SV,Essen,4,1
 1975,8,Uerdingen,Bremen,2,1
 1975,8,Köln,Duisburg,3,2
 1975,9,Braunschweig,Offenbach,5,1
@@ -3616,7 +3616,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,9,Karlsruhe,Schalke,2,2
 1975,9,Bochum,Hamburger SV,0,3
 1975,9,Bremen,Düsseldorf,3,0
-1975,9,RW Essen,Duisburg,5,2
+1975,9,Essen,Duisburg,5,2
 1975,9,Uerdingen,Köln,1,1
 1975,9,Bayern,Hannover,3,1
 1975,9,Hertha,Gladbach,3,0
@@ -3627,9 +3627,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,10,Schalke,Bremen,4,2
 1975,10,Duisburg,Bochum,1,1
 1975,10,Düsseldorf,Uerdingen,2,0
-1975,10,Köln,RW Essen,3,0
+1975,10,Köln,Essen,3,0
 1975,10,K'lautern,Bayern,2,1
-1975,11,Bochum,RW Essen,2,1
+1975,11,Bochum,Essen,2,1
 1975,11,Uerdingen,Schalke,3,2
 1975,11,Hertha,K'lautern,3,0
 1975,11,Bremen,Offenbach,3,1
@@ -3639,7 +3639,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,11,Braunschweig,Hannover,3,2
 1975,11,Karlsruhe,Gladbach,2,4
 1975,12,Gladbach,Bremen,3,0
-1975,12,RW Essen,Frankfurt,4,3
+1975,12,Essen,Frankfurt,4,3
 1975,12,Schalke,Düsseldorf,2,0
 1975,12,Köln,Bochum,1,0
 1975,12,Duisburg,Bayern,1,1
@@ -3652,13 +3652,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,13,Düsseldorf,Offenbach,0,0
 1975,13,Frankfurt,Bochum,6,0
 1975,13,Schalke,Köln,3,1
-1975,13,Bayern,RW Essen,5,1
+1975,13,Bayern,Essen,5,1
 1975,13,Bremen,Hannover,0,0
 1975,13,Braunschweig,Hamburger SV,1,0
 1975,13,Karlsruhe,K'lautern,3,5
 1975,14,Offenbach,Schalke,1,1
 1975,14,Gladbach,Düsseldorf,1,0
-1975,14,RW Essen,Hertha,3,1
+1975,14,Essen,Hertha,3,1
 1975,14,Köln,Frankfurt,3,3
 1975,14,Bochum,Bayern,3,1
 1975,14,Hannover,Uerdingen,3,1
@@ -3671,7 +3671,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,15,Köln,Offenbach,4,0
 1975,15,Frankfurt,Bayern,6,0
 1975,15,Düsseldorf,Hannover,3,0
-1975,15,Braunschweig,RW Essen,1,1
+1975,15,Braunschweig,Essen,1,1
 1975,15,Karlsruhe,Duisburg,2,2
 1975,15,Bremen,Hamburger SV,1,3
 1975,16,Gladbach,Offenbach,2,0
@@ -3679,7 +3679,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,16,Frankfurt,Hertha,1,1
 1975,16,Hannover,Schalke,1,1
 1975,16,K'lautern,Düsseldorf,2,1
-1975,16,RW Essen,Karlsruhe,1,0
+1975,16,Essen,Karlsruhe,1,0
 1975,16,Hamburger SV,Uerdingen,0,0
 1975,16,Duisburg,Bremen,2,0
 1975,16,Bayern,Köln,1,2
@@ -3691,9 +3691,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,17,Schalke,K'lautern,2,2
 1975,17,Karlsruhe,Bochum,2,2
 1975,17,Düsseldorf,Hamburger SV,1,0
-1975,17,Bremen,RW Essen,3,3
+1975,17,Bremen,Essen,3,3
 1975,18,Düsseldorf,Duisburg,1,3
-1975,18,Uerdingen,RW Essen,1,1
+1975,18,Uerdingen,Essen,1,1
 1975,18,Gladbach,Hannover,2,0
 1975,18,Braunschweig,Bayern,1,1
 1975,18,Offenbach,K'lautern,1,4
@@ -3707,14 +3707,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,19,Frankfurt,Bremen,2,0
 1975,19,Duisburg,Schalke,1,3
 1975,19,Bochum,Uerdingen,3,0
-1975,19,RW Essen,Düsseldorf,2,2
+1975,19,Essen,Düsseldorf,2,2
 1975,19,Hannover,Köln,3,3
 1975,19,Bayern,Karlsruhe,2,0
 1975,20,Gladbach,Hamburger SV,1,1
 1975,20,Karlsruhe,Hertha,3,0
 1975,20,Offenbach,Duisburg,2,1
 1975,20,Uerdingen,Frankfurt,0,5
-1975,20,Schalke,RW Essen,5,1
+1975,20,Schalke,Essen,5,1
 1975,20,Düsseldorf,Bochum,3,1
 1975,20,Bremen,Bayern,0,0
 1975,20,Hannover,K'lautern,2,0
@@ -3722,13 +3722,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,21,Duisburg,Gladbach,2,3
 1975,21,Frankfurt,Düsseldorf,5,2
 1975,21,Bayern,Uerdingen,2,0
-1975,21,RW Essen,Offenbach,2,2
+1975,21,Essen,Offenbach,2,2
 1975,21,Hamburger SV,Hannover,3,0
 1975,21,K'lautern,Köln,1,1
 1975,21,Hertha,Bremen,0,0
 1975,21,Bochum,Schalke,1,4
 1975,21,Braunschweig,Karlsruhe,2,0
-1975,22,Gladbach,RW Essen,1,2
+1975,22,Gladbach,Essen,1,2
 1975,22,Uerdingen,Hertha,1,1
 1975,22,Offenbach,Bochum,1,0
 1975,22,Schalke,Frankfurt,2,4
@@ -3741,7 +3741,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,23,Hertha,Düsseldorf,2,2
 1975,23,Frankfurt,Offenbach,1,0
 1975,23,Bayern,Schalke,3,2
-1975,23,RW Essen,Hannover,1,0
+1975,23,Essen,Hannover,1,0
 1975,23,Braunschweig,Uerdingen,1,0
 1975,23,Duisburg,K'lautern,1,2
 1975,23,Karlsruhe,Bremen,2,0
@@ -3752,7 +3752,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,24,Offenbach,Bayern,2,2
 1975,24,Hannover,Bochum,4,1
 1975,24,Düsseldorf,Braunschweig,3,3
-1975,24,K'lautern,RW Essen,5,0
+1975,24,K'lautern,Essen,5,0
 1975,24,Uerdingen,Karlsruhe,1,1
 1975,24,Köln,Bremen,1,1
 1975,25,Bayern,Gladbach,4,0
@@ -3761,11 +3761,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,25,Braunschweig,Schalke,4,1
 1975,25,Bochum,K'lautern,2,0
 1975,25,Karlsruhe,Düsseldorf,1,0
-1975,25,RW Essen,Hamburger SV,1,1
+1975,25,Essen,Hamburger SV,1,1
 1975,25,Bremen,Uerdingen,3,0
 1975,25,Duisburg,Köln,0,4
 1975,26,K'lautern,Frankfurt,3,1
-1975,26,Duisburg,RW Essen,4,0
+1975,26,Duisburg,Essen,4,0
 1975,26,Gladbach,Hertha,1,1
 1975,26,Offenbach,Braunschweig,4,2
 1975,26,Schalke,Karlsruhe,6,2
@@ -3780,19 +3780,19 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,27,Bremen,Schalke,1,1
 1975,27,Bochum,Duisburg,1,2
 1975,27,Uerdingen,Düsseldorf,2,0
-1975,27,RW Essen,Köln,2,3
+1975,27,Essen,Köln,2,3
 1975,27,Bayern,K'lautern,3,4
 1975,28,K'lautern,Hertha,5,0
 1975,28,Schalke,Uerdingen,5,1
 1975,28,Gladbach,Karlsruhe,4,0
 1975,28,Offenbach,Bremen,2,0
 1975,28,Duisburg,Frankfurt,1,1
-1975,28,RW Essen,Bochum,1,0
+1975,28,Essen,Bochum,1,0
 1975,28,Köln,Düsseldorf,4,0
 1975,28,Hamburger SV,Bayern,0,1
 1975,28,Hannover,Braunschweig,2,0
 1975,29,Karlsruhe,Hannover,3,2
-1975,29,Frankfurt,RW Essen,1,3
+1975,29,Frankfurt,Essen,1,3
 1975,29,Düsseldorf,Schalke,1,2
 1975,29,Braunschweig,K'lautern,2,0
 1975,29,Bremen,Gladbach,2,2
@@ -3804,13 +3804,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,30,Gladbach,Uerdingen,6,1
 1975,30,Duisburg,Hertha,2,1
 1975,30,Bochum,Frankfurt,5,3
-1975,30,RW Essen,Bayern,3,3
+1975,30,Essen,Bayern,3,3
 1975,30,Hannover,Bremen,0,0
 1975,30,Hamburger SV,Braunschweig,4,0
 1975,30,K'lautern,Karlsruhe,3,1
 1975,30,Köln,Schalke,2,1
 1975,31,Düsseldorf,Gladbach,1,1
-1975,31,Hertha,RW Essen,2,2
+1975,31,Hertha,Essen,2,2
 1975,31,Schalke,Offenbach,1,1
 1975,31,Frankfurt,Köln,2,2
 1975,31,Bayern,Bochum,4,0
@@ -3818,7 +3818,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,31,Braunschweig,Duisburg,3,1
 1975,31,Bremen,K'lautern,3,2
 1975,31,Karlsruhe,Hamburger SV,3,2
-1975,32,RW Essen,Braunschweig,2,2
+1975,32,Essen,Braunschweig,2,2
 1975,32,Gladbach,Schalke,0,2
 1975,32,Bochum,Hertha,2,0
 1975,32,Offenbach,Köln,1,5
@@ -3827,13 +3827,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,32,K'lautern,Uerdingen,1,2
 1975,32,Duisburg,Karlsruhe,1,0
 1975,32,Hamburger SV,Bremen,1,2
+1975,33,Uerdingen,Hamburger SV,0,1
 1975,33,Offenbach,Gladbach,1,1
 1975,33,Hertha,Frankfurt,4,4
 1975,33,Schalke,Hannover,1,2
 1975,33,Braunschweig,Bochum,1,1
 1975,33,Düsseldorf,K'lautern,5,1
-1975,33,Karlsruhe,RW Essen,1,2
-1975,33,Uerdingen,Hamburger SV,0,1
+1975,33,Karlsruhe,Essen,1,2
 1975,33,Bremen,Duisburg,2,0
 1975,33,Köln,Bayern,1,0
 1975,34,Gladbach,Köln,2,1
@@ -3843,7 +3843,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1975,34,K'lautern,Schalke,1,3
 1975,34,Bochum,Karlsruhe,4,2
 1975,34,Hamburger SV,Düsseldorf,3,1
-1975,34,RW Essen,Bremen,2,0
+1975,34,Essen,Bremen,2,0
 1975,34,Duisburg,Uerdingen,2,0
 1976,1,Gladbach,Duisburg,1,1
 1976,1,Karlsruhe,Hertha,0,3
@@ -3851,12 +3851,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,1,Hamburger SV,Dortmund,3,4
 1976,1,Schalke,Bremen,3,2
 1976,1,Köln,K'lautern,3,1
-1976,1,TeBe Berlin,RW Essen,2,2
+1976,1,TeBe Berlin,Essen,2,2
 1976,1,Braunschweig,Frankfurt,3,1
 1976,1,Bayern,Düsseldorf,2,1
 1976,2,K'lautern,Schalke,2,0
 1976,2,Düsseldorf,Braunschweig,1,3
-1976,2,RW Essen,Köln,0,3
+1976,2,Essen,Köln,0,3
 1976,2,Bremen,Hamburger SV,2,2
 1976,2,Dortmund,Saarbrücken,2,1
 1976,2,Hertha,Gladbach,0,1
@@ -3868,7 +3868,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,3,Gladbach,Bochum,4,2
 1976,3,Karlsruhe,Dortmund,2,1
 1976,3,Saarbrücken,Bremen,2,0
-1976,3,Schalke,RW Essen,3,0
+1976,3,Schalke,Essen,3,0
 1976,3,Köln,Frankfurt,2,0
 1976,3,Duisburg,Hertha,1,1
 1976,3,TeBe Berlin,Düsseldorf,4,2
@@ -3876,7 +3876,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,4,Braunschweig,TeBe Berlin,3,1
 1976,4,Frankfurt,Schalke,6,3
 1976,4,Düsseldorf,Köln,1,3
-1976,4,RW Essen,Hamburger SV,1,2
+1976,4,Essen,Hamburger SV,1,2
 1976,4,K'lautern,Saarbrücken,1,0
 1976,4,Bremen,Karlsruhe,1,1
 1976,4,Dortmund,Gladbach,0,0
@@ -3885,7 +3885,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,5,Bayern,TeBe Berlin,9,0
 1976,5,Gladbach,Bremen,3,1
 1976,5,Karlsruhe,K'lautern,1,1
-1976,5,Saarbrücken,RW Essen,2,1
+1976,5,Saarbrücken,Essen,2,1
 1976,5,Hamburger SV,Frankfurt,3,1
 1976,5,Schalke,Düsseldorf,2,1
 1976,5,Köln,Braunschweig,3,0
@@ -3893,14 +3893,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,6,Bremen,Duisburg,2,2
 1976,6,Dortmund,Hertha,2,1
 1976,6,Düsseldorf,Hamburger SV,2,0
-1976,6,RW Essen,Karlsruhe,3,2
+1976,6,Essen,Karlsruhe,3,2
 1976,6,K'lautern,Gladbach,1,2
 1976,6,Bochum,Bayern,5,6
 1976,6,TeBe Berlin,Köln,3,2
 1976,6,Braunschweig,Schalke,1,0
 1976,6,Frankfurt,Saarbrücken,2,1
 1976,7,Hertha,Bremen,2,1
-1976,7,Gladbach,RW Essen,6,0
+1976,7,Gladbach,Essen,6,0
 1976,7,Hamburger SV,Braunschweig,0,2
 1976,7,Duisburg,K'lautern,1,0
 1976,7,Karlsruhe,Frankfurt,2,0
@@ -3911,7 +3911,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,8,K'lautern,Hertha,0,2
 1976,8,Bremen,Bochum,2,0
 1976,8,Düsseldorf,Karlsruhe,3,0
-1976,8,RW Essen,Duisburg,1,5
+1976,8,Essen,Duisburg,1,5
 1976,8,Dortmund,Bayern,3,3
 1976,8,Köln,Schalke,2,0
 1976,8,TeBe Berlin,Hamburger SV,1,1
@@ -3923,11 +3923,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,9,Saarbrücken,TeBe Berlin,0,0
 1976,9,Hamburger SV,Köln,2,1
 1976,9,Bochum,K'lautern,1,0
-1976,9,Hertha,RW Essen,2,1
+1976,9,Hertha,Essen,2,1
 1976,9,Duisburg,Frankfurt,4,3
 1976,9,Bayern,Schalke,0,7
 1976,10,Düsseldorf,Duisburg,2,0
-1976,10,RW Essen,Bochum,3,3
+1976,10,Essen,Bochum,3,3
 1976,10,K'lautern,Dortmund,2,1
 1976,10,Bremen,Bayern,2,3
 1976,10,Schalke,Hamburger SV,1,0
@@ -3937,7 +3937,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,10,Frankfurt,Hertha,3,3
 1976,11,Gladbach,TeBe Berlin,3,0
 1976,11,Bremen,K'lautern,2,0
-1976,11,Dortmund,RW Essen,4,2
+1976,11,Dortmund,Essen,4,2
 1976,11,Karlsruhe,Köln,2,1
 1976,11,Bochum,Frankfurt,3,1
 1976,11,Hertha,Düsseldorf,4,0
@@ -3945,7 +3945,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,11,Bayern,Hamburger SV,6,2
 1976,11,Saarbrücken,Schalke,2,3
 1976,12,Düsseldorf,Bochum,1,0
-1976,12,RW Essen,Bremen,0,0
+1976,12,Essen,Bremen,0,0
 1976,12,K'lautern,Bayern,1,1
 1976,12,Hamburger SV,Saarbrücken,0,0
 1976,12,Schalke,Karlsruhe,2,2
@@ -3956,14 +3956,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,13,Dortmund,Düsseldorf,1,2
 1976,13,Gladbach,Schalke,2,0
 1976,13,Karlsruhe,Hamburger SV,2,2
-1976,13,K'lautern,RW Essen,7,1
+1976,13,K'lautern,Essen,7,1
 1976,13,Bremen,Frankfurt,2,1
 1976,13,Bochum,Braunschweig,1,1
 1976,13,Hertha,TeBe Berlin,2,0
 1976,13,Duisburg,Köln,1,1
 1976,13,Bayern,Saarbrücken,5,1
 1976,14,Düsseldorf,Bremen,3,2
-1976,14,RW Essen,Bayern,1,4
+1976,14,Essen,Bayern,1,4
 1976,14,Saarbrücken,Karlsruhe,1,1
 1976,14,Hamburger SV,Gladbach,4,1
 1976,14,Schalke,Duisburg,3,2
@@ -3979,9 +3979,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,15,Bochum,Köln,1,2
 1976,15,Hertha,Schalke,2,1
 1976,15,Duisburg,Hamburger SV,0,0
-1976,15,Frankfurt,RW Essen,3,1
+1976,15,Frankfurt,Essen,3,1
 1976,16,Köln,Dortmund,1,1
-1976,16,Düsseldorf,RW Essen,4,4
+1976,16,Düsseldorf,Essen,4,4
 1976,16,Karlsruhe,Gladbach,4,0
 1976,16,Hamburger SV,Hertha,2,0
 1976,16,Schalke,Bochum,3,1
@@ -3992,7 +3992,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,17,Bochum,Hamburger SV,4,2
 1976,17,Duisburg,Karlsruhe,3,1
 1976,17,Gladbach,Bayern,1,0
-1976,17,RW Essen,Braunschweig,2,1
+1976,17,Essen,Braunschweig,2,1
 1976,17,K'lautern,TeBe Berlin,3,1
 1976,17,Bremen,Köln,2,1
 1976,17,Dortmund,Schalke,2,2
@@ -4003,11 +4003,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,18,Dortmund,Hamburger SV,4,4
 1976,18,Bremen,Schalke,1,1
 1976,18,K'lautern,Köln,4,2
-1976,18,RW Essen,TeBe Berlin,1,0
+1976,18,Essen,TeBe Berlin,1,0
 1976,18,Düsseldorf,Bayern,0,0
 1976,18,Hertha,Karlsruhe,1,1
 1976,18,Frankfurt,Braunschweig,3,0
-1976,19,Köln,RW Essen,2,2
+1976,19,Köln,Essen,2,2
 1976,19,Schalke,K'lautern,5,2
 1976,19,Hamburger SV,Bremen,5,3
 1976,19,Karlsruhe,Bochum,2,1
@@ -4024,9 +4024,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,20,Hertha,Duisburg,2,4
 1976,20,Düsseldorf,TeBe Berlin,0,0
 1976,20,Braunschweig,Bayern,1,0
-1976,20,RW Essen,Schalke,2,2
+1976,20,Essen,Schalke,2,2
 1976,21,Köln,Düsseldorf,2,2
-1976,21,Hamburger SV,RW Essen,5,3
+1976,21,Hamburger SV,Essen,5,3
 1976,21,Saarbrücken,K'lautern,2,2
 1976,21,Karlsruhe,Bremen,3,1
 1976,21,Duisburg,Bochum,0,0
@@ -4036,7 +4036,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,21,Gladbach,Dortmund,1,1
 1976,22,Bremen,Gladbach,1,0
 1976,22,K'lautern,Karlsruhe,3,1
-1976,22,RW Essen,Saarbrücken,1,0
+1976,22,Essen,Saarbrücken,1,0
 1976,22,Frankfurt,Hamburger SV,2,1
 1976,22,Düsseldorf,Schalke,1,2
 1976,22,Braunschweig,Köln,4,2
@@ -4044,7 +4044,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,22,Dortmund,Duisburg,2,1
 1976,22,TeBe Berlin,Bayern,3,1
 1976,23,Hamburger SV,Düsseldorf,1,1
-1976,23,Karlsruhe,RW Essen,1,1
+1976,23,Karlsruhe,Essen,1,1
 1976,23,Gladbach,K'lautern,0,0
 1976,23,Duisburg,Bremen,3,0
 1976,23,Hertha,Dortmund,3,2
@@ -4052,7 +4052,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,23,Köln,TeBe Berlin,8,4
 1976,23,Schalke,Braunschweig,2,3
 1976,23,Saarbrücken,Frankfurt,2,2
-1976,24,RW Essen,Gladbach,1,0
+1976,24,Essen,Gladbach,1,0
 1976,24,Frankfurt,Karlsruhe,3,2
 1976,24,Düsseldorf,Saarbrücken,5,1
 1976,24,Braunschweig,Hamburger SV,0,1
@@ -4062,7 +4062,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,24,Köln,Bayern,3,0
 1976,24,Bremen,Hertha,1,0
 1976,25,Karlsruhe,Düsseldorf,1,1
-1976,25,Duisburg,RW Essen,4,0
+1976,25,Duisburg,Essen,4,0
 1976,25,Hertha,K'lautern,2,0
 1976,25,Bochum,Bremen,0,2
 1976,25,Bayern,Dortmund,1,2
@@ -4076,11 +4076,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,26,Braunschweig,Karlsruhe,3,3
 1976,26,TeBe Berlin,Saarbrücken,1,1
 1976,26,Köln,Hamburger SV,3,3
-1976,26,RW Essen,Hertha,2,2
+1976,26,Essen,Hertha,2,2
 1976,26,Frankfurt,Duisburg,3,1
 1976,26,Schalke,Bayern,0,0
 1976,27,Duisburg,Düsseldorf,1,0
-1976,27,Bochum,RW Essen,2,1
+1976,27,Bochum,Essen,2,1
 1976,27,Dortmund,K'lautern,5,2
 1976,27,Bayern,Bremen,1,0
 1976,27,Hamburger SV,Schalke,2,2
@@ -4096,17 +4096,17 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,28,Frankfurt,Bochum,2,2
 1976,28,Düsseldorf,Hertha,2,3
 1976,28,Braunschweig,Duisburg,1,1
-1976,28,RW Essen,Dortmund,1,5
+1976,28,Essen,Dortmund,1,5
 1976,29,Bayern,K'lautern,3,0
 1976,29,Duisburg,TeBe Berlin,1,1
 1976,29,Karlsruhe,Schalke,1,7
 1976,29,Bochum,Düsseldorf,1,2
-1976,29,Bremen,RW Essen,3,1
+1976,29,Bremen,Essen,3,1
 1976,29,Saarbrücken,Hamburger SV,3,2
 1976,29,Gladbach,Köln,3,1
 1976,29,Dortmund,Frankfurt,2,2
 1976,29,Hertha,Braunschweig,2,1
-1976,30,RW Essen,K'lautern,3,2
+1976,30,Essen,K'lautern,3,2
 1976,30,Düsseldorf,Dortmund,3,2
 1976,30,Schalke,Gladbach,1,0
 1976,30,Hamburger SV,Karlsruhe,2,1
@@ -4118,7 +4118,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,31,Bremen,Düsseldorf,0,2
 1976,31,Bochum,TeBe Berlin,2,1
 1976,31,K'lautern,Frankfurt,2,2
-1976,31,Bayern,RW Essen,5,1
+1976,31,Bayern,Essen,5,1
 1976,31,Karlsruhe,Saarbrücken,3,0
 1976,31,Gladbach,Hamburger SV,0,0
 1976,31,Duisburg,Schalke,2,2
@@ -4132,9 +4132,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,32,Braunschweig,Bremen,0,1
 1976,32,TeBe Berlin,Dortmund,2,3
 1976,32,Schalke,Hertha,4,0
-1976,32,RW Essen,Frankfurt,1,8
+1976,32,Essen,Frankfurt,1,8
 1976,33,Dortmund,Köln,1,2
-1976,33,RW Essen,Düsseldorf,5,3
+1976,33,Essen,Düsseldorf,5,3
 1976,33,Gladbach,Karlsruhe,5,1
 1976,33,Duisburg,Saarbrücken,2,3
 1976,33,Hertha,Hamburger SV,2,1
@@ -4143,7 +4143,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1976,33,K'lautern,Braunschweig,1,3
 1976,33,Frankfurt,Bayern,2,1
 1976,34,Bayern,Gladbach,2,2
-1976,34,Braunschweig,RW Essen,6,0
+1976,34,Braunschweig,Essen,6,0
 1976,34,TeBe Berlin,K'lautern,4,2
 1976,34,Köln,Bremen,3,0
 1976,34,Schalke,Dortmund,4,2
@@ -5994,12 +5994,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,1,Köln,Bielefeld,2,3
 1983,1,Gladbach,Düsseldorf,1,1
 1983,1,Bochum,Offenbach,1,0
-1983,1,Waldhof Mannheim,Bremen,2,0
+1983,1,SV Waldhof,Bremen,2,0
 1983,1,Stuttgart,Braunschweig,3,0
 1983,2,Düsseldorf,Köln,2,0
 1983,2,Uerdingen,Frankfurt,5,2
 1983,2,K'lautern,Stuttgart,2,2
-1983,2,Braunschweig,Waldhof Mannheim,3,2
+1983,2,Braunschweig,SV Waldhof,3,2
 1983,2,Offenbach,Gladbach,4,3
 1983,2,Bielefeld,Bayern,1,3
 1983,2,Leverkusen,Nürnberg,3,0
@@ -6009,14 +6009,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,3,Nürnberg,Bielefeld,2,0
 1983,3,Bayern,Düsseldorf,1,1
 1983,3,Bochum,Braunschweig,3,1
-1983,3,Stuttgart,Waldhof Mannheim,0,0
+1983,3,Stuttgart,SV Waldhof,0,0
 1983,3,Hamburger SV,Uerdingen,2,2
 1983,3,Frankfurt,Leverkusen,2,2
 1983,3,Köln,Offenbach,1,0
 1983,3,Gladbach,Bremen,3,1
 1983,4,Uerdingen,K'lautern,3,1
 1983,4,Bremen,Köln,1,0
-1983,4,Waldhof Mannheim,Bochum,3,3
+1983,4,SV Waldhof,Bochum,3,3
 1983,4,Bielefeld,Frankfurt,2,1
 1983,4,Braunschweig,Gladbach,3,1
 1983,4,Offenbach,Bayern,2,3
@@ -6031,7 +6031,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,5,Köln,Braunschweig,2,1
 1983,5,Dortmund,Uerdingen,2,1
 1983,5,Stuttgart,Bochum,4,2
-1983,5,Gladbach,Waldhof Mannheim,3,0
+1983,5,Gladbach,SV Waldhof,3,0
 1983,6,Leverkusen,Dortmund,4,2
 1983,6,Braunschweig,Bayern,1,2
 1983,6,Offenbach,Frankfurt,2,1
@@ -6039,12 +6039,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,6,Bielefeld,K'lautern,3,2
 1983,6,Uerdingen,Stuttgart,3,2
 1983,6,Bochum,Gladbach,0,4
-1983,6,Waldhof Mannheim,Köln,2,2
+1983,6,SV Waldhof,Köln,2,2
 1983,6,Bremen,Nürnberg,2,0
 1983,7,Nürnberg,Braunschweig,4,2
 1983,7,Hamburger SV,Offenbach,6,0
 1983,7,Frankfurt,Bremen,0,0
-1983,7,Bayern,Waldhof Mannheim,6,0
+1983,7,Bayern,SV Waldhof,6,0
 1983,7,Köln,Bochum,3,0
 1983,7,Uerdingen,Leverkusen,2,1
 1983,7,Dortmund,Bielefeld,1,0
@@ -6058,10 +6058,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,8,Leverkusen,Stuttgart,1,1
 1983,8,Gladbach,Köln,4,2
 1983,8,Bochum,Bayern,3,1
-1983,8,Waldhof Mannheim,Nürnberg,1,0
+1983,8,SV Waldhof,Nürnberg,1,0
 1983,9,Nürnberg,Bochum,3,1
 1983,9,Hamburger SV,Braunschweig,3,0
-1983,9,Frankfurt,Waldhof Mannheim,1,3
+1983,9,Frankfurt,SV Waldhof,1,3
 1983,9,Bayern,Gladbach,4,0
 1983,9,Leverkusen,Bielefeld,0,0
 1983,9,Uerdingen,Düsseldorf,1,3
@@ -6076,7 +6076,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,10,Köln,Bayern,2,0
 1983,10,Gladbach,Nürnberg,2,0
 1983,10,Bochum,Frankfurt,4,1
-1983,10,Waldhof Mannheim,Hamburger SV,0,1
+1983,10,SV Waldhof,Hamburger SV,0,1
 1983,11,Hamburger SV,Bochum,2,1
 1983,11,Frankfurt,Gladbach,1,1
 1983,11,Nürnberg,Köln,1,3
@@ -6084,9 +6084,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,11,Leverkusen,Offenbach,3,1
 1983,11,Uerdingen,Bremen,0,3
 1983,11,Dortmund,Braunschweig,0,2
-1983,11,K'lautern,Waldhof Mannheim,2,0
+1983,11,K'lautern,SV Waldhof,2,0
 1983,11,Stuttgart,Bayern,1,0
-1983,12,Waldhof Mannheim,Dortmund,4,1
+1983,12,SV Waldhof,Dortmund,4,1
 1983,12,Braunschweig,Uerdingen,1,2
 1983,12,Offenbach,Bielefeld,2,2
 1983,12,Düsseldorf,Stuttgart,3,0
@@ -6095,7 +6095,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,12,Gladbach,Hamburger SV,4,0
 1983,12,Bochum,K'lautern,4,1
 1983,12,Bremen,Leverkusen,3,0
-1983,13,Uerdingen,Waldhof Mannheim,1,1
+1983,13,Uerdingen,SV Waldhof,1,1
 1983,13,Dortmund,Bochum,1,1
 1983,13,Hamburger SV,Köln,2,2
 1983,13,Frankfurt,Bayern,0,0
@@ -6105,7 +6105,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,13,K'lautern,Gladbach,0,2
 1983,13,Stuttgart,Nürnberg,7,0
 1983,14,Bremen,Düsseldorf,2,0
-1983,14,Waldhof Mannheim,Leverkusen,0,3
+1983,14,SV Waldhof,Leverkusen,0,3
 1983,14,Braunschweig,Bielefeld,2,0
 1983,14,Offenbach,Stuttgart,1,2
 1983,14,Nürnberg,Frankfurt,0,0
@@ -6121,11 +6121,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,15,Dortmund,Köln,0,0
 1983,15,K'lautern,Bayern,0,1
 1983,15,Bremen,Offenbach,8,1
-1983,15,Bielefeld,Waldhof Mannheim,1,1
+1983,15,Bielefeld,SV Waldhof,1,1
 1983,16,Köln,Uerdingen,3,0
 1983,16,Gladbach,Leverkusen,3,1
 1983,16,Bochum,Bielefeld,2,3
-1983,16,Waldhof Mannheim,Düsseldorf,1,1
+1983,16,SV Waldhof,Düsseldorf,1,1
 1983,16,Braunschweig,Offenbach,4,4
 1983,16,Frankfurt,Hamburger SV,0,0
 1983,16,Nürnberg,K'lautern,3,4
@@ -6133,7 +6133,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,16,Stuttgart,Bremen,3,0
 1983,17,Hamburger SV,Stuttgart,0,2
 1983,17,Leverkusen,Köln,2,1
-1983,17,Offenbach,Waldhof Mannheim,0,2
+1983,17,Offenbach,SV Waldhof,0,2
 1983,17,Düsseldorf,Bochum,1,1
 1983,17,Bielefeld,Gladbach,2,2
 1983,17,Uerdingen,Bayern,1,1
@@ -6147,9 +6147,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,18,Leverkusen,Bayern,1,5
 1983,18,Bielefeld,Köln,1,2
 1983,18,Offenbach,Bochum,2,2
-1983,18,Bremen,Waldhof Mannheim,5,0
+1983,18,Bremen,SV Waldhof,5,0
 1983,18,Braunschweig,Stuttgart,1,0
-1983,19,Waldhof Mannheim,Braunschweig,2,2
+1983,19,SV Waldhof,Braunschweig,2,2
 1983,19,Gladbach,Offenbach,3,2
 1983,19,Bayern,Bielefeld,3,1
 1983,19,Nürnberg,Leverkusen,2,3
@@ -6159,7 +6159,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,19,Bochum,Bremen,3,3
 1983,19,Köln,Düsseldorf,1,0
 1983,20,Düsseldorf,Bayern,4,1
-1983,20,Waldhof Mannheim,Stuttgart,2,2
+1983,20,SV Waldhof,Stuttgart,2,2
 1983,20,Uerdingen,Hamburger SV,3,1
 1983,20,Leverkusen,Frankfurt,2,2
 1983,20,Bielefeld,Nürnberg,1,0
@@ -6173,14 +6173,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,21,Hamburger SV,Leverkusen,3,0
 1983,21,K'lautern,Uerdingen,5,2
 1983,21,Stuttgart,Dortmund,3,1
-1983,21,Bochum,Waldhof Mannheim,1,0
+1983,21,Bochum,SV Waldhof,1,0
 1983,21,Köln,Bremen,1,4
 1983,21,Bayern,Offenbach,9,0
 1983,22,Gladbach,Bochum,4,2
 1983,22,Hamburger SV,Düsseldorf,5,2
 1983,22,Bayern,Braunschweig,6,0
 1983,22,Frankfurt,Offenbach,3,0
-1983,22,Köln,Waldhof Mannheim,2,0
+1983,22,Köln,SV Waldhof,2,0
 1983,22,Nürnberg,Bremen,2,0
 1983,22,Dortmund,Leverkusen,3,0
 1983,22,K'lautern,Bielefeld,6,0
@@ -6193,7 +6193,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,23,Braunschweig,Nürnberg,1,0
 1983,23,Düsseldorf,K'lautern,1,5
 1983,23,Leverkusen,Uerdingen,3,1
-1983,23,Waldhof Mannheim,Bayern,0,0
+1983,23,SV Waldhof,Bayern,0,0
 1983,24,Uerdingen,Bielefeld,1,3
 1983,24,K'lautern,Offenbach,1,1
 1983,24,Stuttgart,Leverkusen,2,2
@@ -6202,21 +6202,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,24,Frankfurt,Braunschweig,1,2
 1983,24,Bayern,Bochum,5,1
 1983,24,Dortmund,Düsseldorf,6,0
-1983,24,Nürnberg,Waldhof Mannheim,0,0
+1983,24,Nürnberg,SV Waldhof,0,0
 1983,25,Düsseldorf,Uerdingen,1,1
 1983,25,Offenbach,Dortmund,0,0
 1983,25,Bremen,K'lautern,1,1
 1983,25,Braunschweig,Hamburger SV,0,0
 1983,25,Gladbach,Bayern,3,0
 1983,25,Köln,Stuttgart,2,2
-1983,25,Waldhof Mannheim,Frankfurt,1,1
+1983,25,SV Waldhof,Frankfurt,1,1
 1983,25,Bielefeld,Leverkusen,3,0
 1983,25,Bochum,Nürnberg,2,0
 1983,26,Uerdingen,Offenbach,4,2
 1983,26,Leverkusen,Düsseldorf,2,0
 1983,26,Frankfurt,Bochum,1,0
 1983,26,Bayern,Köln,4,2
-1983,26,Hamburger SV,Waldhof Mannheim,2,3
+1983,26,Hamburger SV,SV Waldhof,2,3
 1983,26,Stuttgart,Bielefeld,1,0
 1983,26,Nürnberg,Gladbach,1,3
 1983,26,K'lautern,Braunschweig,3,1
@@ -6226,7 +6226,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,27,Bochum,Hamburger SV,1,1
 1983,27,Gladbach,Frankfurt,1,1
 1983,27,Bayern,Stuttgart,2,2
-1983,27,Waldhof Mannheim,K'lautern,2,0
+1983,27,SV Waldhof,K'lautern,2,0
 1983,27,Köln,Nürnberg,3,1
 1983,27,Bremen,Uerdingen,5,2
 1983,27,Offenbach,Leverkusen,0,2
@@ -6238,13 +6238,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,28,Nürnberg,Bayern,2,4
 1983,28,Frankfurt,Köln,0,2
 1983,28,Leverkusen,Bremen,0,0
-1983,28,Dortmund,Waldhof Mannheim,4,1
+1983,28,Dortmund,SV Waldhof,4,1
 1983,29,Offenbach,Nürnberg,3,1
 1983,29,Bochum,Stuttgart,0,1
 1983,29,Bremen,Bayern,3,2
 1983,29,Düsseldorf,Frankfurt,4,2
 1983,29,Bielefeld,Hamburger SV,0,1
-1983,29,Waldhof Mannheim,Gladbach,2,3
+1983,29,SV Waldhof,Gladbach,2,3
 1983,29,Uerdingen,Dortmund,2,1
 1983,29,Braunschweig,Köln,2,2
 1983,29,Leverkusen,K'lautern,2,0
@@ -6254,7 +6254,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,30,Köln,Hamburger SV,1,4
 1983,30,Bayern,Frankfurt,3,0
 1983,30,Braunschweig,Leverkusen,0,0
-1983,30,Waldhof Mannheim,Uerdingen,1,4
+1983,30,SV Waldhof,Uerdingen,1,4
 1983,30,Bochum,Dortmund,2,2
 1983,30,Gladbach,K'lautern,3,2
 1983,31,Stuttgart,Offenbach,5,1
@@ -6264,13 +6264,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,31,Frankfurt,Nürnberg,3,1
 1983,31,Hamburger SV,Bayern,2,1
 1983,31,Dortmund,Gladbach,4,1
-1983,31,Leverkusen,Waldhof Mannheim,0,1
+1983,31,Leverkusen,SV Waldhof,0,1
 1983,31,Düsseldorf,Bremen,3,4
 1983,32,Offenbach,Bremen,3,7
 1983,32,Nürnberg,Hamburger SV,1,6
 1983,32,Stuttgart,Frankfurt,2,2
 1983,32,Braunschweig,Düsseldorf,4,1
-1983,32,Waldhof Mannheim,Bielefeld,0,2
+1983,32,SV Waldhof,Bielefeld,0,2
 1983,32,Bochum,Leverkusen,2,1
 1983,32,Gladbach,Uerdingen,7,1
 1983,32,Köln,Dortmund,5,2
@@ -6282,10 +6282,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1983,33,Uerdingen,Köln,4,6
 1983,33,Leverkusen,Gladbach,1,2
 1983,33,Bielefeld,Bochum,2,1
-1983,33,Düsseldorf,Waldhof Mannheim,1,2
+1983,33,Düsseldorf,SV Waldhof,1,2
 1983,33,Bremen,Stuttgart,1,2
 1983,34,Stuttgart,Hamburger SV,0,1
-1983,34,Waldhof Mannheim,Offenbach,6,1
+1983,34,SV Waldhof,Offenbach,6,1
 1983,34,Bochum,Düsseldorf,6,1
 1983,34,Gladbach,Bielefeld,3,0
 1983,34,Köln,Leverkusen,2,0
@@ -6299,13 +6299,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,1,Bielefeld,Bayern,1,3
 1984,1,Braunschweig,Köln,1,3
 1984,1,K'lautern,Stuttgart,2,1
-1984,1,Karlsruhe,Waldhof Mannheim,3,2
+1984,1,Karlsruhe,SV Waldhof,3,2
 1984,1,Leverkusen,Düsseldorf,4,3
 1984,1,Dortmund,Hamburger SV,1,2
 1984,2,Frankfurt,Leverkusen,2,0
 1984,2,Stuttgart,Braunschweig,6,1
 1984,2,Uerdingen,Dortmund,2,1
-1984,2,Waldhof Mannheim,K'lautern,1,1
+1984,2,SV Waldhof,K'lautern,1,1
 1984,2,Hamburger SV,Gladbach,1,1
 1984,2,Düsseldorf,Karlsruhe,2,2
 1984,2,Bayern,Bremen,4,2
@@ -6316,14 +6316,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,3,Dortmund,Gladbach,2,3
 1984,3,Bremen,Köln,6,2
 1984,3,Bielefeld,Stuttgart,2,7
-1984,3,Braunschweig,Waldhof Mannheim,0,1
+1984,3,Braunschweig,SV Waldhof,0,1
 1984,3,K'lautern,Düsseldorf,3,1
 1984,3,Uerdingen,Bayern,1,3
 1984,3,Bochum,Hamburger SV,0,0
 1984,4,Hamburger SV,Leverkusen,1,1
 1984,4,Frankfurt,K'lautern,1,1
 1984,4,Düsseldorf,Braunschweig,4,1
-1984,4,Waldhof Mannheim,Bielefeld,0,0
+1984,4,SV Waldhof,Bielefeld,0,0
 1984,4,Stuttgart,Bremen,1,3
 1984,4,Köln,Uerdingen,1,5
 1984,4,Bayern,Dortmund,1,0
@@ -6332,7 +6332,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,5,Braunschweig,Frankfurt,5,0
 1984,5,K'lautern,Schalke,2,2
 1984,5,Dortmund,Bochum,3,0
-1984,5,Bremen,Waldhof Mannheim,1,1
+1984,5,Bremen,SV Waldhof,1,1
 1984,5,Bielefeld,Düsseldorf,1,1
 1984,5,Karlsruhe,Hamburger SV,1,1
 1984,5,Leverkusen,Gladbach,3,2
@@ -6343,7 +6343,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,6,Schalke,Braunschweig,3,2
 1984,6,Hamburger SV,K'lautern,3,2
 1984,6,Düsseldorf,Bremen,3,2
-1984,6,Waldhof Mannheim,Uerdingen,2,1
+1984,6,SV Waldhof,Uerdingen,2,1
 1984,6,Köln,Dortmund,6,1
 1984,6,Bochum,Leverkusen,0,0
 1984,6,Gladbach,Karlsruhe,3,3
@@ -6355,7 +6355,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,7,Braunschweig,Hamburger SV,3,1
 1984,7,K'lautern,Gladbach,2,0
 1984,7,Köln,Stuttgart,1,1
-1984,7,Bayern,Waldhof Mannheim,1,2
+1984,7,Bayern,SV Waldhof,1,2
 1984,8,Hamburger SV,Bielefeld,4,0
 1984,8,Frankfurt,Uerdingen,3,2
 1984,8,Düsseldorf,Bayern,0,2
@@ -6364,7 +6364,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,8,Schalke,Bremen,2,2
 1984,8,Gladbach,Braunschweig,10,0
 1984,8,Bochum,K'lautern,3,0
-1984,8,Waldhof Mannheim,Köln,1,2
+1984,8,SV Waldhof,Köln,1,2
 1984,9,Braunschweig,Bochum,1,3
 1984,9,K'lautern,Leverkusen,3,3
 1984,9,Uerdingen,Schalke,1,1
@@ -6373,10 +6373,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,9,Köln,Düsseldorf,4,2
 1984,9,Bayern,Frankfurt,4,2
 1984,9,Dortmund,Karlsruhe,0,2
-1984,9,Stuttgart,Waldhof Mannheim,3,0
+1984,9,Stuttgart,SV Waldhof,3,0
 1984,10,Karlsruhe,K'lautern,0,0
 1984,10,Bochum,Bielefeld,1,1
-1984,10,Waldhof Mannheim,Dortmund,1,2
+1984,10,SV Waldhof,Dortmund,1,2
 1984,10,Hamburger SV,Uerdingen,1,1
 1984,10,Frankfurt,Köln,1,4
 1984,10,Düsseldorf,Stuttgart,2,2
@@ -6386,7 +6386,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,11,Bremen,Bochum,2,2
 1984,11,Stuttgart,Frankfurt,4,2
 1984,11,Uerdingen,Gladbach,3,2
-1984,11,Waldhof Mannheim,Düsseldorf,2,1
+1984,11,SV Waldhof,Düsseldorf,2,1
 1984,11,Bielefeld,Leverkusen,1,1
 1984,11,Braunschweig,Karlsruhe,3,1
 1984,11,Köln,Schalke,4,1
@@ -6396,7 +6396,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,12,K'lautern,Braunschweig,1,0
 1984,12,Bochum,Uerdingen,1,0
 1984,12,Hamburger SV,Köln,3,1
-1984,12,Frankfurt,Waldhof Mannheim,7,2
+1984,12,Frankfurt,SV Waldhof,7,2
 1984,12,Karlsruhe,Bielefeld,4,0
 1984,12,Leverkusen,Bremen,0,0
 1984,12,Schalke,Stuttgart,4,3
@@ -6409,8 +6409,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,13,Düsseldorf,Frankfurt,3,1
 1984,13,Köln,Gladbach,1,5
 1984,13,Bayern,Bochum,2,2
-1984,13,Waldhof Mannheim,Schalke,5,2
-1984,14,Hamburger SV,Waldhof Mannheim,5,2
+1984,13,SV Waldhof,Schalke,5,2
+1984,14,Hamburger SV,SV Waldhof,5,2
 1984,14,Frankfurt,Dortmund,2,1
 1984,14,Braunschweig,Bielefeld,0,0
 1984,14,K'lautern,Bremen,2,2
@@ -6419,7 +6419,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,14,Bochum,Köln,1,3
 1984,14,Gladbach,Stuttgart,2,1
 1984,14,Schalke,Düsseldorf,1,0
-1984,15,Waldhof Mannheim,Gladbach,1,3
+1984,15,SV Waldhof,Gladbach,1,3
 1984,15,Bremen,Braunschweig,4,1
 1984,15,Düsseldorf,Hamburger SV,4,2
 1984,15,Stuttgart,Bochum,1,2
@@ -6430,7 +6430,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,15,Bielefeld,Dortmund,3,0
 1984,16,Leverkusen,Stuttgart,0,2
 1984,16,Gladbach,Düsseldorf,0,2
-1984,16,Bochum,Waldhof Mannheim,0,1
+1984,16,Bochum,SV Waldhof,0,1
 1984,16,Hamburger SV,Frankfurt,2,0
 1984,16,Bielefeld,Bremen,3,4
 1984,16,Braunschweig,Uerdingen,0,0
@@ -6438,7 +6438,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,16,Dortmund,Schalke,4,1
 1984,16,K'lautern,Bayern,0,1
 1984,17,Bremen,Dortmund,6,0
-1984,17,Waldhof Mannheim,Leverkusen,2,1
+1984,17,SV Waldhof,Leverkusen,2,1
 1984,17,Frankfurt,Gladbach,1,1
 1984,17,Düsseldorf,Bochum,0,2
 1984,17,Stuttgart,Karlsruhe,5,0
@@ -6447,7 +6447,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,17,Uerdingen,Bielefeld,1,0
 1984,17,Schalke,Hamburger SV,3,0
 1984,18,Köln,Braunschweig,1,0
-1984,18,Waldhof Mannheim,Karlsruhe,3,0
+1984,18,SV Waldhof,Karlsruhe,3,0
 1984,18,Uerdingen,Bremen,3,1
 1984,18,Bayern,Bielefeld,3,3
 1984,18,Stuttgart,K'lautern,5,0
@@ -6460,7 +6460,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,19,Bremen,Bayern,4,2
 1984,19,Bochum,Schalke,0,1
 1984,19,Leverkusen,Frankfurt,3,1
-1984,19,K'lautern,Waldhof Mannheim,1,1
+1984,19,K'lautern,SV Waldhof,1,1
 1984,19,Bielefeld,Köln,1,0
 1984,19,Gladbach,Hamburger SV,0,1
 1984,19,Dortmund,Uerdingen,4,0
@@ -6469,14 +6469,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,20,Stuttgart,Bielefeld,2,0
 1984,20,Schalke,Leverkusen,4,2
 1984,20,Hamburger SV,Bochum,3,1
-1984,20,Waldhof Mannheim,Braunschweig,2,0
+1984,20,SV Waldhof,Braunschweig,2,0
 1984,20,Köln,Bremen,3,2
 1984,20,Düsseldorf,K'lautern,1,0
 1984,20,Gladbach,Dortmund,1,1
 1984,21,Leverkusen,Hamburger SV,2,0
 1984,21,K'lautern,Frankfurt,2,1
 1984,21,Braunschweig,Düsseldorf,1,0
-1984,21,Bielefeld,Waldhof Mannheim,0,1
+1984,21,Bielefeld,SV Waldhof,0,1
 1984,21,Bremen,Stuttgart,3,1
 1984,21,Uerdingen,Köln,2,1
 1984,21,Dortmund,Bayern,1,1
@@ -6484,7 +6484,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,21,Karlsruhe,Schalke,2,2
 1984,22,Schalke,K'lautern,1,1
 1984,22,Stuttgart,Uerdingen,5,2
-1984,22,Waldhof Mannheim,Bremen,1,1
+1984,22,SV Waldhof,Bremen,1,1
 1984,22,Düsseldorf,Bielefeld,1,1
 1984,22,Frankfurt,Braunschweig,2,0
 1984,22,Hamburger SV,Karlsruhe,0,0
@@ -6493,7 +6493,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,22,Bochum,Dortmund,4,1
 1984,23,Bielefeld,Frankfurt,2,2
 1984,23,Bremen,Düsseldorf,2,1
-1984,23,Uerdingen,Waldhof Mannheim,2,2
+1984,23,Uerdingen,SV Waldhof,2,2
 1984,23,Bayern,Stuttgart,3,2
 1984,23,Dortmund,Köln,2,0
 1984,23,Leverkusen,Bochum,1,1
@@ -6506,19 +6506,19 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,24,Hamburger SV,Braunschweig,5,0
 1984,24,Gladbach,K'lautern,7,0
 1984,24,Stuttgart,Köln,3,1
-1984,24,Waldhof Mannheim,Bayern,0,0
+1984,24,SV Waldhof,Bayern,0,0
 1984,24,Düsseldorf,Uerdingen,2,2
 1984,24,Leverkusen,Dortmund,0,1
 1984,25,Bielefeld,Hamburger SV,4,1
 1984,25,Uerdingen,Frankfurt,1,1
 1984,25,Bayern,Düsseldorf,6,0
-1984,25,Köln,Waldhof Mannheim,0,0
+1984,25,Köln,SV Waldhof,0,0
 1984,25,Dortmund,Stuttgart,4,1
 1984,25,Karlsruhe,Leverkusen,0,0
 1984,25,Braunschweig,Gladbach,0,4
 1984,25,Bremen,Schalke,2,1
 1984,25,K'lautern,Bochum,5,2
-1984,26,Waldhof Mannheim,Stuttgart,1,1
+1984,26,SV Waldhof,Stuttgart,1,1
 1984,26,Hamburger SV,Bremen,2,0
 1984,26,Gladbach,Bielefeld,2,0
 1984,26,Bochum,Braunschweig,1,0
@@ -6534,9 +6534,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,27,Braunschweig,Leverkusen,0,2
 1984,27,Bielefeld,Bochum,2,3
 1984,27,Bayern,Schalke,3,0
-1984,27,Dortmund,Waldhof Mannheim,0,0
+1984,27,Dortmund,SV Waldhof,0,0
 1984,27,Uerdingen,Hamburger SV,2,1
-1984,28,Düsseldorf,Waldhof Mannheim,1,1
+1984,28,Düsseldorf,SV Waldhof,1,1
 1984,28,Bochum,Bremen,1,3
 1984,28,Leverkusen,Bielefeld,1,1
 1984,28,Karlsruhe,Braunschweig,4,1
@@ -6548,7 +6548,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,29,Braunschweig,K'lautern,2,1
 1984,29,Uerdingen,Bochum,3,1
 1984,29,Köln,Hamburger SV,2,1
-1984,29,Waldhof Mannheim,Frankfurt,3,1
+1984,29,SV Waldhof,Frankfurt,3,1
 1984,29,Dortmund,Düsseldorf,1,2
 1984,29,Bielefeld,Karlsruhe,4,1
 1984,29,Bremen,Leverkusen,2,2
@@ -6556,7 +6556,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,29,Stuttgart,Schalke,1,0
 1984,30,K'lautern,Bielefeld,1,1
 1984,30,Frankfurt,Düsseldorf,2,2
-1984,30,Schalke,Waldhof Mannheim,4,0
+1984,30,Schalke,SV Waldhof,4,0
 1984,30,Karlsruhe,Bremen,1,1
 1984,30,Hamburger SV,Stuttgart,3,1
 1984,30,Gladbach,Köln,2,3
@@ -6566,7 +6566,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,31,Bremen,K'lautern,6,1
 1984,31,Köln,Bochum,2,1
 1984,31,Düsseldorf,Schalke,1,2
-1984,31,Waldhof Mannheim,Hamburger SV,3,1
+1984,31,SV Waldhof,Hamburger SV,3,1
 1984,31,Dortmund,Frankfurt,2,1
 1984,31,Bielefeld,Braunschweig,3,2
 1984,31,Uerdingen,Karlsruhe,3,0
@@ -6577,7 +6577,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,32,Frankfurt,Schalke,1,1
 1984,32,Braunschweig,Bremen,0,2
 1984,32,Hamburger SV,Düsseldorf,1,2
-1984,32,Gladbach,Waldhof Mannheim,3,0
+1984,32,Gladbach,SV Waldhof,3,0
 1984,32,Bochum,Stuttgart,2,1
 1984,32,Leverkusen,Köln,4,4
 1984,32,K'lautern,Uerdingen,6,1
@@ -6589,18 +6589,18 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1984,33,Düsseldorf,Gladbach,2,1
 1984,33,Schalke,Dortmund,3,1
 1984,33,Bayern,K'lautern,3,0
-1984,33,Waldhof Mannheim,Bochum,2,0
+1984,33,SV Waldhof,Bochum,2,0
 1984,34,Dortmund,Bremen,2,0
 1984,34,Gladbach,Frankfurt,3,3
 1984,34,Bochum,Düsseldorf,1,0
-1984,34,Leverkusen,Waldhof Mannheim,2,1
+1984,34,Leverkusen,SV Waldhof,2,1
 1984,34,Karlsruhe,Stuttgart,1,1
 1984,34,K'lautern,Köln,6,0
 1984,34,Braunschweig,Bayern,0,1
 1984,34,Bielefeld,Uerdingen,1,0
 1984,34,Hamburger SV,Schalke,2,0
 1985,1,Schalke,Bremen,0,1
-1985,1,Düsseldorf,Waldhof Mannheim,4,1
+1985,1,Düsseldorf,SV Waldhof,4,1
 1985,1,Nürnberg,Bochum,0,1
 1985,1,Köln,Frankfurt,1,1
 1985,1,Hamburger SV,K'lautern,4,1
@@ -6610,7 +6610,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,1,Uerdingen,Bayern,1,0
 1985,2,Bremen,Hannover,8,2
 1985,2,Dortmund,Hamburger SV,1,1
-1985,2,Waldhof Mannheim,Uerdingen,2,0
+1985,2,SV Waldhof,Uerdingen,2,0
 1985,2,Bayern,Stuttgart,4,1
 1985,2,Leverkusen,Saarbrücken,2,0
 1985,2,K'lautern,Köln,1,0
@@ -6618,7 +6618,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,2,Bochum,Düsseldorf,5,3
 1985,2,Gladbach,Schalke,4,0
 1985,3,Düsseldorf,Frankfurt,0,1
-1985,3,Waldhof Mannheim,Bochum,4,1
+1985,3,SV Waldhof,Bochum,4,1
 1985,3,Nürnberg,K'lautern,3,1
 1985,3,Köln,Dortmund,2,0
 1985,3,Saarbrücken,Bremen,1,1
@@ -6630,14 +6630,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,4,Leverkusen,Köln,1,1
 1985,4,Dortmund,Nürnberg,1,4
 1985,4,K'lautern,Düsseldorf,2,0
-1985,4,Frankfurt,Waldhof Mannheim,0,0
+1985,4,Frankfurt,SV Waldhof,0,0
 1985,4,Bochum,Uerdingen,1,2
 1985,4,Stuttgart,Schalke,0,1
 1985,4,Gladbach,Saarbrücken,2,0
 1985,4,Bayern,Hannover,6,0
 1985,5,Saarbrücken,Bayern,1,1
 1985,5,Bochum,Frankfurt,2,1
-1985,5,Waldhof Mannheim,K'lautern,1,1
+1985,5,SV Waldhof,K'lautern,1,1
 1985,5,Uerdingen,Schalke,3,2
 1985,5,Düsseldorf,Dortmund,4,2
 1985,5,Nürnberg,Leverkusen,3,2
@@ -6648,7 +6648,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,6,Bayern,Hamburger SV,2,0
 1985,6,Bremen,Nürnberg,2,1
 1985,6,Leverkusen,Düsseldorf,3,1
-1985,6,Dortmund,Waldhof Mannheim,0,0
+1985,6,Dortmund,SV Waldhof,0,0
 1985,6,Frankfurt,Uerdingen,1,1
 1985,6,Schalke,Hannover,2,2
 1985,6,Stuttgart,Saarbrücken,3,1
@@ -6660,12 +6660,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,7,Köln,Bayern,1,1
 1985,7,Hamburger SV,Stuttgart,2,0
 1985,7,Bochum,Dortmund,6,1
-1985,7,Waldhof Mannheim,Leverkusen,1,0
+1985,7,SV Waldhof,Leverkusen,1,0
 1985,7,Uerdingen,Hannover,3,3
 1985,8,Leverkusen,Bochum,4,2
 1985,8,Dortmund,Frankfurt,4,2
 1985,8,Bayern,Nürnberg,2,1
-1985,8,Bremen,Waldhof Mannheim,2,2
+1985,8,Bremen,SV Waldhof,2,2
 1985,8,K'lautern,Uerdingen,5,1
 1985,8,Hannover,Saarbrücken,2,0
 1985,8,Schalke,Hamburger SV,1,0
@@ -6679,9 +6679,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,9,K'lautern,Dortmund,2,0
 1985,9,Frankfurt,Leverkusen,1,0
 1985,9,Bochum,Bremen,2,3
-1985,9,Waldhof Mannheim,Gladbach,3,1
+1985,9,SV Waldhof,Gladbach,3,1
 1985,10,Leverkusen,K'lautern,3,2
-1985,10,Bayern,Waldhof Mannheim,3,1
+1985,10,Bayern,SV Waldhof,3,1
 1985,10,Dortmund,Uerdingen,5,2
 1985,10,Saarbrücken,Hamburger SV,2,2
 1985,10,Hannover,Köln,3,1
@@ -6689,7 +6689,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,10,Stuttgart,Düsseldorf,5,0
 1985,10,Gladbach,Bochum,2,0
 1985,10,Bremen,Frankfurt,4,0
-1985,11,Waldhof Mannheim,Stuttgart,5,3
+1985,11,SV Waldhof,Stuttgart,5,3
 1985,11,Düsseldorf,Schalke,1,1
 1985,11,Nürnberg,Hannover,3,3
 1985,11,Köln,Saarbrücken,3,1
@@ -6704,7 +6704,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,12,Bremen,Dortmund,4,2
 1985,12,Hamburger SV,Köln,0,0
 1985,12,Hannover,Düsseldorf,1,0
-1985,12,Schalke,Waldhof Mannheim,3,1
+1985,12,Schalke,SV Waldhof,3,1
 1985,12,Stuttgart,Bochum,0,4
 1985,12,Gladbach,K'lautern,3,0
 1985,13,Leverkusen,Bremen,5,1
@@ -6714,13 +6714,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,13,Nürnberg,Hamburger SV,0,1
 1985,13,Frankfurt,Stuttgart,1,1
 1985,13,Bochum,Schalke,1,1
-1985,13,Waldhof Mannheim,Hannover,5,1
+1985,13,SV Waldhof,Hannover,5,1
 1985,13,Uerdingen,Köln,3,2
 1985,14,Bayern,Dortmund,0,1
 1985,14,Bremen,Uerdingen,6,1
 1985,14,Köln,Nürnberg,3,1
 1985,14,Hamburger SV,Düsseldorf,4,0
-1985,14,Saarbrücken,Waldhof Mannheim,2,1
+1985,14,Saarbrücken,SV Waldhof,2,1
 1985,14,Hannover,Bochum,1,2
 1985,14,Schalke,Frankfurt,3,1
 1985,14,Stuttgart,K'lautern,2,0
@@ -6729,7 +6729,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,15,Nürnberg,Uerdingen,1,2
 1985,15,Frankfurt,Hannover,1,3
 1985,15,Bochum,Saarbrücken,3,1
-1985,15,Waldhof Mannheim,Hamburger SV,0,1
+1985,15,SV Waldhof,Hamburger SV,0,1
 1985,15,Leverkusen,Bayern,1,2
 1985,15,Dortmund,Stuttgart,2,0
 1985,15,K'lautern,Schalke,0,0
@@ -6738,7 +6738,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,16,Nürnberg,Düsseldorf,3,2
 1985,16,Hamburger SV,Bochum,1,0
 1985,16,Saarbrücken,Frankfurt,2,2
-1985,16,Köln,Waldhof Mannheim,0,1
+1985,16,Köln,SV Waldhof,0,1
 1985,16,Hannover,K'lautern,3,2
 1985,16,Stuttgart,Leverkusen,2,2
 1985,16,Schalke,Dortmund,6,1
@@ -6750,10 +6750,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,17,K'lautern,Saarbrücken,1,1
 1985,17,Gladbach,Bayern,4,2
 1985,17,Frankfurt,Hamburger SV,3,0
-1985,17,Waldhof Mannheim,Nürnberg,0,1
+1985,17,SV Waldhof,Nürnberg,0,1
 1985,17,Bochum,Köln,2,0
 1985,18,Leverkusen,Hannover,4,1
-1985,18,Waldhof Mannheim,Düsseldorf,2,1
+1985,18,SV Waldhof,Düsseldorf,2,1
 1985,18,Dortmund,Saarbrücken,3,1
 1985,18,Bochum,Nürnberg,2,1
 1985,18,Frankfurt,Köln,2,2
@@ -6768,7 +6768,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,19,Köln,K'lautern,1,1
 1985,19,Nürnberg,Frankfurt,4,1
 1985,19,Düsseldorf,Bochum,2,1
-1985,19,Uerdingen,Waldhof Mannheim,1,0
+1985,19,Uerdingen,SV Waldhof,1,0
 1985,19,Schalke,Gladbach,2,2
 1985,20,Frankfurt,Düsseldorf,2,0
 1985,20,K'lautern,Nürnberg,0,3
@@ -6778,12 +6778,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,20,Bayern,Schalke,3,2
 1985,20,Stuttgart,Uerdingen,0,2
 1985,20,Leverkusen,Hamburger SV,3,2
-1985,20,Bochum,Waldhof Mannheim,0,1
+1985,20,Bochum,SV Waldhof,0,1
 1985,21,Köln,Leverkusen,2,3
 1985,21,Hamburger SV,Bremen,0,1
 1985,21,Nürnberg,Dortmund,0,0
 1985,21,Düsseldorf,K'lautern,0,0
-1985,21,Waldhof Mannheim,Frankfurt,0,0
+1985,21,SV Waldhof,Frankfurt,0,0
 1985,21,Uerdingen,Bochum,3,2
 1985,21,Schalke,Stuttgart,1,2
 1985,21,Saarbrücken,Gladbach,1,3
@@ -6796,12 +6796,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,22,Bayern,Saarbrücken,5,1
 1985,22,Frankfurt,Bochum,1,0
 1985,22,Schalke,Uerdingen,2,0
-1985,22,K'lautern,Waldhof Mannheim,0,0
+1985,22,K'lautern,SV Waldhof,0,0
 1985,23,Hamburger SV,Bayern,0,0
 1985,23,Nürnberg,Bremen,2,2
 1985,23,Düsseldorf,Leverkusen,2,1
 1985,23,Bochum,K'lautern,3,2
-1985,23,Waldhof Mannheim,Dortmund,0,0
+1985,23,SV Waldhof,Dortmund,0,0
 1985,23,Saarbrücken,Stuttgart,1,1
 1985,23,Hannover,Schalke,1,2
 1985,23,Köln,Gladbach,0,2
@@ -6812,11 +6812,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,24,Bayern,Köln,3,1
 1985,24,Schalke,Saarbrücken,3,2
 1985,24,Stuttgart,Hamburger SV,1,0
-1985,24,Leverkusen,Waldhof Mannheim,3,1
+1985,24,Leverkusen,SV Waldhof,3,1
 1985,24,Dortmund,Bochum,1,0
 1985,24,Hannover,Uerdingen,1,1
 1985,25,Nürnberg,Bayern,0,1
-1985,25,Waldhof Mannheim,Bremen,1,1
+1985,25,SV Waldhof,Bremen,1,1
 1985,25,Bochum,Leverkusen,1,1
 1985,25,Frankfurt,Dortmund,2,1
 1985,25,Saarbrücken,Hannover,2,1
@@ -6830,11 +6830,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,26,Schalke,Köln,3,0
 1985,26,Bremen,Bochum,0,0
 1985,26,Hannover,Hamburger SV,0,2
-1985,26,Gladbach,Waldhof Mannheim,1,1
+1985,26,Gladbach,SV Waldhof,1,1
 1985,26,Leverkusen,Frankfurt,2,0
 1985,26,Saarbrücken,Uerdingen,1,2
 1985,27,K'lautern,Leverkusen,4,1
-1985,27,Waldhof Mannheim,Bayern,0,4
+1985,27,SV Waldhof,Bayern,0,4
 1985,27,Frankfurt,Bremen,0,2
 1985,27,Uerdingen,Dortmund,2,0
 1985,27,Hamburger SV,Saarbrücken,4,0
@@ -6849,14 +6849,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,28,Saarbrücken,Köln,1,2
 1985,28,Gladbach,Frankfurt,1,1
 1985,28,Bayern,Bochum,6,1
-1985,28,Stuttgart,Waldhof Mannheim,3,1
+1985,28,Stuttgart,SV Waldhof,3,1
 1985,28,Hamburger SV,Uerdingen,1,4
 1985,29,Düsseldorf,Hannover,2,2
 1985,29,Frankfurt,Bayern,2,2
 1985,29,Uerdingen,Leverkusen,2,1
 1985,29,Köln,Hamburger SV,1,1
 1985,29,Nürnberg,Saarbrücken,2,0
-1985,29,Waldhof Mannheim,Schalke,3,0
+1985,29,SV Waldhof,Schalke,3,0
 1985,29,Bochum,Stuttgart,0,2
 1985,29,K'lautern,Gladbach,1,1
 1985,29,Dortmund,Bremen,1,1
@@ -6867,7 +6867,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,30,Bayern,K'lautern,5,0
 1985,30,Stuttgart,Frankfurt,2,1
 1985,30,Schalke,Bochum,4,2
-1985,30,Hannover,Waldhof Mannheim,1,1
+1985,30,Hannover,SV Waldhof,1,1
 1985,30,Köln,Uerdingen,1,1
 1985,31,Uerdingen,Bremen,1,0
 1985,31,Bochum,Hannover,3,2
@@ -6875,7 +6875,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,31,Dortmund,Bayern,0,3
 1985,31,Nürnberg,Köln,3,0
 1985,31,Düsseldorf,Hamburger SV,3,1
-1985,31,Waldhof Mannheim,Saarbrücken,1,0
+1985,31,SV Waldhof,Saarbrücken,1,0
 1985,31,Frankfurt,Schalke,3,0
 1985,31,Leverkusen,Gladbach,3,1
 1985,32,Hannover,Frankfurt,0,0
@@ -6886,10 +6886,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,32,Stuttgart,Dortmund,4,0
 1985,32,Schalke,K'lautern,2,3
 1985,32,Saarbrücken,Bochum,0,1
-1985,32,Hamburger SV,Waldhof Mannheim,3,0
+1985,32,Hamburger SV,SV Waldhof,3,0
 1985,33,Bremen,Bayern,0,0
 1985,33,Düsseldorf,Nürnberg,2,1
-1985,33,Waldhof Mannheim,Köln,1,1
+1985,33,SV Waldhof,Köln,1,1
 1985,33,Bochum,Hamburger SV,2,0
 1985,33,Frankfurt,Saarbrücken,1,3
 1985,33,K'lautern,Hannover,1,0
@@ -6903,10 +6903,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1985,34,Saarbrücken,K'lautern,0,6
 1985,34,Hamburger SV,Frankfurt,1,0
 1985,34,Köln,Bochum,3,0
-1985,34,Nürnberg,Waldhof Mannheim,2,0
+1985,34,Nürnberg,SV Waldhof,2,0
 1985,34,Bayern,Gladbach,6,0
 1986,1,Homburg,Uerdingen,0,2
-1986,1,Waldhof Mannheim,Stuttgart,3,2
+1986,1,SV Waldhof,Stuttgart,3,2
 1986,1,Leverkusen,Schalke,4,2
 1986,1,Bayern,Dortmund,2,2
 1986,1,Frankfurt,Düsseldorf,5,0
@@ -6920,20 +6920,20 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,2,K'lautern,Gladbach,1,1
 1986,2,Nürnberg,Bochum,3,3
 1986,2,Düsseldorf,Bayern,0,3
-1986,2,Schalke,Waldhof Mannheim,3,1
+1986,2,Schalke,SV Waldhof,3,1
 1986,2,Uerdingen,Blau-Weiß 90 Berlin,2,1
 1986,2,Hamburger SV,Bremen,3,0
 1986,3,Homburg,Schalke,1,1
 1986,3,Frankfurt,Nürnberg,1,0
 1986,3,Bremen,K'lautern,1,0
-1986,3,Waldhof Mannheim,Dortmund,2,1
+1986,3,SV Waldhof,Dortmund,2,1
 1986,3,Leverkusen,Düsseldorf,5,0
 1986,3,Bayern,Köln,3,0
 1986,3,Bochum,Hamburger SV,1,1
 1986,3,Uerdingen,Stuttgart,2,2
 1986,3,Blau-Weiß 90 Berlin,Gladbach,3,2
 1986,4,Köln,Leverkusen,1,4
-1986,4,Düsseldorf,Waldhof Mannheim,2,0
+1986,4,Düsseldorf,SV Waldhof,2,0
 1986,4,Dortmund,Homburg,3,0
 1986,4,Schalke,Uerdingen,2,1
 1986,4,Gladbach,Bremen,1,2
@@ -6942,7 +6942,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,4,Nürnberg,Bayern,1,2
 1986,4,Stuttgart,Blau-Weiß 90 Berlin,1,1
 1986,5,Homburg,Düsseldorf,3,1
-1986,5,Waldhof Mannheim,Köln,2,0
+1986,5,SV Waldhof,Köln,2,0
 1986,5,Leverkusen,Nürnberg,2,0
 1986,5,Bayern,Hamburger SV,3,1
 1986,5,Frankfurt,K'lautern,2,2
@@ -6950,7 +6950,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,5,Stuttgart,Schalke,4,0
 1986,5,Uerdingen,Dortmund,2,4
 1986,5,Blau-Weiß 90 Berlin,Bremen,1,4
-1986,6,Nürnberg,Waldhof Mannheim,1,1
+1986,6,Nürnberg,SV Waldhof,1,1
 1986,6,Schalke,Blau-Weiß 90 Berlin,3,0
 1986,6,Bremen,Bochum,0,0
 1986,6,K'lautern,Bayern,1,1
@@ -6960,7 +6960,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,6,Gladbach,Frankfurt,1,1
 1986,6,Hamburger SV,Leverkusen,2,1
 1986,7,Homburg,Nürnberg,2,0
-1986,7,Waldhof Mannheim,Hamburger SV,2,2
+1986,7,SV Waldhof,Hamburger SV,2,2
 1986,7,Leverkusen,K'lautern,1,0
 1986,7,Bayern,Gladbach,3,1
 1986,7,Frankfurt,Bremen,2,2
@@ -6969,7 +6969,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,7,Uerdingen,Köln,3,1
 1986,7,Blau-Weiß 90 Berlin,Bochum,0,0
 1986,8,Dortmund,Blau-Weiß 90 Berlin,7,0
-1986,8,K'lautern,Waldhof Mannheim,3,2
+1986,8,K'lautern,SV Waldhof,3,2
 1986,8,Nürnberg,Uerdingen,1,1
 1986,8,Köln,Stuttgart,0,0
 1986,8,Düsseldorf,Schalke,3,4
@@ -6979,7 +6979,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,8,Hamburger SV,Homburg,3,1
 1986,9,Dortmund,Düsseldorf,4,1
 1986,9,Homburg,K'lautern,1,1
-1986,9,Waldhof Mannheim,Gladbach,1,1
+1986,9,SV Waldhof,Gladbach,1,1
 1986,9,Bayern,Bochum,3,2
 1986,9,Schalke,Köln,2,4
 1986,9,Stuttgart,Nürnberg,1,1
@@ -6987,7 +6987,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,9,Blau-Weiß 90 Berlin,Frankfurt,2,2
 1986,9,Leverkusen,Bremen,4,1
 1986,10,K'lautern,Uerdingen,1,0
-1986,10,Bremen,Waldhof Mannheim,4,2
+1986,10,Bremen,SV Waldhof,4,2
 1986,10,Hamburger SV,Stuttgart,2,0
 1986,10,Nürnberg,Schalke,2,1
 1986,10,Köln,Dortmund,2,0
@@ -6998,14 +6998,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,11,Leverkusen,Frankfurt,2,0
 1986,11,Dortmund,Nürnberg,2,2
 1986,11,Homburg,Bremen,0,1
-1986,11,Waldhof Mannheim,Bochum,0,0
+1986,11,SV Waldhof,Bochum,0,0
 1986,11,Düsseldorf,Köln,0,4
 1986,11,Schalke,Hamburger SV,1,1
 1986,11,Stuttgart,K'lautern,1,1
 1986,11,Uerdingen,Gladbach,1,1
 1986,11,Blau-Weiß 90 Berlin,Bayern,1,1
 1986,12,Nürnberg,Düsseldorf,4,3
-1986,12,Frankfurt,Waldhof Mannheim,2,1
+1986,12,Frankfurt,SV Waldhof,2,1
 1986,12,Bremen,Uerdingen,5,1
 1986,12,Hamburger SV,Dortmund,4,2
 1986,12,Bayern,Leverkusen,0,3
@@ -7016,13 +7016,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,13,Dortmund,K'lautern,2,0
 1986,13,Homburg,Frankfurt,1,1
 1986,13,Blau-Weiß 90 Berlin,Leverkusen,0,1
-1986,13,Waldhof Mannheim,Bayern,3,3
+1986,13,SV Waldhof,Bayern,3,3
 1986,13,Köln,Nürnberg,3,1
 1986,13,Düsseldorf,Hamburger SV,3,2
 1986,13,Schalke,Gladbach,1,2
 1986,13,Stuttgart,Bremen,4,0
 1986,13,Uerdingen,Bochum,3,1
-1986,14,Leverkusen,Waldhof Mannheim,0,0
+1986,14,Leverkusen,SV Waldhof,0,0
 1986,14,Bremen,Schalke,0,0
 1986,14,K'lautern,Düsseldorf,3,1
 1986,14,Nürnberg,Blau-Weiß 90 Berlin,7,2
@@ -7032,7 +7032,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,14,Gladbach,Dortmund,2,2
 1986,14,Hamburger SV,Köln,1,0
 1986,15,Homburg,Leverkusen,1,2
-1986,15,Waldhof Mannheim,Blau-Weiß 90 Berlin,1,1
+1986,15,SV Waldhof,Blau-Weiß 90 Berlin,1,1
 1986,15,Köln,K'lautern,2,2
 1986,15,Düsseldorf,Gladbach,1,1
 1986,15,Dortmund,Bremen,2,1
@@ -7043,7 +7043,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,16,K'lautern,Nürnberg,2,1
 1986,16,Bochum,Dortmund,0,0
 1986,16,Bremen,Düsseldorf,5,2
-1986,16,Waldhof Mannheim,Homburg,5,1
+1986,16,SV Waldhof,Homburg,5,1
 1986,16,Leverkusen,Uerdingen,1,4
 1986,16,Bayern,Stuttgart,1,0
 1986,16,Frankfurt,Schalke,0,1
@@ -7056,7 +7056,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,17,Düsseldorf,Bochum,0,4
 1986,17,Schalke,Bayern,2,2
 1986,17,Stuttgart,Leverkusen,1,0
-1986,17,Uerdingen,Waldhof Mannheim,3,2
+1986,17,Uerdingen,SV Waldhof,3,2
 1986,17,Hamburger SV,K'lautern,2,0
 1986,18,Dortmund,Bayern,2,2
 1986,18,Düsseldorf,Frankfurt,3,3
@@ -7064,7 +7064,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,18,Nürnberg,Bremen,5,1
 1986,18,Hamburger SV,Gladbach,3,1
 1986,18,K'lautern,Blau-Weiß 90 Berlin,2,0
-1986,18,Stuttgart,Waldhof Mannheim,2,1
+1986,18,Stuttgart,SV Waldhof,2,1
 1986,18,Uerdingen,Homburg,2,1
 1986,18,Schalke,Leverkusen,1,2
 1986,19,Homburg,Stuttgart,2,1
@@ -7072,13 +7072,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,19,Bochum,Nürnberg,0,1
 1986,19,Frankfurt,Köln,1,2
 1986,19,Bayern,Düsseldorf,3,0
-1986,19,Waldhof Mannheim,Schalke,2,0
+1986,19,SV Waldhof,Schalke,2,0
 1986,19,Bremen,Hamburger SV,2,1
 1986,19,Leverkusen,Dortmund,3,2
 1986,19,Blau-Weiß 90 Berlin,Uerdingen,1,1
 1986,20,K'lautern,Bremen,1,3
 1986,20,Schalke,Homburg,4,0
-1986,20,Dortmund,Waldhof Mannheim,6,0
+1986,20,Dortmund,SV Waldhof,6,0
 1986,20,Düsseldorf,Leverkusen,2,3
 1986,20,Köln,Bayern,1,1
 1986,20,Nürnberg,Frankfurt,1,0
@@ -7089,21 +7089,21 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,21,Bochum,K'lautern,3,1
 1986,21,Bayern,Nürnberg,4,0
 1986,21,Leverkusen,Köln,0,1
-1986,21,Waldhof Mannheim,Düsseldorf,1,1
+1986,21,SV Waldhof,Düsseldorf,1,1
 1986,21,Uerdingen,Schalke,0,0
 1986,21,Bremen,Gladbach,1,7
 1986,21,Homburg,Dortmund,2,2
 1986,21,Blau-Weiß 90 Berlin,Stuttgart,0,2
 1986,22,Bremen,Blau-Weiß 90 Berlin,2,0
 1986,22,Düsseldorf,Homburg,1,0
-1986,22,Köln,Waldhof Mannheim,2,1
+1986,22,Köln,SV Waldhof,2,1
 1986,22,Nürnberg,Leverkusen,1,1
 1986,22,Hamburger SV,Bayern,1,2
 1986,22,K'lautern,Frankfurt,2,1
 1986,22,Gladbach,Bochum,2,1
 1986,22,Schalke,Stuttgart,2,1
 1986,22,Dortmund,Uerdingen,1,1
-1986,23,Waldhof Mannheim,Nürnberg,3,0
+1986,23,SV Waldhof,Nürnberg,3,0
 1986,23,Bayern,K'lautern,3,0
 1986,23,Homburg,Köln,1,3
 1986,23,Uerdingen,Düsseldorf,4,1
@@ -7115,7 +7115,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,24,Nürnberg,Homburg,2,2
 1986,24,Bremen,Frankfurt,4,1
 1986,24,Bochum,Blau-Weiß 90 Berlin,5,1
-1986,24,Hamburger SV,Waldhof Mannheim,1,0
+1986,24,Hamburger SV,SV Waldhof,1,0
 1986,24,K'lautern,Leverkusen,1,1
 1986,24,Gladbach,Bayern,0,1
 1986,24,Dortmund,Schalke,1,0
@@ -7123,7 +7123,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,24,Köln,Uerdingen,1,2
 1986,25,Schalke,Düsseldorf,4,2
 1986,25,Blau-Weiß 90 Berlin,Dortmund,1,1
-1986,25,Waldhof Mannheim,K'lautern,4,3
+1986,25,SV Waldhof,K'lautern,4,3
 1986,25,Uerdingen,Nürnberg,3,4
 1986,25,Stuttgart,Köln,5,1
 1986,25,Bayern,Bremen,3,2
@@ -7133,7 +7133,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,26,K'lautern,Homburg,5,0
 1986,26,Düsseldorf,Dortmund,0,4
 1986,26,Frankfurt,Blau-Weiß 90 Berlin,1,3
-1986,26,Gladbach,Waldhof Mannheim,7,2
+1986,26,Gladbach,SV Waldhof,7,2
 1986,26,Bremen,Leverkusen,1,0
 1986,26,Bochum,Bayern,1,2
 1986,26,Köln,Schalke,3,2
@@ -7144,14 +7144,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,27,Dortmund,Köln,1,1
 1986,27,Uerdingen,K'lautern,1,2
 1986,27,Leverkusen,Bochum,2,1
-1986,27,Waldhof Mannheim,Bremen,1,0
+1986,27,SV Waldhof,Bremen,1,0
 1986,27,Homburg,Gladbach,0,2
 1986,27,Stuttgart,Hamburger SV,1,1
 1986,27,Bayern,Frankfurt,2,1
 1986,28,Bremen,Homburg,6,0
 1986,28,Köln,Düsseldorf,1,0
 1986,28,Hamburger SV,Schalke,4,0
-1986,28,Bochum,Waldhof Mannheim,6,1
+1986,28,Bochum,SV Waldhof,6,1
 1986,28,Frankfurt,Leverkusen,1,0
 1986,28,Nürnberg,Dortmund,1,2
 1986,28,K'lautern,Stuttgart,3,0
@@ -7164,13 +7164,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,29,Düsseldorf,Nürnberg,1,1
 1986,29,Blau-Weiß 90 Berlin,Köln,1,1
 1986,29,Leverkusen,Bayern,0,0
-1986,29,Waldhof Mannheim,Frankfurt,2,1
+1986,29,SV Waldhof,Frankfurt,2,1
 1986,29,Homburg,Bochum,3,1
 1986,30,Leverkusen,Blau-Weiß 90 Berlin,2,2
 1986,30,K'lautern,Dortmund,2,3
 1986,30,Bremen,Stuttgart,1,0
 1986,30,Frankfurt,Homburg,4,0
-1986,30,Bayern,Waldhof Mannheim,3,0
+1986,30,Bayern,SV Waldhof,3,0
 1986,30,Nürnberg,Köln,1,1
 1986,30,Hamburger SV,Düsseldorf,4,1
 1986,30,Gladbach,Schalke,3,1
@@ -7179,7 +7179,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,31,Stuttgart,Bochum,2,4
 1986,31,Schalke,Bremen,1,0
 1986,31,Düsseldorf,K'lautern,1,3
-1986,31,Waldhof Mannheim,Leverkusen,2,1
+1986,31,SV Waldhof,Leverkusen,2,1
 1986,31,Homburg,Bayern,2,2
 1986,31,Uerdingen,Frankfurt,1,0
 1986,31,Dortmund,Gladbach,0,2
@@ -7192,9 +7192,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,32,Bremen,Dortmund,5,0
 1986,32,Bayern,Uerdingen,2,2
 1986,32,Nürnberg,Hamburger SV,3,3
-1986,32,Blau-Weiß 90 Berlin,Waldhof Mannheim,4,1
+1986,32,Blau-Weiß 90 Berlin,SV Waldhof,4,1
 1986,33,Nürnberg,K'lautern,2,1
-1986,33,Homburg,Waldhof Mannheim,2,1
+1986,33,Homburg,SV Waldhof,2,1
 1986,33,Uerdingen,Leverkusen,1,1
 1986,33,Stuttgart,Bayern,1,3
 1986,33,Schalke,Frankfurt,3,1
@@ -7209,9 +7209,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1986,34,Frankfurt,Dortmund,0,4
 1986,34,Bayern,Schalke,1,0
 1986,34,Leverkusen,Stuttgart,4,1
-1986,34,Waldhof Mannheim,Uerdingen,2,3
+1986,34,SV Waldhof,Uerdingen,2,3
 1986,34,K'lautern,Hamburger SV,0,4
-1987,1,Leverkusen,Waldhof Mannheim,1,0
+1987,1,Leverkusen,SV Waldhof,1,0
 1987,1,Uerdingen,Nürnberg,0,2
 1987,1,Bochum,Gladbach,1,2
 1987,1,Dortmund,Bayern,1,3
@@ -7220,7 +7220,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,1,Karlsruhe,Köln,1,1
 1987,1,Hannover,Bremen,0,1
 1987,1,Hamburger SV,Schalke,5,2
-1987,2,Waldhof Mannheim,Dortmund,1,0
+1987,2,SV Waldhof,Dortmund,1,0
 1987,2,Köln,K'lautern,2,1
 1987,2,Frankfurt,Bochum,0,1
 1987,2,Schalke,Hannover,0,2
@@ -7236,7 +7236,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,3,Bochum,Köln,0,0
 1987,3,K'lautern,Bremen,0,0
 1987,3,Karlsruhe,Schalke,4,1
-1987,3,Bayern,Waldhof Mannheim,2,1
+1987,3,Bayern,SV Waldhof,2,1
 1987,3,Hamburger SV,Hannover,3,3
 1987,4,Frankfurt,Stuttgart,0,2
 1987,4,Gladbach,Leverkusen,2,1
@@ -7244,14 +7244,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,4,Schalke,K'lautern,5,0
 1987,4,Köln,Uerdingen,2,0
 1987,4,Homburg,Bayern,3,2
-1987,4,Waldhof Mannheim,Hamburger SV,2,2
+1987,4,SV Waldhof,Hamburger SV,2,2
 1987,4,Hannover,Karlsruhe,3,2
 1987,4,Bremen,Bochum,0,0
 1987,5,Leverkusen,Frankfurt,1,3
 1987,5,Stuttgart,Köln,0,2
 1987,5,Uerdingen,Bremen,1,2
 1987,5,Bochum,Schalke,1,3
-1987,5,Waldhof Mannheim,Homburg,0,0
+1987,5,SV Waldhof,Homburg,0,0
 1987,5,Dortmund,Gladbach,1,1
 1987,5,K'lautern,Hannover,4,1
 1987,5,Bayern,Nürnberg,1,0
@@ -7263,7 +7263,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,6,Hannover,Bochum,1,0
 1987,6,Köln,Leverkusen,0,0
 1987,6,Gladbach,Bayern,2,0
-1987,6,Nürnberg,Waldhof Mannheim,1,1
+1987,6,Nürnberg,SV Waldhof,1,1
 1987,6,Bremen,Stuttgart,5,1
 1987,7,Bochum,Karlsruhe,5,0
 1987,7,Hamburger SV,K'lautern,5,1
@@ -7272,9 +7272,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,7,Stuttgart,Schalke,4,0
 1987,7,Uerdingen,Hannover,1,0
 1987,7,Homburg,Nürnberg,0,4
-1987,7,Waldhof Mannheim,Gladbach,0,3
+1987,7,SV Waldhof,Gladbach,0,3
 1987,7,Bayern,Frankfurt,3,2
-1987,8,Frankfurt,Waldhof Mannheim,5,1
+1987,8,Frankfurt,SV Waldhof,5,1
 1987,8,K'lautern,Bochum,4,2
 1987,8,Bremen,Dortmund,4,0
 1987,8,Schalke,Leverkusen,2,2
@@ -7285,7 +7285,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,8,Hannover,Stuttgart,3,3
 1987,9,Homburg,Frankfurt,5,2
 1987,9,Uerdingen,K'lautern,3,1
-1987,9,Waldhof Mannheim,Köln,0,0
+1987,9,SV Waldhof,Köln,0,0
 1987,9,Dortmund,Schalke,4,1
 1987,9,Leverkusen,Hannover,2,0
 1987,9,Stuttgart,Karlsruhe,2,2
@@ -7293,7 +7293,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,9,Bayern,Bremen,2,1
 1987,9,Hamburger SV,Bochum,2,2
 1987,10,Hannover,Dortmund,2,3
-1987,10,Bremen,Waldhof Mannheim,3,1
+1987,10,Bremen,SV Waldhof,3,1
 1987,10,Schalke,Bayern,1,4
 1987,10,Köln,Homburg,3,0
 1987,10,Frankfurt,Nürnberg,3,1
@@ -7307,7 +7307,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,11,Gladbach,Frankfurt,3,1
 1987,11,Nürnberg,Köln,1,2
 1987,11,Homburg,Bremen,1,1
-1987,11,Waldhof Mannheim,Schalke,2,0
+1987,11,SV Waldhof,Schalke,2,0
 1987,11,Bayern,Hannover,4,1
 1987,11,Hamburger SV,Uerdingen,3,1
 1987,12,Uerdingen,Stuttgart,2,5
@@ -7317,14 +7317,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,12,Köln,Gladbach,4,1
 1987,12,Frankfurt,Hamburger SV,3,0
 1987,12,Karlsruhe,Bayern,0,1
-1987,12,Hannover,Waldhof Mannheim,3,1
+1987,12,Hannover,SV Waldhof,3,1
 1987,12,Bremen,Nürnberg,1,0
 1987,13,Leverkusen,Uerdingen,0,0
 1987,13,Frankfurt,Köln,1,1
 1987,13,Gladbach,Bremen,1,2
 1987,13,Nürnberg,Schalke,1,1
 1987,13,Homburg,Hannover,1,1
-1987,13,Waldhof Mannheim,Karlsruhe,4,1
+1987,13,SV Waldhof,Karlsruhe,4,1
 1987,13,Bayern,K'lautern,4,2
 1987,13,Hamburger SV,Stuttgart,3,0
 1987,13,Dortmund,Bochum,1,2
@@ -7334,10 +7334,10 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,14,Stuttgart,Leverkusen,4,1
 1987,14,Uerdingen,Dortmund,2,1
 1987,14,Bochum,Bayern,0,2
-1987,14,K'lautern,Waldhof Mannheim,2,2
+1987,14,K'lautern,SV Waldhof,2,2
 1987,14,Karlsruhe,Homburg,2,1
 1987,14,Hannover,Nürnberg,1,2
-1987,15,Waldhof Mannheim,Bochum,1,1
+1987,15,SV Waldhof,Bochum,1,1
 1987,15,Homburg,K'lautern,3,2
 1987,15,Dortmund,Stuttgart,2,2
 1987,15,Leverkusen,Hamburger SV,2,0
@@ -7349,7 +7349,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,16,Leverkusen,Dortmund,2,2
 1987,16,Schalke,Köln,2,2
 1987,16,Stuttgart,Bayern,3,0
-1987,16,Uerdingen,Waldhof Mannheim,1,1
+1987,16,Uerdingen,SV Waldhof,1,1
 1987,16,K'lautern,Nürnberg,1,2
 1987,16,Karlsruhe,Gladbach,2,2
 1987,16,Hannover,Frankfurt,1,2
@@ -7361,13 +7361,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,17,Frankfurt,Karlsruhe,4,0
 1987,17,Gladbach,K'lautern,1,0
 1987,17,Nürnberg,Bochum,2,1
-1987,17,Waldhof Mannheim,Stuttgart,2,1
+1987,17,SV Waldhof,Stuttgart,2,1
 1987,17,Bayern,Leverkusen,3,2
 1987,17,Bremen,Schalke,5,0
 1987,18,Köln,Karlsruhe,4,0
 1987,18,Homburg,Stuttgart,2,2
 1987,18,Bayern,Dortmund,1,3
-1987,18,Waldhof Mannheim,Leverkusen,1,4
+1987,18,SV Waldhof,Leverkusen,1,4
 1987,18,Nürnberg,Uerdingen,3,1
 1987,18,Gladbach,Bochum,3,0
 1987,18,Frankfurt,K'lautern,0,2
@@ -7375,7 +7375,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,18,Schalke,Hamburger SV,1,0
 1987,19,Leverkusen,Homburg,2,1
 1987,19,Hannover,Schalke,3,1
-1987,19,Dortmund,Waldhof Mannheim,0,1
+1987,19,Dortmund,SV Waldhof,0,1
 1987,19,K'lautern,Köln,3,0
 1987,19,Bochum,Frankfurt,1,0
 1987,19,Uerdingen,Gladbach,2,4
@@ -7389,7 +7389,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,20,Köln,Bochum,2,2
 1987,20,Bremen,K'lautern,0,0
 1987,20,Schalke,Karlsruhe,3,1
-1987,20,Waldhof Mannheim,Bayern,1,2
+1987,20,SV Waldhof,Bayern,1,2
 1987,20,Hannover,Hamburger SV,3,1
 1987,21,K'lautern,Schalke,5,2
 1987,21,Uerdingen,Köln,1,1
@@ -7398,7 +7398,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,21,Leverkusen,Gladbach,2,1
 1987,21,Stuttgart,Frankfurt,1,0
 1987,21,Karlsruhe,Hannover,2,1
-1987,21,Hamburger SV,Waldhof Mannheim,1,1
+1987,21,Hamburger SV,SV Waldhof,1,1
 1987,21,Dortmund,Nürnberg,1,1
 1987,22,Gladbach,Dortmund,0,3
 1987,22,Frankfurt,Leverkusen,3,2
@@ -7406,19 +7406,19 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,22,Bremen,Uerdingen,5,1
 1987,22,Schalke,Bochum,2,1
 1987,22,Hannover,K'lautern,1,0
-1987,22,Homburg,Waldhof Mannheim,1,1
+1987,22,Homburg,SV Waldhof,1,1
 1987,22,Nürnberg,Bayern,0,3
 1987,22,Karlsruhe,Hamburger SV,0,0
 1987,23,Leverkusen,Köln,1,1
 1987,23,K'lautern,Karlsruhe,1,1
 1987,23,Dortmund,Frankfurt,3,1
 1987,23,Bayern,Gladbach,1,0
-1987,23,Waldhof Mannheim,Nürnberg,0,1
+1987,23,SV Waldhof,Nürnberg,0,1
 1987,23,Hamburger SV,Homburg,2,1
 1987,23,Stuttgart,Bremen,1,0
 1987,23,Uerdingen,Schalke,5,2
 1987,23,Bochum,Hannover,1,1
-1987,24,Gladbach,Waldhof Mannheim,0,1
+1987,24,Gladbach,SV Waldhof,0,1
 1987,24,Köln,Dortmund,2,0
 1987,24,Bremen,Leverkusen,3,3
 1987,24,Schalke,Stuttgart,3,4
@@ -7431,7 +7431,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,25,Leverkusen,Schalke,3,2
 1987,25,Bochum,K'lautern,1,1
 1987,25,Stuttgart,Hannover,3,1
-1987,25,Waldhof Mannheim,Frankfurt,2,2
+1987,25,SV Waldhof,Frankfurt,2,2
 1987,25,Bayern,Köln,2,2
 1987,25,Hamburger SV,Nürnberg,2,2
 1987,25,Uerdingen,Karlsruhe,4,2
@@ -7442,7 +7442,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,26,K'lautern,Uerdingen,2,2
 1987,26,Gladbach,Nürnberg,3,0
 1987,26,Frankfurt,Homburg,1,2
-1987,26,Köln,Waldhof Mannheim,3,0
+1987,26,Köln,SV Waldhof,3,0
 1987,26,Bremen,Bayern,3,1
 1987,26,Bochum,Hamburger SV,4,0
 1987,27,Hamburger SV,Gladbach,2,1
@@ -7453,14 +7453,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,27,Uerdingen,Bochum,3,1
 1987,27,Stuttgart,K'lautern,3,0
 1987,27,Leverkusen,Karlsruhe,0,0
-1987,27,Waldhof Mannheim,Bremen,0,1
+1987,27,SV Waldhof,Bremen,0,1
 1987,28,K'lautern,Leverkusen,1,3
 1987,28,Karlsruhe,Dortmund,0,0
 1987,28,Bochum,Stuttgart,5,1
 1987,28,Frankfurt,Gladbach,2,0
 1987,28,Köln,Nürnberg,3,1
 1987,28,Bremen,Homburg,3,0
-1987,28,Schalke,Waldhof Mannheim,1,1
+1987,28,Schalke,SV Waldhof,1,1
 1987,28,Hannover,Bayern,2,1
 1987,28,Uerdingen,Hamburger SV,1,1
 1987,29,Dortmund,K'lautern,3,0
@@ -7470,9 +7470,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,29,Stuttgart,Uerdingen,1,3
 1987,29,Leverkusen,Bochum,0,0
 1987,29,Bayern,Karlsruhe,2,1
-1987,29,Waldhof Mannheim,Hannover,2,1
+1987,29,SV Waldhof,Hannover,2,1
 1987,29,Nürnberg,Bremen,0,0
-1987,30,Karlsruhe,Waldhof Mannheim,1,1
+1987,30,Karlsruhe,SV Waldhof,1,1
 1987,30,Bochum,Dortmund,2,0
 1987,30,Uerdingen,Leverkusen,4,1
 1987,30,Köln,Frankfurt,1,1
@@ -7486,12 +7486,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,31,Hamburger SV,Köln,3,0
 1987,31,Dortmund,Uerdingen,4,2
 1987,31,Bayern,Bochum,5,0
-1987,31,Waldhof Mannheim,K'lautern,0,2
+1987,31,SV Waldhof,K'lautern,0,2
 1987,31,Nürnberg,Hannover,1,3
 1987,31,Frankfurt,Bremen,0,1
 1987,31,Leverkusen,Stuttgart,2,1
 1987,32,K'lautern,Homburg,1,0
-1987,32,Bochum,Waldhof Mannheim,1,0
+1987,32,Bochum,SV Waldhof,1,0
 1987,32,Stuttgart,Dortmund,2,2
 1987,32,Hamburger SV,Leverkusen,3,2
 1987,32,Schalke,Frankfurt,0,0
@@ -7502,7 +7502,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,33,Köln,Schalke,3,1
 1987,33,Dortmund,Leverkusen,2,2
 1987,33,Bayern,Stuttgart,2,1
-1987,33,Waldhof Mannheim,Uerdingen,2,2
+1987,33,SV Waldhof,Uerdingen,2,2
 1987,33,Homburg,Bochum,1,1
 1987,33,Nürnberg,K'lautern,3,2
 1987,33,Gladbach,Karlsruhe,2,2
@@ -7514,14 +7514,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1987,34,K'lautern,Gladbach,5,2
 1987,34,Bochum,Nürnberg,3,0
 1987,34,Uerdingen,Homburg,5,1
-1987,34,Stuttgart,Waldhof Mannheim,1,1
+1987,34,Stuttgart,SV Waldhof,1,1
 1987,34,Leverkusen,Bayern,3,4
 1987,34,Schalke,Bremen,1,4
-1988,1,Waldhof Mannheim,Leverkusen,1,1
+1988,1,SV Waldhof,Leverkusen,1,1
 1988,1,Dortmund,Stuttgart,1,2
 1988,1,Köln,Uerdingen,1,1
 1988,1,St. Pauli,Nürnberg,0,1
-1988,1,Stuttg. Kick.,Bochum,1,2
+1988,1,Stg. Kickers,Bochum,1,2
 1988,1,Bayern,Frankfurt,3,0
 1988,1,Hannover,Karlsruhe,2,3
 1988,1,Bremen,Hamburger SV,2,1
@@ -7530,84 +7530,84 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,2,Stuttgart,Hannover,2,1
 1988,2,Leverkusen,Gladbach,3,1
 1988,2,Karlsruhe,Bayern,2,2
-1988,2,Frankfurt,Stuttg. Kick.,1,2
+1988,2,Frankfurt,Stg. Kickers,1,2
 1988,2,Bochum,St. Pauli,0,0
 1988,2,Nürnberg,Köln,0,2
-1988,2,Uerdingen,Waldhof Mannheim,0,0
+1988,2,Uerdingen,SV Waldhof,0,0
 1988,2,K'lautern,Bremen,0,0
 1988,3,Dortmund,K'lautern,1,1
 1988,3,St. Pauli,Frankfurt,2,0
-1988,3,Stuttg. Kick.,Karlsruhe,1,3
+1988,3,Stg. Kickers,Karlsruhe,1,3
 1988,3,Hannover,Hamburger SV,2,3
 1988,3,Bremen,Leverkusen,3,1
 1988,3,Uerdingen,Nürnberg,3,2
-1988,3,Waldhof Mannheim,Gladbach,4,1
+1988,3,SV Waldhof,Gladbach,4,1
 1988,3,Köln,Bochum,1,0
 1988,3,Bayern,Stuttgart,3,3
 1988,4,Karlsruhe,St. Pauli,3,1
 1988,4,Frankfurt,Köln,1,0
 1988,4,Leverkusen,Dortmund,2,0
 1988,4,Hamburger SV,Bayern,0,1
-1988,4,Stuttgart,Stuttg. Kick.,4,0
+1988,4,Stuttgart,Stg. Kickers,4,0
 1988,4,Bochum,Uerdingen,1,1
-1988,4,Nürnberg,Waldhof Mannheim,1,0
+1988,4,Nürnberg,SV Waldhof,1,0
 1988,4,Gladbach,Bremen,4,1
 1988,4,K'lautern,Hannover,0,0
 1988,5,St. Pauli,Stuttgart,2,1
 1988,5,Uerdingen,Frankfurt,4,1
 1988,5,Köln,Karlsruhe,6,1
-1988,5,Stuttg. Kick.,Hamburger SV,2,0
+1988,5,Stg. Kickers,Hamburger SV,2,0
 1988,5,Bayern,K'lautern,5,1
 1988,5,Hannover,Leverkusen,2,2
 1988,5,Dortmund,Gladbach,0,0
 1988,5,Nürnberg,Bochum,3,1
-1988,5,Waldhof Mannheim,Bremen,1,1
+1988,5,SV Waldhof,Bremen,1,1
 1988,6,Gladbach,Hannover,2,0
 1988,6,Leverkusen,Bayern,1,1
 1988,6,Hamburger SV,St. Pauli,1,1
 1988,6,Stuttgart,Köln,2,0
 1988,6,Karlsruhe,Uerdingen,0,1
 1988,6,Frankfurt,Nürnberg,1,0
-1988,6,Bochum,Waldhof Mannheim,2,2
-1988,6,K'lautern,Stuttg. Kick.,6,0
+1988,6,Bochum,SV Waldhof,2,2
+1988,6,K'lautern,Stg. Kickers,6,0
 1988,6,Bremen,Dortmund,2,0
 1988,7,St. Pauli,K'lautern,1,1
 1988,7,Köln,Hamburger SV,1,2
-1988,7,Stuttg. Kick.,Leverkusen,1,3
+1988,7,Stg. Kickers,Leverkusen,1,3
 1988,7,Bayern,Gladbach,3,0
 1988,7,Hannover,Bremen,2,2
 1988,7,Bochum,Frankfurt,1,0
 1988,7,Nürnberg,Karlsruhe,1,3
 1988,7,Uerdingen,Stuttgart,0,0
-1988,7,Waldhof Mannheim,Dortmund,0,3
+1988,7,SV Waldhof,Dortmund,0,3
 1988,8,Leverkusen,St. Pauli,2,2
 1988,8,Hamburger SV,Uerdingen,3,0
 1988,8,Stuttgart,Nürnberg,4,0
 1988,8,Karlsruhe,Bochum,1,3
-1988,8,Frankfurt,Waldhof Mannheim,0,0
+1988,8,Frankfurt,SV Waldhof,0,0
 1988,8,Dortmund,Hannover,4,0
 1988,8,Bremen,Bayern,2,2
-1988,8,Gladbach,Stuttg. Kick.,1,1
+1988,8,Gladbach,Stg. Kickers,1,1
 1988,8,K'lautern,Köln,1,1
 1988,9,Nürnberg,Hamburger SV,1,4
 1988,9,Bayern,Dortmund,1,1
 1988,9,St. Pauli,Gladbach,1,1
 1988,9,Bochum,Stuttgart,1,0
 1988,9,Köln,Leverkusen,3,0
-1988,9,Stuttg. Kick.,Bremen,0,6
+1988,9,Stg. Kickers,Bremen,0,6
 1988,9,Frankfurt,Karlsruhe,1,0
 1988,9,Uerdingen,K'lautern,3,1
-1988,9,Waldhof Mannheim,Hannover,1,1
-1988,10,Dortmund,Stuttg. Kick.,1,1
+1988,9,SV Waldhof,Hannover,1,1
+1988,10,Dortmund,Stg. Kickers,1,1
 1988,10,Leverkusen,Uerdingen,2,2
 1988,10,Hamburger SV,Bochum,3,1
 1988,10,Stuttgart,Frankfurt,2,0
-1988,10,Karlsruhe,Waldhof Mannheim,2,1
+1988,10,Karlsruhe,SV Waldhof,2,1
 1988,10,Hannover,Bayern,0,0
 1988,10,Bremen,St. Pauli,0,0
 1988,10,Gladbach,Köln,1,0
 1988,10,K'lautern,Nürnberg,2,1
-1988,11,Stuttg. Kick.,Hannover,0,1
+1988,11,Stg. Kickers,Hannover,0,1
 1988,11,St. Pauli,Dortmund,1,0
 1988,11,Köln,Bremen,2,0
 1988,11,Karlsruhe,Stuttgart,2,0
@@ -7615,11 +7615,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,11,Bochum,K'lautern,2,0
 1988,11,Nürnberg,Leverkusen,1,1
 1988,11,Uerdingen,Gladbach,0,0
-1988,11,Waldhof Mannheim,Bayern,0,3
+1988,11,SV Waldhof,Bayern,0,3
 1988,12,Leverkusen,Bochum,1,1
 1988,12,Hamburger SV,Karlsruhe,1,1
-1988,12,Stuttgart,Waldhof Mannheim,2,0
-1988,12,Bayern,Stuttg. Kick.,3,0
+1988,12,Stuttgart,SV Waldhof,2,0
+1988,12,Bayern,Stg. Kickers,3,0
 1988,12,Hannover,St. Pauli,2,2
 1988,12,Dortmund,Köln,0,4
 1988,12,Bremen,Uerdingen,3,1
@@ -7633,130 +7633,130 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,13,Frankfurt,Leverkusen,1,1
 1988,13,Nürnberg,Bremen,0,1
 1988,13,Uerdingen,Dortmund,0,0
-1988,13,Waldhof Mannheim,Stuttg. Kick.,2,2
+1988,13,SV Waldhof,Stg. Kickers,2,2
 1988,14,Leverkusen,Karlsruhe,1,0
-1988,14,Hamburger SV,Waldhof Mannheim,5,1
-1988,14,Stuttg. Kick.,St. Pauli,2,2
+1988,14,Hamburger SV,SV Waldhof,5,1
+1988,14,Stg. Kickers,St. Pauli,2,2
 1988,14,Bayern,Köln,2,0
 1988,14,Hannover,Uerdingen,0,5
 1988,14,Dortmund,Nürnberg,4,0
 1988,14,Bremen,Bochum,2,0
 1988,14,Gladbach,Frankfurt,2,1
 1988,14,K'lautern,Stuttgart,6,1
-1988,15,St. Pauli,Waldhof Mannheim,2,1
-1988,15,Köln,Stuttg. Kick.,5,1
-1988,15,Stuttgart,Leverkusen,0,0
-1988,15,Frankfurt,Bremen,0,0
-1988,15,Bochum,Dortmund,2,2
-1988,15,Nürnberg,Hannover,1,0
-1988,15,Uerdingen,Bayern,1,3
-1988,15,K'lautern,Hamburger SV,0,0
-1988,15,Karlsruhe,Gladbach,2,2
+1988,15,Leverkusen,Karlsruhe,2,1
+1988,15,Hamburger SV,SV Waldhof,5,1
+1988,15,Stg. Kickers,St. Pauli,0,0
+1988,15,Bayern,Köln,0,0
+1988,15,Hannover,Uerdingen,2,2
+1988,15,Dortmund,Nürnberg,1,0
+1988,15,Bremen,Bochum,1,3
+1988,15,Gladbach,Frankfurt,0,0
+1988,15,K'lautern,Stuttgart,3,1
 1988,16,Bremen,Karlsruhe,3,1
 1988,16,St. Pauli,Köln,0,1
 1988,16,Leverkusen,Hamburger SV,1,2
-1988,16,Stuttg. Kick.,Uerdingen,3,1
+1988,16,Stg. Kickers,Uerdingen,3,1
 1988,16,Bayern,Nürnberg,1,0
 1988,16,Hannover,Bochum,3,2
 1988,16,Dortmund,Frankfurt,6,0
 1988,16,Gladbach,Stuttgart,2,2
-1988,16,Waldhof Mannheim,K'lautern,0,4
-1988,17,Köln,Waldhof Mannheim,1,0
+1988,16,SV Waldhof,K'lautern,0,4
+1988,17,Köln,SV Waldhof,1,0
 1988,17,K'lautern,Leverkusen,0,0
 1988,17,Stuttgart,Bremen,3,3
 1988,17,Karlsruhe,Dortmund,0,0
 1988,17,Frankfurt,Hannover,1,0
 1988,17,Bochum,Bayern,0,0
-1988,17,Nürnberg,Stuttg. Kick.,3,3
+1988,17,Nürnberg,Stg. Kickers,3,3
 1988,17,Uerdingen,St. Pauli,0,0
 1988,17,Hamburger SV,Gladbach,1,2
 1988,18,Karlsruhe,Hannover,2,0
-1988,18,Leverkusen,Waldhof Mannheim,3,0
+1988,18,Leverkusen,SV Waldhof,3,0
 1988,18,Uerdingen,Köln,1,1
 1988,18,Nürnberg,St. Pauli,5,3
 1988,18,Frankfurt,Bayern,2,2
 1988,18,Stuttgart,Dortmund,1,3
 1988,18,Hamburger SV,Bremen,2,0
 1988,18,K'lautern,Gladbach,0,0
-1988,18,Bochum,Stuttg. Kick.,2,1
+1988,18,Bochum,Stg. Kickers,2,1
 1988,19,Gladbach,Leverkusen,2,0
 1988,19,Dortmund,Hamburger SV,2,2
 1988,19,Hannover,Stuttgart,2,0
 1988,19,Bayern,Karlsruhe,3,2
-1988,19,Stuttg. Kick.,Frankfurt,0,1
+1988,19,Stg. Kickers,Frankfurt,0,1
 1988,19,St. Pauli,Bochum,1,0
 1988,19,Köln,Nürnberg,1,1
-1988,19,Waldhof Mannheim,Uerdingen,3,3
+1988,19,SV Waldhof,Uerdingen,3,3
 1988,19,Bremen,K'lautern,1,0
 1988,20,Frankfurt,St. Pauli,1,1
-1988,20,Karlsruhe,Stuttg. Kick.,1,0
+1988,20,Karlsruhe,Stg. Kickers,1,0
 1988,20,Hamburger SV,Hannover,4,1
 1988,20,K'lautern,Dortmund,3,2
 1988,20,Leverkusen,Bremen,1,0
 1988,20,Nürnberg,Uerdingen,1,0
-1988,20,Gladbach,Waldhof Mannheim,1,1
+1988,20,Gladbach,SV Waldhof,1,1
 1988,20,Bochum,Köln,1,3
 1988,20,Stuttgart,Bayern,1,2
 1988,21,Bremen,Gladbach,2,0
 1988,21,Hannover,K'lautern,0,0
 1988,21,Dortmund,Leverkusen,2,1
 1988,21,Bayern,Hamburger SV,1,0
-1988,21,Stuttg. Kick.,Stuttgart,0,2
+1988,21,Stg. Kickers,Stuttgart,0,2
 1988,21,St. Pauli,Karlsruhe,1,0
 1988,21,Köln,Frankfurt,3,2
 1988,21,Uerdingen,Bochum,3,1
-1988,21,Waldhof Mannheim,Nürnberg,2,1
-1988,22,Hamburger SV,Stuttg. Kick.,3,0
+1988,21,SV Waldhof,Nürnberg,2,1
+1988,22,Hamburger SV,Stg. Kickers,3,0
 1988,22,Karlsruhe,Köln,0,0
 1988,22,K'lautern,Bayern,1,1
 1988,22,Leverkusen,Hannover,3,1
 1988,22,Gladbach,Dortmund,1,1
 1988,22,Bochum,Nürnberg,1,0
 1988,22,Frankfurt,Uerdingen,0,2
-1988,22,Bremen,Waldhof Mannheim,2,1
+1988,22,Bremen,SV Waldhof,2,1
 1988,22,Stuttgart,St. Pauli,2,1
 1988,23,St. Pauli,Hamburger SV,1,2
 1988,23,Bayern,Leverkusen,2,0
 1988,23,Köln,Stuttgart,3,0
 1988,23,Uerdingen,Karlsruhe,0,3
 1988,23,Nürnberg,Frankfurt,1,1
-1988,23,Waldhof Mannheim,Bochum,2,2
+1988,23,SV Waldhof,Bochum,2,2
 1988,23,Dortmund,Bremen,3,1
 1988,23,Hannover,Gladbach,0,1
-1988,23,Stuttg. Kick.,K'lautern,2,0
+1988,23,Stg. Kickers,K'lautern,2,0
 1988,24,Frankfurt,Bochum,1,1
 1988,24,Hamburger SV,Köln,0,1
 1988,24,K'lautern,St. Pauli,1,0
-1988,24,Leverkusen,Stuttg. Kick.,1,3
+1988,24,Leverkusen,Stg. Kickers,1,3
 1988,24,Gladbach,Bayern,2,1
 1988,24,Bremen,Hannover,1,0
 1988,24,Karlsruhe,Nürnberg,1,1
 1988,24,Stuttgart,Uerdingen,2,2
-1988,24,Dortmund,Waldhof Mannheim,1,2
+1988,24,Dortmund,SV Waldhof,1,2
 1988,25,St. Pauli,Leverkusen,2,0
 1988,25,Hannover,Dortmund,1,5
 1988,25,Uerdingen,Hamburger SV,0,2
 1988,25,Nürnberg,Stuttgart,1,0
 1988,25,Bochum,Karlsruhe,2,0
-1988,25,Waldhof Mannheim,Frankfurt,1,0
+1988,25,SV Waldhof,Frankfurt,1,0
 1988,25,Bayern,Bremen,0,0
-1988,25,Stuttg. Kick.,Gladbach,3,0
+1988,25,Stg. Kickers,Gladbach,3,0
 1988,25,Köln,K'lautern,2,2
-1988,26,Hannover,Waldhof Mannheim,0,2
+1988,26,Hannover,SV Waldhof,0,2
 1988,26,Stuttgart,Bochum,3,1
 1988,26,K'lautern,Uerdingen,2,0
 1988,26,Leverkusen,Köln,0,0
 1988,26,Gladbach,St. Pauli,2,2
-1988,26,Bremen,Stuttg. Kick.,4,0
+1988,26,Bremen,Stg. Kickers,4,0
 1988,26,Dortmund,Bayern,1,1
 1988,26,Karlsruhe,Frankfurt,1,3
 1988,26,Hamburger SV,Nürnberg,3,2
 1988,27,Uerdingen,Leverkusen,3,1
 1988,27,Bochum,Hamburger SV,2,1
 1988,27,Frankfurt,Stuttgart,1,3
-1988,27,Waldhof Mannheim,Karlsruhe,2,0
+1988,27,SV Waldhof,Karlsruhe,2,0
 1988,27,Bayern,Hannover,4,0
-1988,27,Stuttg. Kick.,Dortmund,1,2
+1988,27,Stg. Kickers,Dortmund,1,2
 1988,27,St. Pauli,Bremen,1,3
 1988,27,Köln,Gladbach,3,1
 1988,27,Nürnberg,K'lautern,1,1
@@ -7764,22 +7764,22 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,28,Leverkusen,Nürnberg,3,0
 1988,28,Bremen,Köln,1,2
 1988,28,Dortmund,St. Pauli,0,0
-1988,28,Hannover,Stuttg. Kick.,3,4
+1988,28,Hannover,Stg. Kickers,3,4
 1988,28,Stuttgart,Karlsruhe,2,0
 1988,28,Hamburger SV,Frankfurt,2,1
 1988,28,Gladbach,Uerdingen,3,0
-1988,28,Bayern,Waldhof Mannheim,1,0
-1988,29,Waldhof Mannheim,Stuttgart,3,4
+1988,28,Bayern,SV Waldhof,1,0
+1988,29,SV Waldhof,Stuttgart,3,4
 1988,29,Frankfurt,K'lautern,3,2
 1988,29,Karlsruhe,Hamburger SV,2,2
-1988,29,Stuttg. Kick.,Bayern,2,0
+1988,29,Stg. Kickers,Bayern,2,0
 1988,29,St. Pauli,Hannover,1,1
 1988,29,Köln,Dortmund,2,0
 1988,29,Uerdingen,Bremen,2,1
 1988,29,Nürnberg,Gladbach,0,0
 1988,29,Bochum,Leverkusen,2,4
 1988,30,Bremen,Nürnberg,2,1
-1988,30,Stuttg. Kick.,Waldhof Mannheim,1,3
+1988,30,Stg. Kickers,SV Waldhof,1,3
 1988,30,Hannover,Köln,2,2
 1988,30,Bayern,St. Pauli,2,1
 1988,30,Hamburger SV,Stuttgart,2,1
@@ -7790,13 +7790,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,31,Stuttgart,K'lautern,3,1
 1988,31,Nürnberg,Dortmund,1,1
 1988,31,Frankfurt,Gladbach,1,1
-1988,31,St. Pauli,Stuttg. Kick.,1,0
+1988,31,St. Pauli,Stg. Kickers,1,0
 1988,31,Karlsruhe,Leverkusen,2,3
-1988,31,Waldhof Mannheim,Hamburger SV,0,0
+1988,31,SV Waldhof,Hamburger SV,0,0
 1988,31,Köln,Bayern,1,3
 1988,31,Uerdingen,Hannover,7,3
 1988,31,Bochum,Bremen,0,1
-1988,32,Waldhof Mannheim,St. Pauli,2,1
+1988,32,SV Waldhof,St. Pauli,2,1
 1988,32,Leverkusen,Stuttgart,0,0
 1988,32,Gladbach,Karlsruhe,1,1
 1988,32,Bremen,Frankfurt,2,0
@@ -7804,23 +7804,23 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1988,32,Hannover,Nürnberg,2,2
 1988,32,Bayern,Uerdingen,5,0
 1988,32,Hamburger SV,K'lautern,1,1
-1988,32,Stuttg. Kick.,Köln,0,0
+1988,32,Stg. Kickers,Köln,0,0
 1988,33,Hamburger SV,Leverkusen,1,1
 1988,33,Köln,St. Pauli,4,2
-1988,33,Uerdingen,Stuttg. Kick.,1,3
+1988,33,Uerdingen,Stg. Kickers,1,3
 1988,33,Nürnberg,Bayern,2,1
 1988,33,Bochum,Hannover,1,3
 1988,33,Frankfurt,Dortmund,2,1
 1988,33,Karlsruhe,Bremen,1,0
 1988,33,Stuttgart,Gladbach,2,1
-1988,33,K'lautern,Waldhof Mannheim,0,3
-1988,34,Waldhof Mannheim,Köln,2,1
+1988,33,K'lautern,SV Waldhof,0,3
+1988,34,SV Waldhof,Köln,2,1
 1988,34,Gladbach,Hamburger SV,0,4
 1988,34,Bremen,Stuttgart,3,0
 1988,34,Dortmund,Karlsruhe,3,2
 1988,34,Hannover,Frankfurt,1,1
 1988,34,Bayern,Bochum,5,0
-1988,34,Stuttg. Kick.,Nürnberg,1,0
+1988,34,Stg. Kickers,Nürnberg,1,0
 1988,34,St. Pauli,Uerdingen,5,1
 1988,34,Leverkusen,K'lautern,0,1
 1989,1,K'lautern,Gladbach,2,1
@@ -7831,13 +7831,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,1,Bayern,Nürnberg,3,2
 1989,1,St. Pauli,Bremen,0,0
 1989,1,Stuttgart,Karlsruhe,2,0
-1989,1,Frankfurt,Waldhof Mannheim,3,1
+1989,1,Frankfurt,SV Waldhof,3,1
 1989,2,Dortmund,St. Pauli,3,1
 1989,2,Hamburger SV,Frankfurt,1,1
 1989,2,Homburg,K'lautern,2,2
 1989,2,Gladbach,Bayern,0,0
 1989,2,Bremen,Düsseldorf,2,2
-1989,2,Waldhof Mannheim,Bochum,3,2
+1989,2,SV Waldhof,Bochum,3,2
 1989,2,Karlsruhe,Uerdingen,0,0
 1989,2,Nürnberg,Leverkusen,2,2
 1989,2,Köln,Stuttgart,0,0
@@ -7849,9 +7849,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,3,Bochum,Hamburger SV,3,1
 1989,3,St. Pauli,Nürnberg,0,1
 1989,3,Leverkusen,Gladbach,0,0
-1989,3,Stuttgart,Waldhof Mannheim,1,0
+1989,3,Stuttgart,SV Waldhof,1,0
 1989,4,Nürnberg,Bremen,1,1
-1989,4,Waldhof Mannheim,Uerdingen,1,1
+1989,4,SV Waldhof,Uerdingen,1,1
 1989,4,Gladbach,St. Pauli,4,1
 1989,4,Homburg,Leverkusen,2,1
 1989,4,Hamburger SV,Stuttgart,1,0
@@ -7867,12 +7867,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,5,Uerdingen,Hamburger SV,5,2
 1989,5,Leverkusen,Karlsruhe,1,1
 1989,5,Düsseldorf,Bochum,2,2
-1989,5,K'lautern,Waldhof Mannheim,2,3
+1989,5,K'lautern,SV Waldhof,2,3
 1989,6,Gladbach,Dortmund,0,0
 1989,6,Bochum,Stuttgart,2,0
 1989,6,Homburg,Bremen,1,1
 1989,6,Hamburger SV,K'lautern,3,0
-1989,6,Waldhof Mannheim,Bayern,1,0
+1989,6,SV Waldhof,Bayern,1,0
 1989,6,Nürnberg,Düsseldorf,3,0
 1989,6,Frankfurt,Uerdingen,2,1
 1989,6,Karlsruhe,St. Pauli,0,0
@@ -7884,7 +7884,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,7,K'lautern,Frankfurt,2,1
 1989,7,Düsseldorf,Stuttgart,4,2
 1989,7,Nürnberg,Gladbach,2,0
-1989,7,Leverkusen,Waldhof Mannheim,3,0
+1989,7,Leverkusen,SV Waldhof,3,0
 1989,7,Dortmund,Homburg,3,0
 1989,8,Gladbach,Düsseldorf,3,1
 1989,8,Karlsruhe,Dortmund,2,1
@@ -7893,7 +7893,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,8,Bochum,K'lautern,2,0
 1989,8,Frankfurt,Bayern,1,2
 1989,8,Stuttgart,Uerdingen,1,0
-1989,8,Waldhof Mannheim,St. Pauli,0,1
+1989,8,SV Waldhof,St. Pauli,0,1
 1989,8,Hamburger SV,Leverkusen,0,1
 1989,9,Gladbach,Homburg,0,0
 1989,9,Leverkusen,Frankfurt,2,0
@@ -7903,12 +7903,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,9,Nürnberg,Karlsruhe,2,0
 1989,9,Bayern,Bochum,5,1
 1989,9,Düsseldorf,Uerdingen,2,1
-1989,9,Bremen,Waldhof Mannheim,0,1
+1989,9,Bremen,SV Waldhof,0,1
 1989,10,Homburg,Düsseldorf,1,0
 1989,10,Uerdingen,K'lautern,3,2
 1989,10,Karlsruhe,Gladbach,0,1
 1989,10,Frankfurt,St. Pauli,4,1
-1989,10,Waldhof Mannheim,Dortmund,2,1
+1989,10,SV Waldhof,Dortmund,2,1
 1989,10,Köln,Nürnberg,2,1
 1989,10,Hamburger SV,Bremen,4,0
 1989,10,Stuttgart,Bayern,2,1
@@ -7921,8 +7921,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,11,Düsseldorf,K'lautern,1,1
 1989,11,Homburg,Karlsruhe,2,0
 1989,11,Bayern,Uerdingen,3,0
-1989,11,Nürnberg,Waldhof Mannheim,2,0
-1989,12,Waldhof Mannheim,Gladbach,4,2
+1989,11,Nürnberg,SV Waldhof,2,0
+1989,12,SV Waldhof,Gladbach,4,2
 1989,12,Frankfurt,Dortmund,0,2
 1989,12,Hamburger SV,Nürnberg,1,0
 1989,12,Bochum,Bremen,0,0
@@ -7934,14 +7934,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,13,Bremen,Stuttgart,6,1
 1989,13,Gladbach,Hamburger SV,1,3
 1989,13,Dortmund,Bochum,0,1
-1989,13,Homburg,Waldhof Mannheim,2,1
+1989,13,Homburg,SV Waldhof,2,1
 1989,13,Karlsruhe,Köln,0,0
 1989,13,Nürnberg,Frankfurt,1,1
 1989,13,Leverkusen,K'lautern,1,1
 1989,13,Düsseldorf,Bayern,1,2
 1989,13,St. Pauli,Uerdingen,1,1
 1989,14,K'lautern,St. Pauli,1,1
-1989,14,Waldhof Mannheim,Karlsruhe,0,1
+1989,14,SV Waldhof,Karlsruhe,0,1
 1989,14,Bochum,Nürnberg,3,3
 1989,14,Uerdingen,Bremen,0,1
 1989,14,Frankfurt,Gladbach,3,0
@@ -7952,7 +7952,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,15,St. Pauli,Bayern,0,2
 1989,15,Bremen,K'lautern,4,0
 1989,15,Homburg,Frankfurt,2,3
-1989,15,Waldhof Mannheim,Köln,2,3
+1989,15,SV Waldhof,Köln,2,3
 1989,15,Nürnberg,Stuttgart,0,2
 1989,15,Karlsruhe,Hamburger SV,2,0
 1989,15,Leverkusen,Düsseldorf,3,3
@@ -7960,7 +7960,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,15,Dortmund,Uerdingen,1,0
 1989,16,Bochum,Homburg,1,0
 1989,16,Leverkusen,St. Pauli,1,1
-1989,16,Düsseldorf,Waldhof Mannheim,0,0
+1989,16,Düsseldorf,SV Waldhof,0,0
 1989,16,K'lautern,Dortmund,2,2
 1989,16,Uerdingen,Nürnberg,3,3
 1989,16,Bayern,Bremen,1,1
@@ -7970,14 +7970,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,17,St. Pauli,Düsseldorf,1,0
 1989,17,Nürnberg,K'lautern,0,0
 1989,17,Homburg,Stuttgart,4,2
-1989,17,Waldhof Mannheim,Hamburger SV,4,1
+1989,17,SV Waldhof,Hamburger SV,4,1
 1989,17,Köln,Frankfurt,3,5
 1989,17,Dortmund,Bayern,2,2
 1989,17,Karlsruhe,Bochum,2,0
 1989,17,Gladbach,Uerdingen,0,1
 1989,17,Bremen,Leverkusen,0,0
 1989,18,Dortmund,Leverkusen,1,1
-1989,18,Waldhof Mannheim,Frankfurt,1,1
+1989,18,SV Waldhof,Frankfurt,1,1
 1989,18,Homburg,Uerdingen,1,2
 1989,18,Karlsruhe,Stuttgart,1,0
 1989,18,Gladbach,K'lautern,3,1
@@ -7987,7 +7987,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,18,Bremen,St. Pauli,2,1
 1989,19,St. Pauli,Dortmund,2,1
 1989,19,Leverkusen,Nürnberg,2,0
-1989,19,Bochum,Waldhof Mannheim,2,0
+1989,19,Bochum,SV Waldhof,2,0
 1989,19,Stuttgart,Köln,3,1
 1989,19,Frankfurt,Hamburger SV,2,0
 1989,19,Düsseldorf,Bremen,2,1
@@ -7995,7 +7995,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,19,Bayern,Gladbach,2,0
 1989,19,K'lautern,Homburg,3,1
 1989,20,Gladbach,Leverkusen,1,1
-1989,20,Waldhof Mannheim,Stuttgart,2,1
+1989,20,SV Waldhof,Stuttgart,2,1
 1989,20,Homburg,Bayern,1,3
 1989,20,Dortmund,Bremen,4,1
 1989,20,Karlsruhe,K'lautern,0,0
@@ -8010,11 +8010,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,21,Stuttgart,Hamburger SV,3,0
 1989,21,Bremen,Nürnberg,4,0
 1989,21,St. Pauli,Gladbach,2,1
-1989,21,Uerdingen,Waldhof Mannheim,0,2
+1989,21,Uerdingen,SV Waldhof,0,2
 1989,21,Leverkusen,Homburg,3,1
 1989,22,Homburg,St. Pauli,0,2
 1989,22,Köln,Bayern,1,1
-1989,22,Waldhof Mannheim,K'lautern,4,0
+1989,22,SV Waldhof,K'lautern,4,0
 1989,22,Frankfurt,Stuttgart,5,1
 1989,22,Gladbach,Bremen,4,0
 1989,22,Bochum,Düsseldorf,1,2
@@ -8029,7 +8029,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,23,Düsseldorf,Nürnberg,0,0
 1989,23,Dortmund,Gladbach,3,0
 1989,23,Stuttgart,Bochum,1,0
-1989,23,Bayern,Waldhof Mannheim,2,0
+1989,23,Bayern,SV Waldhof,2,0
 1989,24,Homburg,Dortmund,3,3
 1989,24,Gladbach,Nürnberg,3,0
 1989,24,Karlsruhe,Bremen,2,1
@@ -8038,8 +8038,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,24,Stuttgart,Düsseldorf,4,0
 1989,24,Bochum,Uerdingen,2,1
 1989,24,Köln,St. Pauli,1,0
-1989,24,Waldhof Mannheim,Leverkusen,1,1
-1989,25,St. Pauli,Waldhof Mannheim,2,1
+1989,24,SV Waldhof,Leverkusen,1,1
+1989,25,St. Pauli,SV Waldhof,2,1
 1989,25,Bremen,Köln,4,0
 1989,25,Bayern,Frankfurt,1,0
 1989,25,Uerdingen,Stuttgart,4,1
@@ -8052,12 +8052,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,26,Frankfurt,Leverkusen,0,3
 1989,26,Köln,Dortmund,1,1
 1989,26,Karlsruhe,Nürnberg,0,0
-1989,26,Waldhof Mannheim,Bremen,0,0
+1989,26,SV Waldhof,Bremen,0,0
 1989,26,Stuttgart,K'lautern,0,1
 1989,26,Bochum,Bayern,0,0
 1989,26,Uerdingen,Düsseldorf,0,1
 1989,26,Hamburger SV,St. Pauli,0,0
-1989,27,Dortmund,Waldhof Mannheim,2,0
+1989,27,Dortmund,SV Waldhof,2,0
 1989,27,Düsseldorf,Homburg,1,0
 1989,27,Nürnberg,Köln,1,1
 1989,27,St. Pauli,Frankfurt,2,2
@@ -8069,7 +8069,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,28,K'lautern,Düsseldorf,1,0
 1989,28,Bochum,St. Pauli,3,3
 1989,28,Hamburger SV,Dortmund,1,1
-1989,28,Waldhof Mannheim,Nürnberg,1,1
+1989,28,SV Waldhof,Nürnberg,1,1
 1989,28,Frankfurt,Bremen,1,0
 1989,28,Uerdingen,Bayern,2,2
 1989,28,Köln,Gladbach,3,0
@@ -8083,7 +8083,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,29,Düsseldorf,Karlsruhe,0,0
 1989,29,Bremen,Bochum,1,1
 1989,29,Leverkusen,Uerdingen,1,1
-1989,29,Gladbach,Waldhof Mannheim,2,0
+1989,29,Gladbach,SV Waldhof,2,0
 1989,30,Uerdingen,St. Pauli,1,0
 1989,30,K'lautern,Leverkusen,2,0
 1989,30,Bochum,Dortmund,2,3
@@ -8092,7 +8092,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,30,Köln,Karlsruhe,0,5
 1989,30,Hamburger SV,Gladbach,3,0
 1989,30,Bayern,Düsseldorf,0,0
-1989,30,Waldhof Mannheim,Homburg,1,2
+1989,30,SV Waldhof,Homburg,1,2
 1989,31,St. Pauli,K'lautern,0,2
 1989,31,Homburg,Hamburger SV,0,1
 1989,31,Gladbach,Frankfurt,2,1
@@ -8100,12 +8100,12 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,31,Leverkusen,Bayern,0,0
 1989,31,Nürnberg,Bochum,2,1
 1989,31,Bremen,Uerdingen,0,0
-1989,31,Karlsruhe,Waldhof Mannheim,4,0
+1989,31,Karlsruhe,SV Waldhof,4,0
 1989,31,Düsseldorf,Köln,1,1
 1989,32,Stuttgart,Nürnberg,4,0
 1989,32,K'lautern,Bremen,2,2
 1989,32,Bochum,Gladbach,2,1
-1989,32,Köln,Waldhof Mannheim,6,0
+1989,32,Köln,SV Waldhof,6,0
 1989,32,Frankfurt,Homburg,1,1
 1989,32,Uerdingen,Dortmund,1,3
 1989,32,Hamburger SV,Karlsruhe,1,0
@@ -8116,7 +8116,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,33,Köln,Hamburger SV,2,0
 1989,33,Dortmund,K'lautern,1,1
 1989,33,Bremen,Bayern,2,2
-1989,33,Waldhof Mannheim,Düsseldorf,0,1
+1989,33,SV Waldhof,Düsseldorf,0,1
 1989,33,Homburg,Bochum,1,0
 1989,33,Nürnberg,Uerdingen,1,1
 1989,33,St. Pauli,Leverkusen,3,0
@@ -8126,7 +8126,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1989,34,Bochum,Karlsruhe,2,0
 1989,34,Uerdingen,Gladbach,0,0
 1989,34,Düsseldorf,St. Pauli,7,0
-1989,34,Hamburger SV,Waldhof Mannheim,1,0
+1989,34,Hamburger SV,SV Waldhof,1,0
 1989,34,Stuttgart,Homburg,2,2
 1989,34,Bayern,Dortmund,3,0
 1990,1,Dortmund,Stuttgart,0,3
@@ -8444,7 +8444,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,1,Rostock,Nürnberg,4,0
 1991,1,Bremen,Bayern,1,1
 1991,1,Karlsruhe,Dortmund,2,2
-1991,1,Stuttg. Kick.,Wattenscheid,3,0
+1991,1,Stg. Kickers,Wattenscheid,3,0
 1991,2,Wattenscheid,Leverkusen,3,0
 1991,2,Gladbach,Duisburg,0,0
 1991,2,Hamburger SV,Dresden,2,0
@@ -8453,7 +8453,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,2,Nürnberg,Düsseldorf,3,1
 1991,2,Frankfurt,Schalke,5,0
 1991,2,K'lautern,Bochum,1,1
-1991,2,Köln,Stuttg. Kick.,0,0
+1991,2,Köln,Stg. Kickers,0,0
 1991,2,Stuttgart,Karlsruhe,1,0
 1991,3,Duisburg,Wattenscheid,0,0
 1991,3,Bochum,Hamburger SV,2,3
@@ -8464,7 +8464,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,3,Rostock,Dortmund,5,1
 1991,3,Bremen,Stuttgart,1,1
 1991,3,Köln,K'lautern,1,1
-1991,3,Stuttg. Kick.,Leverkusen,0,1
+1991,3,Stg. Kickers,Leverkusen,0,1
 1991,4,Gladbach,Bremen,0,2
 1991,4,Dortmund,Düsseldorf,3,1
 1991,4,Bayern,Schalke,3,2
@@ -8472,7 +8472,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,4,Wattenscheid,Karlsruhe,1,1
 1991,4,Frankfurt,Bochum,2,1
 1991,4,Hamburger SV,Köln,1,1
-1991,4,K'lautern,Stuttg. Kick.,4,3
+1991,4,K'lautern,Stg. Kickers,4,3
 1991,4,Leverkusen,Duisburg,2,1
 1991,4,Stuttgart,Rostock,3,0
 1991,5,Dresden,Bayern,0,2
@@ -8484,7 +8484,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,5,K'lautern,Hamburger SV,0,0
 1991,5,Köln,Frankfurt,1,1
 1991,5,Bochum,Nürnberg,0,3
-1991,5,Stuttg. Kick.,Duisburg,0,1
+1991,5,Stg. Kickers,Duisburg,0,1
 1991,6,Wattenscheid,Rostock,0,0
 1991,6,Duisburg,Karlsruhe,6,2
 1991,6,Gladbach,Düsseldorf,3,1
@@ -8494,7 +8494,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,6,Bayern,Bochum,0,2
 1991,6,Nürnberg,Köln,4,0
 1991,6,Frankfurt,K'lautern,2,0
-1991,6,Hamburger SV,Stuttg. Kick.,0,3
+1991,6,Hamburger SV,Stg. Kickers,0,3
 1991,7,Schalke,Gladbach,3,1
 1991,7,Düsseldorf,Wattenscheid,4,3
 1991,7,Bremen,Duisburg,5,1
@@ -8504,9 +8504,9 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,7,Hamburger SV,Frankfurt,2,1
 1991,7,K'lautern,Nürnberg,3,0
 1991,7,Köln,Bayern,1,1
-1991,7,Stuttg. Kick.,Karlsruhe,1,1
+1991,7,Stg. Kickers,Karlsruhe,1,1
 1991,8,Dortmund,Köln,3,1
-1991,8,Frankfurt,Stuttg. Kick.,6,1
+1991,8,Frankfurt,Stg. Kickers,6,1
 1991,8,Wattenscheid,Schalke,1,2
 1991,8,Gladbach,Dresden,1,0
 1991,8,Bayern,K'lautern,1,0
@@ -8520,7 +8520,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,9,Rostock,Karlsruhe,1,2
 1991,9,K'lautern,Dortmund,4,0
 1991,9,Köln,Stuttgart,1,1
-1991,9,Stuttg. Kick.,Bremen,2,1
+1991,9,Stg. Kickers,Bremen,2,1
 1991,9,Dresden,Wattenscheid,3,0
 1991,9,Schalke,Leverkusen,0,0
 1991,9,Hamburger SV,Bayern,1,0
@@ -8530,7 +8530,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,10,Karlsruhe,Düsseldorf,1,5
 1991,10,Dortmund,Hamburger SV,2,2
 1991,10,Bayern,Frankfurt,3,3
-1991,10,Nürnberg,Stuttg. Kick.,2,0
+1991,10,Nürnberg,Stg. Kickers,2,0
 1991,10,Bremen,Rostock,1,0
 1991,10,Leverkusen,Dresden,4,0
 1991,10,Stuttgart,K'lautern,4,1
@@ -8544,13 +8544,13 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,11,Frankfurt,Dortmund,3,0
 1991,11,Hamburger SV,Stuttgart,1,1
 1991,11,K'lautern,Gladbach,4,2
-1991,11,Stuttg. Kick.,Rostock,1,1
+1991,11,Stg. Kickers,Rostock,1,1
 1991,12,Duisburg,Bochum,1,1
 1991,12,Dortmund,Nürnberg,3,2
 1991,12,Karlsruhe,Dresden,1,0
 1991,12,Wattenscheid,K'lautern,1,0
 1991,12,Gladbach,Hamburger SV,1,0
-1991,12,Bayern,Stuttg. Kick.,1,4
+1991,12,Bayern,Stg. Kickers,1,4
 1991,12,Rostock,Düsseldorf,3,1
 1991,12,Bremen,Schalke,2,1
 1991,12,Leverkusen,Köln,1,1
@@ -8564,7 +8564,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,13,Hamburger SV,Wattenscheid,0,1
 1991,13,K'lautern,Leverkusen,2,1
 1991,13,Köln,Duisburg,1,1
-1991,13,Stuttg. Kick.,Düsseldorf,0,1
+1991,13,Stg. Kickers,Düsseldorf,0,1
 1991,14,Duisburg,K'lautern,1,1
 1991,14,Gladbach,Nürnberg,1,0
 1991,14,Bremen,Bochum,3,0
@@ -8574,7 +8574,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,14,Karlsruhe,Köln,0,1
 1991,14,Leverkusen,Hamburger SV,1,1
 1991,14,Stuttgart,Bayern,3,2
-1991,14,Dortmund,Stuttg. Kick.,3,1
+1991,14,Dortmund,Stg. Kickers,3,1
 1991,15,Bochum,Rostock,3,2
 1991,15,Dresden,Düsseldorf,2,0
 1991,15,Nürnberg,Wattenscheid,3,1
@@ -8584,7 +8584,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,15,Hamburger SV,Duisburg,1,1
 1991,15,K'lautern,Karlsruhe,3,0
 1991,15,Köln,Bremen,5,0
-1991,15,Stuttg. Kick.,Schalke,1,1
+1991,15,Stg. Kickers,Schalke,1,1
 1991,16,Duisburg,Frankfurt,3,6
 1991,16,Wattenscheid,Bayern,0,0
 1991,16,Bremen,K'lautern,0,2
@@ -8594,11 +8594,11 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,16,Rostock,Köln,1,1
 1991,16,Karlsruhe,Hamburger SV,4,1
 1991,16,Leverkusen,Nürnberg,0,1
-1991,16,Stuttgart,Stuttg. Kick.,3,1
+1991,16,Stuttgart,Stg. Kickers,3,1
 1991,17,Dortmund,Wattenscheid,1,1
 1991,17,Nürnberg,Duisburg,1,1
 1991,17,Bochum,Schalke,1,0
-1991,17,Dresden,Stuttg. Kick.,2,2
+1991,17,Dresden,Stg. Kickers,2,2
 1991,17,Bayern,Leverkusen,2,2
 1991,17,Frankfurt,Karlsruhe,1,1
 1991,17,K'lautern,Rostock,3,0
@@ -8614,8 +8614,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,18,Rostock,Hamburger SV,1,2
 1991,18,Karlsruhe,Nürnberg,1,0
 1991,18,Leverkusen,Dortmund,0,2
-1991,18,Stuttg. Kick.,Gladbach,3,0
-1991,19,Bochum,Stuttg. Kick.,2,2
+1991,18,Stg. Kickers,Gladbach,3,0
+1991,19,Bochum,Stg. Kickers,2,2
 1991,19,Gladbach,Wattenscheid,1,0
 1991,19,Dortmund,Duisburg,2,1
 1991,19,Bayern,Karlsruhe,1,0
@@ -8627,7 +8627,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,19,Köln,Dresden,1,1
 1991,20,Dortmund,Karlsruhe,1,0
 1991,20,Gladbach,Leverkusen,2,2
-1991,20,Wattenscheid,Stuttg. Kick.,4,1
+1991,20,Wattenscheid,Stg. Kickers,4,1
 1991,20,Köln,Bochum,1,0
 1991,20,K'lautern,Dresden,4,1
 1991,20,Hamburger SV,Schalke,2,1
@@ -8642,7 +8642,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,21,Rostock,Bayern,2,1
 1991,21,Dresden,Hamburger SV,3,0
 1991,21,Bochum,K'lautern,0,0
-1991,21,Stuttg. Kick.,Köln,0,3
+1991,21,Stg. Kickers,Köln,0,3
 1991,21,Karlsruhe,Stuttgart,0,0
 1991,21,Duisburg,Gladbach,1,1
 1991,22,Hamburger SV,Bochum,0,0
@@ -8654,18 +8654,18 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,22,Stuttgart,Bremen,1,1
 1991,22,Wattenscheid,Duisburg,2,0
 1991,22,K'lautern,Köln,2,1
-1991,22,Leverkusen,Stuttg. Kick.,3,1
+1991,22,Leverkusen,Stg. Kickers,3,1
 1991,23,Karlsruhe,Wattenscheid,1,2
 1991,23,Dresden,Nürnberg,1,2
 1991,23,Bochum,Frankfurt,0,0
 1991,23,Bremen,Gladbach,0,0
 1991,23,Düsseldorf,Dortmund,1,1
 1991,23,Schalke,Bayern,1,1
-1991,23,Stuttg. Kick.,K'lautern,1,1
+1991,23,Stg. Kickers,K'lautern,1,1
 1991,23,Rostock,Stuttgart,2,0
 1991,23,Köln,Hamburger SV,0,0
 1991,23,Duisburg,Leverkusen,1,2
-1991,24,Duisburg,Stuttg. Kick.,1,1
+1991,24,Duisburg,Stg. Kickers,1,1
 1991,24,Nürnberg,Bochum,1,0
 1991,24,Wattenscheid,Bremen,0,1
 1991,24,Bayern,Dresden,1,2
@@ -8683,7 +8683,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,25,Dresden,Dortmund,0,0
 1991,25,Köln,Nürnberg,4,0
 1991,25,K'lautern,Frankfurt,1,1
-1991,25,Stuttg. Kick.,Hamburger SV,1,1
+1991,25,Stg. Kickers,Hamburger SV,1,1
 1991,25,Schalke,Stuttgart,0,1
 1991,26,Duisburg,Bremen,0,0
 1991,26,Wattenscheid,Düsseldorf,4,1
@@ -8694,20 +8694,20 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,26,Frankfurt,Hamburger SV,2,1
 1991,26,Nürnberg,K'lautern,3,2
 1991,26,Bayern,Köln,0,0
-1991,26,Karlsruhe,Stuttg. Kick.,3,1
+1991,26,Karlsruhe,Stg. Kickers,3,1
 1991,27,Schalke,Wattenscheid,1,1
 1991,27,Dresden,Gladbach,1,2
 1991,27,Rostock,Duisburg,0,0
 1991,27,Köln,Dortmund,1,2
 1991,27,K'lautern,Bayern,4,0
-1991,27,Stuttg. Kick.,Frankfurt,0,2
+1991,27,Stg. Kickers,Frankfurt,0,2
 1991,27,Bremen,Karlsruhe,0,0
 1991,27,Düsseldorf,Leverkusen,1,1
 1991,27,Bochum,Stuttgart,0,2
 1991,27,Hamburger SV,Nürnberg,0,2
 1991,28,Gladbach,Bochum,1,2
 1991,28,Nürnberg,Frankfurt,1,3
-1991,28,Bremen,Stuttg. Kick.,1,3
+1991,28,Bremen,Stg. Kickers,1,3
 1991,28,Leverkusen,Schalke,2,1
 1991,28,Karlsruhe,Rostock,2,1
 1991,28,Bayern,Hamburger SV,2,0
@@ -8720,7 +8720,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,29,Dresden,Leverkusen,1,0
 1991,29,Köln,Gladbach,1,1
 1991,29,Frankfurt,Bayern,3,2
-1991,29,Stuttg. Kick.,Nürnberg,3,1
+1991,29,Stg. Kickers,Nürnberg,3,1
 1991,29,Rostock,Bremen,0,0
 1991,29,Düsseldorf,Karlsruhe,2,3
 1991,29,Schalke,Duisburg,3,0
@@ -8734,20 +8734,20 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,30,Dortmund,Frankfurt,2,2
 1991,30,Stuttgart,Hamburger SV,3,2
 1991,30,Gladbach,K'lautern,1,0
-1991,30,Rostock,Stuttg. Kick.,2,2
+1991,30,Rostock,Stg. Kickers,2,2
 1991,31,Nürnberg,Dortmund,2,1
 1991,31,Dresden,Karlsruhe,2,0
 1991,31,Bochum,Duisburg,2,1
 1991,31,K'lautern,Wattenscheid,3,2
 1991,31,Hamburger SV,Gladbach,1,0
-1991,31,Stuttg. Kick.,Bayern,2,4
+1991,31,Stg. Kickers,Bayern,2,4
 1991,31,Düsseldorf,Rostock,0,0
 1991,31,Schalke,Bremen,0,0
 1991,31,Köln,Leverkusen,1,1
 1991,31,Frankfurt,Stuttgart,1,1
 1991,32,Rostock,Schalke,2,0
 1991,32,Dortmund,Bayern,3,0
-1991,32,Düsseldorf,Stuttg. Kick.,1,3
+1991,32,Düsseldorf,Stg. Kickers,1,3
 1991,32,Karlsruhe,Bochum,1,1
 1991,32,Bremen,Dresden,2,0
 1991,32,Stuttgart,Nürnberg,2,0
@@ -8755,7 +8755,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,32,Wattenscheid,Hamburger SV,1,1
 1991,32,Leverkusen,K'lautern,3,0
 1991,32,Duisburg,Köln,1,3
-1991,33,Stuttg. Kick.,Dortmund,0,1
+1991,33,Stg. Kickers,Dortmund,0,1
 1991,33,Dresden,Rostock,2,1
 1991,33,Bochum,Bremen,2,2
 1991,33,Frankfurt,Wattenscheid,1,1
@@ -8774,7 +8774,7 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,34,Duisburg,Hamburger SV,0,1
 1991,34,Karlsruhe,K'lautern,2,1
 1991,34,Bremen,Köln,1,3
-1991,34,Schalke,Stuttg. Kick.,1,2
+1991,34,Schalke,Stg. Kickers,1,2
 1991,35,Bayern,Wattenscheid,5,2
 1991,35,Bochum,Düsseldorf,3,0
 1991,35,K'lautern,Bremen,2,2
@@ -8784,14 +8784,14 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,35,Köln,Rostock,3,1
 1991,35,Hamburger SV,Karlsruhe,0,1
 1991,35,Frankfurt,Duisburg,3,0
-1991,35,Stuttg. Kick.,Stuttgart,1,3
+1991,35,Stg. Kickers,Stuttgart,1,3
 1991,36,Bremen,Hamburger SV,1,1
 1991,36,Duisburg,Nürnberg,3,0
 1991,36,Wattenscheid,Dortmund,0,1
 1991,36,Leverkusen,Bayern,2,1
 1991,36,Gladbach,Stuttgart,0,1
 1991,36,Schalke,Bochum,2,1
-1991,36,Stuttg. Kick.,Dresden,0,0
+1991,36,Stg. Kickers,Dresden,0,0
 1991,36,Karlsruhe,Frankfurt,0,2
 1991,36,Rostock,K'lautern,0,1
 1991,36,Düsseldorf,Köln,1,3
@@ -8804,8 +8804,8 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 1991,37,Nürnberg,Karlsruhe,1,2
 1991,37,Bayern,Duisburg,4,2
 1991,37,Dortmund,Leverkusen,3,1
-1991,37,Gladbach,Stuttg. Kick.,2,1
-1991,38,Stuttg. Kick.,Bochum,2,0
+1991,37,Gladbach,Stg. Kickers,2,1
+1991,38,Stg. Kickers,Bochum,2,0
 1991,38,Wattenscheid,Gladbach,3,2
 1991,38,Duisburg,Dortmund,0,1
 1991,38,Karlsruhe,Bayern,3,0
@@ -17995,3 +17995,309 @@ season,spieltag,hometeam,awayteam,homegoals,awaygoals
 2021,34,Mainz,Frankfurt,2,2
 2021,34,Augsburg,Fürth,2,1
 2021,34,Bielefeld,Leipzig,1,1
+2022,1,Frankfurt,Bayern,1,6
+2022,1,Union,Hertha,3,1
+2022,1,Gladbach,Hoffenheim,3,1
+2022,1,Wolfsburg,Bremen,2,2
+2022,1,Bochum,Mainz,1,2
+2022,1,Augsburg,Freiburg,0,4
+2022,1,Dortmund,Leverkusen,1,0
+2022,1,Stuttgart,Leipzig,1,1
+2022,1,Köln,Schalke,3,1
+2022,2,Freiburg,Dortmund,1,3
+2022,2,Leverkusen,Augsburg,1,2
+2022,2,Leipzig,Köln,2,2
+2022,2,Hoffenheim,Bochum,3,2
+2022,2,Hertha,Frankfurt,1,1
+2022,2,Bremen,Stuttgart,2,2
+2022,2,Schalke,Gladbach,2,2
+2022,2,Mainz,Union,0,0
+2022,2,Bayern,Wolfsburg,2,0
+2022,3,Gladbach,Hertha,1,0
+2022,3,Dortmund,Bremen,2,3
+2022,3,Leverkusen,Hoffenheim,0,3
+2022,3,Wolfsburg,Schalke,0,0
+2022,3,Augsburg,Mainz,1,2
+2022,3,Stuttgart,Freiburg,0,1
+2022,3,Union,Leipzig,2,1
+2022,3,Frankfurt,Köln,1,1
+2022,3,Bochum,Bayern,0,7
+2022,4,Freiburg,Bochum,1,0
+2022,4,Leipzig,Wolfsburg,2,0
+2022,4,Mainz,Leverkusen,0,3
+2022,4,Hoffenheim,Augsburg,1,0
+2022,4,Hertha,Dortmund,0,1
+2022,4,Schalke,Union,1,6
+2022,4,Bayern,Gladbach,1,1
+2022,4,Köln,Stuttgart,0,0
+2022,4,Bremen,Frankfurt,3,4
+2022,5,Dortmund,Hoffenheim,1,0
+2022,5,Leverkusen,Freiburg,2,3
+2022,5,Union,Bayern,1,1
+2022,5,Wolfsburg,Köln,2,4
+2022,5,Bochum,Bremen,0,2
+2022,5,Stuttgart,Schalke,1,1
+2022,5,Frankfurt,Leipzig,4,0
+2022,5,Augsburg,Hertha,0,2
+2022,5,Gladbach,Mainz,0,1
+2022,6,Bremen,Augsburg,0,1
+2022,6,Bayern,Stuttgart,2,2
+2022,6,Leipzig,Dortmund,3,0
+2022,6,Hoffenheim,Mainz,4,1
+2022,6,Frankfurt,Wolfsburg,0,1
+2022,6,Hertha,Leverkusen,2,2
+2022,6,Schalke,Bochum,3,1
+2022,6,Köln,Union,0,1
+2022,6,Freiburg,Gladbach,0,0
+2022,7,Mainz,Hertha,1,1
+2022,7,Dortmund,Schalke,1,0
+2022,7,Leverkusen,Bremen,1,1
+2022,7,Augsburg,Bayern,1,0
+2022,7,Stuttgart,Frankfurt,1,3
+2022,7,Gladbach,Leipzig,3,0
+2022,7,Union,Wolfsburg,2,0
+2022,7,Bochum,Köln,1,1
+2022,7,Hoffenheim,Freiburg,0,0
+2022,8,Bayern,Leverkusen,4,0
+2022,8,Leipzig,Bochum,4,0
+2022,8,Freiburg,Mainz,2,1
+2022,8,Köln,Dortmund,3,2
+2022,8,Frankfurt,Union,2,0
+2022,8,Wolfsburg,Stuttgart,3,2
+2022,8,Bremen,Gladbach,5,1
+2022,8,Hertha,Hoffenheim,1,1
+2022,8,Schalke,Augsburg,2,3
+2022,9,Hoffenheim,Bremen,1,2
+2022,9,Leverkusen,Schalke,4,0
+2022,9,Mainz,Leipzig,1,1
+2022,9,Bochum,Frankfurt,3,0
+2022,9,Augsburg,Wolfsburg,1,1
+2022,9,Dortmund,Bayern,2,2
+2022,9,Gladbach,Köln,5,2
+2022,9,Hertha,Freiburg,2,2
+2022,9,Stuttgart,Union,0,1
+2022,10,Schalke,Hoffenheim,0,3
+2022,10,Frankfurt,Leverkusen,5,1
+2022,10,Wolfsburg,Gladbach,2,2
+2022,10,Stuttgart,Bochum,4,1
+2022,10,Bremen,Mainz,0,2
+2022,10,Leipzig,Hertha,3,2
+2022,10,Köln,Augsburg,3,2
+2022,10,Union,Dortmund,2,0
+2022,10,Bayern,Freiburg,5,0
+2022,11,Mainz,Köln,5,0
+2022,11,Dortmund,Stuttgart,5,0
+2022,11,Leverkusen,Wolfsburg,2,2
+2022,11,Freiburg,Bremen,2,0
+2022,11,Hoffenheim,Bayern,0,2
+2022,11,Augsburg,Leipzig,3,3
+2022,11,Gladbach,Frankfurt,1,3
+2022,11,Bochum,Union,2,1
+2022,11,Hertha,Schalke,2,1
+2022,12,Bremen,Hertha,1,0
+2022,12,Bayern,Mainz,6,2
+2022,12,Leipzig,Leverkusen,2,0
+2022,12,Wolfsburg,Bochum,4,0
+2022,12,Stuttgart,Augsburg,2,1
+2022,12,Frankfurt,Dortmund,1,2
+2022,12,Union,Gladbach,2,1
+2022,12,Schalke,Freiburg,0,2
+2022,12,Köln,Hoffenheim,1,1
+2022,13,Gladbach,Stuttgart,3,1
+2022,13,Dortmund,Bochum,3,0
+2022,13,Mainz,Wolfsburg,0,3
+2022,13,Hoffenheim,Leipzig,1,3
+2022,13,Augsburg,Frankfurt,1,2
+2022,13,Hertha,Bayern,2,3
+2022,13,Bremen,Schalke,2,1
+2022,13,Leverkusen,Union,5,0
+2022,13,Freiburg,Köln,2,0
+2022,14,Wolfsburg,Dortmund,2,0
+2022,14,Bayern,Bremen,6,1
+2022,14,Bochum,Gladbach,2,1
+2022,14,Stuttgart,Hertha,2,1
+2022,14,Köln,Leverkusen,1,2
+2022,14,Leipzig,Freiburg,3,1
+2022,14,Union,Augsburg,2,2
+2022,14,Frankfurt,Hoffenheim,4,2
+2022,14,Schalke,Mainz,1,0
+2022,15,Gladbach,Dortmund,4,2
+2022,15,Leverkusen,Stuttgart,2,0
+2022,15,Hoffenheim,Wolfsburg,1,2
+2022,15,Augsburg,Bochum,0,1
+2022,15,Hertha,Köln,2,0
+2022,15,Bremen,Leipzig,1,2
+2022,15,Schalke,Bayern,0,2
+2022,15,Mainz,Frankfurt,1,1
+2022,15,Freiburg,Union,4,1
+2022,16,Leipzig,Bayern,1,1
+2022,16,Union,Hoffenheim,3,1
+2022,16,Frankfurt,Schalke,3,0
+2022,16,Wolfsburg,Freiburg,6,0
+2022,16,Bochum,Hertha,3,1
+2022,16,Stuttgart,Mainz,1,1
+2022,16,Köln,Bremen,7,1
+2022,16,Dortmund,Augsburg,4,3
+2022,16,Gladbach,Leverkusen,2,3
+2022,17,Schalke,Leipzig,1,6
+2022,17,Bayern,Köln,1,1
+2022,17,Hoffenheim,Stuttgart,2,2
+2022,17,Hertha,Wolfsburg,0,5
+2022,17,Mainz,Dortmund,1,2
+2022,17,Leverkusen,Bochum,2,0
+2022,17,Freiburg,Frankfurt,1,1
+2022,17,Augsburg,Gladbach,1,0
+2022,17,Bremen,Union,1,2
+2022,18,Leipzig,Stuttgart,2,1
+2022,18,Freiburg,Augsburg,3,1
+2022,18,Mainz,Bochum,5,2
+2022,18,Hoffenheim,Gladbach,1,4
+2022,18,Hertha,Union,0,2
+2022,18,Bremen,Wolfsburg,2,1
+2022,18,Bayern,Frankfurt,1,1
+2022,18,Schalke,Köln,0,0
+2022,18,Leverkusen,Dortmund,0,2
+2022,19,Augsburg,Leverkusen,1,0
+2022,19,Dortmund,Freiburg,5,1
+2022,19,Union,Mainz,2,1
+2022,19,Köln,Leipzig,0,0
+2022,19,Frankfurt,Hertha,3,0
+2022,19,Bochum,Hoffenheim,5,2
+2022,19,Gladbach,Schalke,0,0
+2022,19,Stuttgart,Bremen,0,2
+2022,19,Wolfsburg,Bayern,2,4
+2022,20,Schalke,Wolfsburg,0,0
+2022,20,Bayern,Bochum,3,0
+2022,20,Freiburg,Stuttgart,2,1
+2022,20,Mainz,Augsburg,3,1
+2022,20,Hoffenheim,Leverkusen,1,3
+2022,20,Bremen,Dortmund,0,2
+2022,20,Leipzig,Union,1,2
+2022,20,Hertha,Gladbach,4,1
+2022,20,Köln,Frankfurt,3,0
+2022,21,Augsburg,Hoffenheim,1,0
+2022,21,Gladbach,Bayern,3,2
+2022,21,Wolfsburg,Leipzig,0,3
+2022,21,Bochum,Freiburg,0,2
+2022,21,Stuttgart,Köln,3,0
+2022,21,Frankfurt,Bremen,2,0
+2022,21,Union,Schalke,0,0
+2022,21,Dortmund,Hertha,4,1
+2022,21,Leverkusen,Mainz,2,3
+2022,22,Mainz,Gladbach,4,0
+2022,22,Leipzig,Frankfurt,2,1
+2022,22,Köln,Wolfsburg,0,2
+2022,22,Hoffenheim,Dortmund,0,1
+2022,22,Hertha,Augsburg,2,0
+2022,22,Bremen,Bochum,3,0
+2022,22,Schalke,Stuttgart,2,1
+2022,22,Freiburg,Leverkusen,1,1
+2022,22,Bayern,Union,3,0
+2022,23,Dortmund,Leipzig,2,1
+2022,23,Union,Köln,0,0
+2022,23,Mainz,Hoffenheim,1,0
+2022,23,Gladbach,Freiburg,0,0
+2022,23,Bochum,Schalke,0,2
+2022,23,Augsburg,Bremen,2,1
+2022,23,Stuttgart,Bayern,1,2
+2022,23,Leverkusen,Hertha,4,1
+2022,23,Wolfsburg,Frankfurt,2,2
+2022,24,Köln,Bochum,0,2
+2022,24,Bayern,Augsburg,5,3
+2022,24,Leipzig,Gladbach,3,0
+2022,24,Frankfurt,Stuttgart,1,1
+2022,24,Hertha,Mainz,1,1
+2022,24,Schalke,Dortmund,2,2
+2022,24,Freiburg,Hoffenheim,2,1
+2022,24,Bremen,Leverkusen,2,3
+2022,24,Wolfsburg,Union,1,1
+2022,25,Gladbach,Bremen,2,2
+2022,25,Hoffenheim,Hertha,3,1
+2022,25,Bochum,Leipzig,1,0
+2022,25,Augsburg,Schalke,1,1
+2022,25,Stuttgart,Wolfsburg,0,1
+2022,25,Dortmund,Köln,6,1
+2022,25,Union,Frankfurt,2,0
+2022,25,Leverkusen,Bayern,2,1
+2022,25,Mainz,Freiburg,1,1
+2022,26,Frankfurt,Bochum,1,1
+2022,26,Leipzig,Mainz,0,3
+2022,26,Union,Stuttgart,3,0
+2022,26,Freiburg,Hertha,1,1
+2022,26,Wolfsburg,Augsburg,2,2
+2022,26,Schalke,Leverkusen,0,3
+2022,26,Bayern,Dortmund,4,2
+2022,26,Köln,Gladbach,0,0
+2022,26,Bremen,Hoffenheim,1,2
+2022,27,Dortmund,Union,2,1
+2022,27,Leverkusen,Frankfurt,3,1
+2022,27,Freiburg,Bayern,0,1
+2022,27,Mainz,Bremen,2,2
+2022,27,Augsburg,Köln,1,3
+2022,27,Hertha,Leipzig,0,1
+2022,27,Gladbach,Wolfsburg,2,0
+2022,27,Bochum,Stuttgart,2,3
+2022,27,Hoffenheim,Schalke,2,0
+2022,28,Schalke,Hertha,5,2
+2022,28,Bayern,Hoffenheim,1,1
+2022,28,Leipzig,Augsburg,3,2
+2022,28,Köln,Mainz,1,1
+2022,28,Stuttgart,Dortmund,3,3
+2022,28,Frankfurt,Gladbach,1,1
+2022,28,Bremen,Freiburg,1,2
+2022,28,Union,Bochum,1,1
+2022,28,Wolfsburg,Leverkusen,0,0
+2022,29,Augsburg,Stuttgart,1,1
+2022,29,Mainz,Bayern,3,1
+2022,29,Hoffenheim,Köln,1,3
+2022,29,Bochum,Wolfsburg,1,5
+2022,29,Hertha,Bremen,2,4
+2022,29,Dortmund,Frankfurt,4,0
+2022,29,Freiburg,Schalke,4,0
+2022,29,Leverkusen,Leipzig,2,0
+2022,29,Gladbach,Union,0,1
+2022,30,Bochum,Dortmund,1,1
+2022,30,Leipzig,Hoffenheim,1,0
+2022,30,Union,Leverkusen,0,0
+2022,30,Köln,Freiburg,0,1
+2022,30,Frankfurt,Augsburg,1,1
+2022,30,Stuttgart,Gladbach,2,1
+2022,30,Schalke,Bremen,2,1
+2022,30,Bayern,Hertha,2,0
+2022,30,Wolfsburg,Mainz,3,0
+2022,31,Leverkusen,Köln,1,2
+2022,31,Mainz,Schalke,2,3
+2022,31,Freiburg,Leipzig,0,1
+2022,31,Hoffenheim,Frankfurt,3,1
+2022,31,Gladbach,Bochum,2,0
+2022,31,Augsburg,Union,1,0
+2022,31,Hertha,Stuttgart,2,1
+2022,31,Bremen,Bayern,1,2
+2022,31,Dortmund,Wolfsburg,6,0
+2022,32,Köln,Hertha,5,2
+2022,32,Bayern,Schalke,6,0
+2022,32,Union,Freiburg,4,2
+2022,32,Frankfurt,Mainz,3,0
+2022,32,Wolfsburg,Hoffenheim,2,1
+2022,32,Bochum,Augsburg,3,2
+2022,32,Dortmund,Gladbach,5,2
+2022,32,Stuttgart,Leverkusen,1,1
+2022,32,Leipzig,Bremen,2,1
+2022,33,Freiburg,Wolfsburg,2,0
+2022,33,Hoffenheim,Union,4,2
+2022,33,Hertha,Bochum,1,1
+2022,33,Schalke,Frankfurt,2,2
+2022,33,Bremen,Köln,1,1
+2022,33,Bayern,Leipzig,1,3
+2022,33,Mainz,Stuttgart,1,4
+2022,33,Augsburg,Dortmund,0,3
+2022,33,Leverkusen,Gladbach,2,2
+2022,34,Dortmund,Mainz,2,2
+2022,34,Leipzig,Schalke,4,2
+2022,34,Union,Bremen,1,0
+2022,34,Köln,Bayern,1,2
+2022,34,Gladbach,Augsburg,2,0
+2022,34,Frankfurt,Freiburg,2,1
+2022,34,Wolfsburg,Hertha,1,2
+2022,34,Bochum,Leverkusen,3,0
+2022,34,Stuttgart,Hoffenheim,1,1

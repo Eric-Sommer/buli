@@ -15,7 +15,7 @@ from crawler import crawler, correct_names
 # SWITCHES
 
 # Crawl and reproduce data?
-CRAWL = 0
+CRAWL = 1
 
 SEASONS_TO_CRAWL = list(range(1963, 2022))
 PATH = os.getcwd()
@@ -29,7 +29,7 @@ TEAM_POINTS = 42
 def make_boxplot_by_spieltag(df):
     """ Produces Boxplot showing the distribution of points by rank for a given matchday
     """
-    for sp in range(34, 35):
+    for sp in range(30, 35):
         plt.clf()
         fig = plt.figure(figsize=(10, 5))
         plt.boxplot(
@@ -46,15 +46,15 @@ def make_boxplot_by_spieltag(df):
         )
 
         plt.title(
-            "Verteilung der Punkte nach Platzierung nach dem {}. Spieltag".format(sp)
+            f"Verteilung der Punkte nach Platzierung nach dem {sp}. Spieltag"
         )
 
         # plt.xlabel('Platzierung')
         plt.ylabel("Punkte")
         plt.text(
-            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2021/22."
+            0, -5, "Bundesliga seit 1963. Blaue Punkte stehen für die Saison 2023/24."
         )
-        plt.savefig(f"out/box_{p}.png")
+        plt.savefig(f"out/box_{sp}.png")
         plt.close()
 
 
@@ -109,7 +109,7 @@ def get_streaks(df):
     )
 
 
-def ewigetabelle(df):
+def dewigetabelle(df):
     """ Ewige Tabelle: Cumulated Table of all seasons
     """
     # Now, create Rank.
@@ -303,7 +303,7 @@ def clean_results_data(df):
     dfhome["home"] = 1
     dfaway["home"] = 0
     # Packe home und away zusammen
-    df = dfhome.append(dfaway)
+    df = pd.concat([dfhome, dfaway])
 
     df["team"] = correct_names(df["team"])
     df["opponent"] = correct_names(df["opponent"])
@@ -495,12 +495,12 @@ def create_game_results_since_1963(path, crawl):
     """
     # Run Crawler for Bundesliga
     if crawl:
-        crawler(path, list(range(1963, 2022)), 1, True)
+        crawler(path, list(range(1963, 2023)), 1, True)
 
     df = clean_all_results(path)
     df.to_csv("data/all_bundesliga_results.csv", index=False)
     df = clean_results_data(df)
-    game_analysis(df, 34, 45, "Freiburg", path)
+    game_analysis(df, spieltag=34, team_points=45, teamname="Freiburg", path=path)
 
     return None
 
@@ -527,9 +527,9 @@ def main(
     for liga in leagues_to_crawl:
         if liga == 3:
             # 3. Liga existent only since 2008
-            seas = list(range(2008, 2019))
+            seas = list(range(2008, 2023))
         elif liga == 2:
-            seas = list(range(1997, 2019))
+            seas = list(range(1997, 2023))
         else:
             seas = seasons_to_crawl
         if crawl == 1:
@@ -558,8 +558,8 @@ def main(
     clean_booking_data(bookings, liga)
 
 
-# create_game_results_since_1963(PATH, CRAWL)
-crawler(PATH, list(rangec(2008, 2022)), 1, True)
+#create_game_results_since_1963(PATH, CRAWL)
+crawler(PATH, list(range(1974, 2023)), 2, True)
 """
 ranklist=[]
 

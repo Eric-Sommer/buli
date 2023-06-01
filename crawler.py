@@ -37,7 +37,7 @@ def mkURL(season, spieltag, liga):
     ligastr1 = {1: "bundesliga", 2: "2bundesliga", 3: "3-liga"}
     ligastr2 = {1: "1-bundesliga", 2: "2-bundesliga", 3: "3-liga"}
     seasonstring = str(season) + "-" + str(season + 1)[-2:]
-    url = f"http://www.kicker.de/news/fussball/{ligastr1[liga]}/spieltag/{ligastr2[liga]}/{seasonstring}/{spieltag}/spieltag.html"
+    url = f"http://www.kicker.de/{ligastr2[liga]}/spieltag/{seasonstring}/{spieltag}"
     return url
 
 
@@ -130,6 +130,8 @@ def crawler(path, seasons, liga, resultsonly=False):
             or ((liga == 2) and (s <= 1993))
         ):
             n_matchdays = 38
+        elif (liga == 1) and (s <= 1964):
+            n_matchdays = 30
         else:
             n_matchdays = 34
 
@@ -229,7 +231,7 @@ def get_game_results(seasons, rawdir, path, liga, resultsonly):
                     6: "gamelink",
                 }
             )
-            buli_results = buli_results.append(spt, ignore_index=True)
+            buli_results = pd.concat([buli_results, spt], ignore_index=True)
 
     buli_results["game_id"] = buli_results.index
     # clean
